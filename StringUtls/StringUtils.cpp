@@ -49,3 +49,17 @@ TStringVec Ken_SplitString(std::string& strSrc, const char chSep)
 		}		  // if .. else ..
 	}			  // while ..	
 }
+
+
+std::wstring A2W(std::string& astr_)
+{
+	std::wstring ws(astr_.begin(), astr_.end());
+	return ws;
+}
+
+std::string W2A(std::wstring& wstr_)
+{
+	std::string as(wstr_.begin(), wstr_.end());
+	return as;
+	
+}
