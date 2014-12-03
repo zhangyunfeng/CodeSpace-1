@@ -63,3 +63,5 @@ std::string W2A(std::wstring& wstr_)
 	return as;
 	
 }
+
+
