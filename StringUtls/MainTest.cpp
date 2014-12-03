@@ -12,17 +12,29 @@ extern "C" {
 #endif
 
 #include <iostream>
+#include <string>
+#include <vector>
+#include <iterator>
 #include "StringUtils.h"
 
 extern char* Ken_i2a(unsigned i, char* a, unsigned r);
+extern TStringVec Ken_SplitString(std::string& strSrc, const char chSep);
 
 int main(void)
 {
-  char a[100] = {0};
-  char *end = Ken_i2a(10, a, 3); //将10转换为3进制
-  *end = 0;
-  printf("Ken_i2a(10, a, 3) result: %s\n", a);
+		// char a[100] = {0};
+		// char *end = Ken_i2a(10, a, 3); //将10转换为3进制
+		// *end = 0;
+		// printf("Ken_i2a(10, a, 3) result: %s\n", a);
 
-  system("pause");
-  return 0;
+	TStringVec rst;
+	std::string testStr = ":h:llo:world::::";
+	rst = Ken_SplitString(testStr, ':');
+	for (TStringVec::iterator it = rst.begin(); it != rst.end(); it++)
+		std::cout << *it << " ";
+
+#ifdef _WIN32
+	system("pause");
+#endif
+	return 0;
 }
