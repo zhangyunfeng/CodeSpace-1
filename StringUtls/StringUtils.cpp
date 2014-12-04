@@ -1,6 +1,7 @@
 //Note: 不要过度包含头文件， 系统文件在前，自定义头文件在后
 //尽量以Google的code style
-
+#include <sstream>
+#include <iostream>
 #include "StringUtils.h"
 
 char* Ken_i2a(unsigned i, char* a, unsigned r)
@@ -65,3 +66,28 @@ std::string W2A(std::wstring& wstr_)
 }
 
 
+std::string Ken_Int2String(const int num)
+{
+	std::string str;
+	std::stringstream ss;
+	ss.clear();
+	ss << num;
+	ss >> str;
+	return str;
+}
+
+std::string Ken_FormatInt2Thousands(const int num)
+{
+	std::string rst("");
+	rst = Ken_Int2String(num);
+	std::cout << rst << std::endl;
+	int pos = rst.length() - 1 - 2;
+	while (pos > 0)	{
+		if (rst[pos - 1] != '-' && rst[pos - 1] != '+')	{
+			rst.insert(pos, ",");
+		}
+		pos -= 3;
+	}
+	//if (num < 0 && rst[0] != '-') rst.insert(0, "-");
+	return rst;
+}
