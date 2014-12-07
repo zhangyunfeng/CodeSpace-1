@@ -20,5 +20,10 @@ extern std::wstring A2W(std::string& astr_);
 //convert wide string to ansi string
 extern std::string W2A(std::wstring wstr_);
 
+//将int转换为string
+extern std::string Ken_Int2String(const int num);
 
+//将整形数字转化成千分位表示形式
+//需要更大的数字，可以用long long表示
+extern std::string Ken_FormatInt2Thousands(const int num);
 #endif /* end of include guard: STRINGUTILS_HPP */
