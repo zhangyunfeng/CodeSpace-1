@@ -20,4 +20,5 @@ extern std::wstring A2W(std::string& astr_);
 //convert wide string to ansi string
 extern std::string W2A(std::wstring wstr_);
 
+
 #endif /* end of include guard: STRINGUTILS_HPP */
