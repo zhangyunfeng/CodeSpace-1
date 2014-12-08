@@ -27,3 +27,4 @@ extern std::string Ken_Int2String(const int num);
 //需要更大的数字，可以用long long表示
 extern std::string Ken_FormatInt2Thousands(const int num);
 #endif /* end of include guard: STRINGUTILS_HPP */
+
