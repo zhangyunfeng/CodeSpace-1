@@ -25,6 +25,7 @@ Cache_FIFO<T>::~Cache_FIFO()
 template<typename T>
 void Cache_FIFO<T>::InitCacheLink(void)
 {
+	//单向链表, pre预留
 	cache_page_link<T>* current_page = NULL;
 	current_page = new cache_page_link<T>();
 	head = current_page ;
