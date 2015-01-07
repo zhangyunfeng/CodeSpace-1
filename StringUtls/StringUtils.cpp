@@ -89,5 +89,14 @@ std::string Ken_FormatInt2Thousands(const int num)
 		pos -= 3;
 	}
 	//if (num < 0 && rst[0] != '-') rst.insert(0, "-");
+	
 	return rst;
+}
+
+std::string Ken_SplitFileName(const std::string& src)
+{
+	if (src.empty()) return "";
+	unsigned pos = src.find_last_of("/\\"); 
+	std::string filename = src.substr(pos+1);
+	return filename;
 }
