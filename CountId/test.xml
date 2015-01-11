@@ -1,0 +1,13 @@
+<layer>
+	<dlg id="10">
+		<dlg id="22">
+			<button id="33"></button>
+			<id id="20"/>
+		</dlg>
+	</dlg>
+	<img id="20" pos="1,1,1,1"/>
+	<scrolldlg id="100">
+		<text id="200">hello world</text>
+		<img id="33"></img>
+	</scrolldlg>
+</layer>
