@@ -1,0 +1,98 @@
+#! /usr/bin/env python
+
+
+#coding:utf8
+
+
+
+import wx
+import os
+import sys
+import PlayerUtils
+
+class PlayerMenuBar:
+    '''
+    '''
+    def __init__(self):
+        self.menu_bar = wx.MenuBar()
+        self.open_menu_item = None
+        self.open_dir_menu_item = None
+        self.quit_dir_menu_item = None
+        
+    def FillMenuBar(self):
+        
+        file_menu = wx.Menu()
+        edit_menu = wx.Menu()
+
+        self.open_menu_item = file_menu.Append(wx.NewId(), "&Open Music", "open a music file")
+        self.open_dir_menu_item = file_menu.Append(wx.NewId(), "&Open Director", "open a directory including music files") # 
+        self.quit_menu_item = file_menu.Append(wx.NewId(), "&Quit", "Quit application")
+        
+        edit_menu.Append(wx.NewId(), "&Add to playList", "add current music to play list")
+        edit_menu.Append(wx.NewId(), "&Preference", "edit application's preference")
+
+        self.menu_bar.Append(file_menu, "&File")
+        self.menu_bar.Append(edit_menu, "&Edit")
+
+
+    def OpenMusicFile(self, event):
+        win = wx.Window(parent=None, id=-2)
+        dlg = wx.FileDialog(win, message="Select a music file",
+                             style = wx.OPEN, wildcard="MEDIA(*.mp3)|*.mp3")
+        if dlg.ShowModal() == wx.ID_OK:
+            file_name = dlg.GetPath()
+            print file_name
+
+
+    def GetMenuBar(self):
+        self.FillMenuBar()
+        return self.menu_bar
+
+    def GetMenuItem_Open(self):
+        return self.open_menu_item
+    def GetMenuItem_OpenDir(self):
+        return self.open_dir_menu_item
+    def GetMenuItem_Quit(self):
+        return self.quit_menu_item
+
+
+
+class PlayerFrame(wx.Frame):
+    '''Player frame'''
+    def __init__(self, parent, id):
+        wx.Frame.__init__(self, parent, id, "Music Player", size=(800,600))
+        panel = wx.Panel(self)
+        back_button = wx.Button(panel, label="Back", pos=(30,30), size=(56,28))
+        foward_button = wx.Button(panel, label="Foward", pos=(120,30), size=(56,28)) #
+        self.Bind(wx.EVT_BUTTON, self.OnBackButton, back_button)
+        self.Bind(wx.EVT_BUTTON, self.OnFowardButton, foward_button)
+
+    def OnBackButton(self, event):
+        print "back button clicked"
+    def OnFowardButton(self, event):
+        print "foward button clicked"
+        
+
+
+
+class App(wx.PySimpleApp):
+    # def __init__(self, parent, id):
+    #     wx.Window.__init__(self, parent, id)
+        
+   
+    def OnInit(self):
+        frame = PlayerFrame(parent=None, id=-1)
+        menu_bar = PlayerMenuBar()
+        frame.SetMenuBar(menu_bar.GetMenuBar())
+
+        self.Bind(wx.EVT_MENU, menu_bar.OpenMusicFile, menu_bar.GetMenuItem_Open())
+        frame.Show()
+        return True
+
+
+
+def Display():        
+    app = App()
+    app.MainLoop()
+
+
