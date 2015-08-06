@@ -1,0 +1,45 @@
+
+ClientSocket.hpp,1648
+#define CLIENTSOCKET_HPP_8,72
+enum class Domain:Domain35,462
+	UNIX Domain::UNIX36,486
+	UNIX = 1, LOCAL Domain::LOCAL36,486
+	UNIX = 1, LOCAL = 1, INET Domain::INET36,486
+	UNIX = 1, LOCAL = 1, INET = 2, INET6 Domain::INET636,486
+	UNIX = 1, LOCAL = 1, INET = 2, INET6 = 3, IPX Domain::IPX36,486
+	NETLINK Domain::NETLINK37,538
+	NETLINK = 5, X25 Domain::X2537,538
+	NETLINK = 5, X25 = 6, AX25 Domain::AX2537,538
+	NETLINK = 5, X25 = 6, AX25 = 7, ATMPVC Domain::ATMPVC37,538
+	NETLINK = 5, X25 = 6, AX25 = 7, ATMPVC = 8, APPLETALK Domain::APPLETALK37,538
+	NETLINK = 5, X25 = 6, AX25 = 7, ATMPVC = 8, APPLETALK = 9, PACKET Domain::PACKET37,538
+enum class Type:Type41,624
+	STREAM Type::STREAM42,646
+	STREAM = 1, DGRAM Type::DGRAM42,646
+	STREAM = 1, DGRAM = 2, SEQPACKET Type::SEQPACKET42,646
+	STREAM = 1, DGRAM = 2, SEQPACKET = 3, RAW Type::RAW42,646
+	STREAM = 1, DGRAM = 2, SEQPACKET = 3, RAW = 4, RDM Type::RDM42,646
+	STREAM = 1, DGRAM = 2, SEQPACKET = 3, RAW = 4, RDM = 5, PACKET Type::PACKET42,646
+	STREAM = 1, DGRAM = 2, SEQPACKET = 3, RAW = 4, RDM = 5, PACKET = 6, NONBLOCK Type::NONBLOCK42,646
+	STREAM = 1, DGRAM = 2, SEQPACKET = 3, RAW = 4, RDM = 5, PACKET = 6, NONBLOCK = 7, CLOEXEC Type::CLOEXEC42,646
+enum class Protocol:Protocol46,755
+	DEFAULT Protocol::DEFAULT47,781
+struct SocketParam 51,800
+	std::string serverIp;SocketParam::serverIp52,821
+	int serverPort;SocketParam::serverPort53,875
+	Type type;SocketParam::type55,931
+	Protocol protocol;SocketParam::protocol56,961
+	SocketParam(SocketParam::SocketParam58,985
+class ClientSocket70,1269
+	SocketParam m_sp;ClientSocket::m_sp90,1555
+
+Test.cpp,15
+int main(7,87
+
+SocketCommon.hpp,0
+
+ServerSocket.hpp,0
+
+ServerSocket.cpp,0
+
+ClientSocket.cpp,0
