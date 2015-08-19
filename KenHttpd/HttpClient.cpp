@@ -26,7 +26,7 @@ void HttpClient::requestHttp(const Url& url, const std::string& httpContent)
                                                     Domain::INET, Type::STREAM, Protocol::DEFAULT ));
 
     ClientSocket cs(sp);
-    cs.Connet();
+    cs.Connect();
     cs.Send(httpContent);
     while (true) {
         std::string data = cs.Receive();
@@ -42,19 +42,22 @@ void HttpClient::RequestHttp(const std::string& url)
 {
     m_url.setUrl(url);
     std::string httpHead("");
-    std::string httpHead = this->MakeHttpHead(m_url);
-    std::thread t(this->requestHttp, m_url, httpContent);
+    httpHead = this->MakeHttpHead(m_url);
+    std::thread t(&HttpClient::requestHttp, this, m_url, httpHead);
     t.detach();
+
 }
 
 
 const std::string HttpClient::blockingRequestHttp(const std::string& url)
 {
-    std::unique_ptr<SocketParam> sp(new SocketParam(url.getHost(), std::stoi(url.getPort()),
+    Url url_(url);
+    std::unique_ptr<SocketParam> sp(new SocketParam(url_.getHost(), std::stoi(url_.getPort()),
                                                     Domain::INET, Type::STREAM, Protocol::DEFAULT));
     ClientSocket cs(sp);
-    cs.Connet();
-    cs.Send(url);
+    cs.Connect();
+    std::string head = this->MakeHttpHead(url_);
+    cs.Send(head);
     std::string data = cs.Receive();
     return data;
 }
@@ -62,14 +65,15 @@ const std::string HttpClient::blockingRequestHttp(const std::string& url)
 std::string HttpClient::MakeHttpHead(const Url& url)
 {
     std::string head("");
-    if (url != nullptr) {
+    if (true) {
         // GET /bmgeorg/http/blob/master/server.c HTTP/1.1
         head += "GET ";
         head += url.getPath();
-        head += "HTTP/1.1";
+        head += " HTTP/1.1";
         head += "\r\n";
 
         //Host: github.com
+        head += "Host: ";
         head += url.getHost();
         head += "\r\n";
 

@@ -20,10 +20,10 @@ public:
     Url(const std::string& url);
     virtual ~Url();
 
-    std::string getProtocol();
-    std::string getHost();
-    std::string getPath();
-    std::string getPort();
+    std::string getProtocol() const;
+    std::string getHost() const;
+    std::string getPath() const ;
+    std::string getPort() const;
     void setUrl(const std::string& url);
 private:
     std::string m_protocol;

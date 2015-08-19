@@ -3,6 +3,7 @@
 #ifndef HTTP_CLIENT_HPP_
 #define HTTP_CLIENT_HPP_
 
+#include <iostream>
 #include <memory>
 #include <string>
 #include "Url.hpp"
@@ -40,7 +41,7 @@ class HttpClient
     std::string MakeHttpHead(const Url& url);
 
   private:
-    void requestHttp(const std::string& url);
+    void requestHttp(const Url& url, const std::string& httpContent);
     
   private:
     Url m_url;

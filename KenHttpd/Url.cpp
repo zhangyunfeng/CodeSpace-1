@@ -33,7 +33,7 @@ void Url::setUrl(const std::string& url)
 
     // port :8080
     std::string::size_type port_position = m_url.find_last_of(":");
-    if (port_position != std::string::npos) {
+    if (port_position != std::string::npos && port_position != position) {
         m_port = m_url.substr(port_position+1);
     }
     
@@ -51,24 +51,24 @@ void Url::setUrl(const std::string& url)
     
 }
 
-std::string Url::getProtocol()
+std::string Url::getProtocol() const
 {
     return m_protocol;
 }
 
 
-std::string Url::getHost()
+std::string Url::getHost() const
 {
     return m_host;
 }
 
-std::string Url::getPath()
+std::string Url::getPath() const
 {
   return m_path;
 }
 
 
-std::string Url::getPort()
+std::string Url::getPort() const
 {
     return m_port;
 

@@ -2,30 +2,28 @@ CC := g++
 CCFLAGS := -Wall
 CCVERSION := -std=c++11
 
-LIBS := 
+LIBS := -pthread
 
-CLIENTOBJ := SocketClientTest
+OBJECT := HttpTest
 
-SERVEROBJ := SocketServerTest
-
-COMMONSRC := ClientSocket.hpp \
-	SocketCommon.hpp \
+COMMONSRC := SocketCommon.hpp \
 	SocketCommon.cpp \
 	ClientSocket.cpp \
 	ServerSocket.hpp \
-	ServerSocket.cpp 
+	ServerSocket.cpp  \
+	ThreadPool.hpp \
+	ThreadPool.cpp \
+	Url.hpp \
+	Url.cpp \
+	HttpClient.hpp \
+	HttpClient.cpp \
+	HttpTest.cpp
 
-all:$(CLIENTOBJ) $(SERVEROBJ)
 
-$(CLIENTOBJ):$(COMMONSRC) ClientTest.cpp
-	@echo "Compiling " $@
-	$(CC) $(CCFLAGS) $^ -o $@ $(CCVERSION) $(LIBS)
-
-$(SERVEROBJ):$(COMMONSRC) ServerTest.cpp
-	@echo "Compiling " $@
+$(OBJECT):$(COMMONSRC) HttpTest.cpp
+	@echo "Compiling " $@	
 	$(CC) $(CCFLAGS) $^ -o $@ $(CCVERSION) $(LIBS)
 
 .PHONY:clean
 clean:
-	-rm $(CLIENTOBJ) *~ *#
-	-rm $(SERVEROBJ) *~ *#
+	-rm $(OBJECT) *~ *#

@@ -147,7 +147,6 @@ std::string ClientSocket::NoblockReceive()
 	return receivedData;	
 }
 
-
 void ClientSocket::AsynReceive(HandleReceiveFuncPtr_T hfunc)
 {
 	std::unique_ptr<std::thread> newThread(new std::thread(hfunc));

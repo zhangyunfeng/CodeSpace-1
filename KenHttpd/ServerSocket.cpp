@@ -83,6 +83,7 @@ void ServerSocket::StartServer()
 		 	printf("[Received]: %s\n", buffer);
 
 		 	int bytesWrite = write(m_clientsocketfd, "message from server", 19);
+                        
 		 	
 		 }
 
