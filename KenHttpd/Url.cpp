@@ -4,7 +4,7 @@
 #include "Url.hpp"
 
 
-Url::Url(const std::string& url) : m_url(url), m_host(""), m_path(""), m_protocol(""), m_port("8080")
+Url::Url(const std::string& url) : m_url(url), m_host(""), m_path(""), m_protocol(""), m_port("80")
 {
     setUrl(url);
 }
@@ -46,7 +46,7 @@ void Url::setUrl(const std::string& url)
     
     //path
     if (host_position != std::string::npos) {
-        m_path = strtemp.substr(host_position+1, path_last_position-host_position-1);
+        m_path = strtemp.substr(host_position, path_last_position-host_position-1);
     }
     
 }

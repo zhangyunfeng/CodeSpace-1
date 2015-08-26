@@ -59,6 +59,8 @@ const std::string HttpClient::blockingRequestHttp(const std::string& url)
     std::string head = this->MakeHttpHead(url_);
     cs.Send(head);
     std::string data = cs.Receive();
+    
+
     return data;
 }
 
@@ -87,6 +89,8 @@ std::string HttpClient::MakeHttpHead(const Url& url)
         
         //User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.118 Safari/537.36
         head += "User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.118 Safari/537.36";
+        head += "\r\n";
+
         head += "\r\n";
     }
 

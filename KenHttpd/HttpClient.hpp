@@ -38,6 +38,7 @@ class HttpClient
 
     void RegistHttpReceiver(const std::unique_ptr<HttpReceiver> httpReceiver);
 
+
     std::string MakeHttpHead(const Url& url);
 
   private:
