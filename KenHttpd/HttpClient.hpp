@@ -21,32 +21,33 @@ class HttpReceiver
         
     }
     
-    virtual void OnReceive(const std::string& data)
+    virtual void OnReceive(int id, const std::string& data)
     {
         std::cout << "please implement " << std::endl;
     }
 };
 
-class HttpClient
-{
+
+class HttpClient {
   public:
     HttpClient() = delete;
-    HttpClient(const std::string& url);
-    void RequestHttp(const std::string& url);
+    explicit HttpClient(const std::string& url);
+    void ansyRequestHttp(int id, const std::string& url);
 
     const std::string blockingRequestHttp(const std::string& url);
 
-    void RegistHttpReceiver(const std::unique_ptr<HttpReceiver> httpReceiver);
+    void RegistHttpReceiver(HttpReceiver* httpReceiver);
 
 
-    std::string MakeHttpHead(const Url& url);
+    static std::string MakeHttpHead(const Url& url);
 
   private:
-    void requestHttp(const Url& url, const std::string& httpContent);
-    
+    void requestHttp(int id, const Url& url);
+
   private:
     Url m_url;
-    std::unique_ptr<HttpReceiver> m_receiver;
+    HttpReceiver* m_receiver;
 };
 
-#endif 
+#endif
+

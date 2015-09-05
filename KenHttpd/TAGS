@@ -145,3 +145,162 @@ int getStdProtocol(42,1003
 
 ClientTest.cpp,15
 int main(6,88
+
+ThreadPool.hpp,382
+#define THREADPOOL_HPP_2,24
+class ThreadPool15,230
+	std::vector<std::thread> m_workThreads;ThreadPool::m_workThreads29,501
+	bool m_stop;ThreadPool::m_stop31,586
+	std::mutex m_queue_mutex;ThreadPool::m_queue_mutex34,610
+	std::condition_variable m_condition;ThreadPool::m_condition35,637
+		using returnType 46,1026
+	auto task 52,1471
+	std::future<returnType> res 56,1618
+
+HttpTest.cpp,17
+int main(21,212
+
+HttpClient.cpp,210
+HttpClient::HttpClient(18,264
+void HttpClient::requestHttp(23,354
+void HttpClient::RequestHttp(41,884
+const std::string HttpClient::blockingRequestHttp(52,1123
+std::string HttpClient::MakeHttpHead(67,1588
+
+HttpClient.hpp,369
+#define HTTP_CLIENT_HPP_4,27
+class HttpReceiver12,130
+    HttpReceiver(HttpReceiver::HttpReceiver15,161
+    virtual ~HttpReceiver(HttpReceiver::~HttpReceiver19,201
+    virtual void OnReceive(HttpReceiver::OnReceive24,255
+class HttpClient30,378
+    Url m_url;HttpClient::m_url48,819
+    std::unique_ptr<HttpReceiver> m_receiver;HttpClient::m_receiver49,834
+
+ServerSocket.cpp,376
+ServerSocket::ServerSocket(9,78
+ServerSocket::~ServerSocket(19,258
+void ServerSocket::StartServer(29,422
+void ServerSocket::StopServer(98,2387
+void ServerSocket::ResetServerParam(109,2624
+void ServerSocket::RestartServer(119,2799
+bool ServerSocket::IsServerRunning(126,2871
+void ServerSocket::SetServerListenMax(134,2973
+int ServerSocket::GetServerListenMax(139,3063
+
+ThreadPoolTest.cpp,15
+int main(6,83
+
+ServerSocket.hpp,487
+#define SERVERSOCKET_HPP_9,50
+class ServerSocket 21,238
+	std::unique_ptr<SocketParam> m_sp;ServerSocket::m_sp43,601
+	int m_listenMax;ServerSocket::m_listenMax44,637
+	int m_socketfd;ServerSocket::m_socketfd45,655
+	int m_clientsocketfd;ServerSocket::m_clientsocketfd46,672
+	struct sockaddr_in m_server_addr;ServerSocket::m_server_addr47,726
+	struct sockaddr_in m_client_addr;ServerSocket::m_client_addr48,761
+	bool m_hasStartedServer;ServerSocket::m_hasStartedServer49,836
+
+DNSUtil.cpp,58
+std::vector<std::string> DNSUtil::GetIPByHostName(18,272
+
+gethostbyname.cpp,110
+class DNSUtil21,296
+    static std::string GetIpByHostname(DNSUtil::GetIpByHostname24,322
+int main(43,755
+
+DNSUtil.hpp,46
+#define DNSUTIL_H13,143
+class DNSUtil19,219
+
+Test.cpp,43
+void PrintVector(48,876
+int main(55,1044
+
+SocketCommon.hpp,1649
+#define SOCKET_COMMON_HPP_7,49
+enum class Domain:Domain30,364
+	UNIX Domain::UNIX31,388
+	UNIX = 1, LOCAL Domain::LOCAL31,388
+	UNIX = 1, LOCAL = 11, INET Domain::INET31,388
+	UNIX = 1, LOCAL = 11, INET = 2, INET6 Domain::INET631,388
+	UNIX = 1, LOCAL = 11, INET = 2, INET6 = 3, IPX Domain::IPX31,388
+	NETLINK Domain::NETLINK32,441
+	NETLINK = 5, X25 Domain::X2532,441
+	NETLINK = 5, X25 = 6, AX25 Domain::AX2532,441
+	NETLINK = 5, X25 = 6, AX25 = 7, ATMPVC Domain::ATMPVC32,441
+	NETLINK = 5, X25 = 6, AX25 = 7, ATMPVC = 8, APPLETALK Domain::APPLETALK32,441
+	NETLINK = 5, X25 = 6, AX25 = 7, ATMPVC = 8, APPLETALK = 9, PACKET Domain::PACKET32,441
+enum class Type:Type36,527
+	STREAM Type::STREAM37,549
+	STREAM = 1, DGRAM Type::DGRAM37,549
+	STREAM = 1, DGRAM = 2, SEQPACKET Type::SEQPACKET37,549
+	STREAM = 1, DGRAM = 2, SEQPACKET = 3, RAW Type::RAW37,549
+	STREAM = 1, DGRAM = 2, SEQPACKET = 3, RAW = 4, RDM Type::RDM37,549
+	STREAM = 1, DGRAM = 2, SEQPACKET = 3, RAW = 4, RDM = 5, PACKET Type::PACKET37,549
+	STREAM = 1, DGRAM = 2, SEQPACKET = 3, RAW = 4, RDM = 5, PACKET = 6, NONBLOCK Type::NONBLOCK37,549
+	STREAM = 1, DGRAM = 2, SEQPACKET = 3, RAW = 4, RDM = 5, PACKET = 6, NONBLOCK = 7, CLOEXEC Type::CLOEXEC37,549
+enum class Protocol:Protocol41,658
+	DEFAULT Protocol::DEFAULT42,684
+struct SocketParam 45,702
+	std::string serverIp;SocketParam::serverIp46,723
+	int serverPort;SocketParam::serverPort47,777
+	Type type;SocketParam::type49,833
+	Protocol protocol;SocketParam::protocol50,863
+	SocketParam(SocketParam::SocketParam52,887
+typedef void (*HandleReceiveFuncPtr_T)HandleReceiveFuncPtr_T74,1322
+
+Url.hpp,263
+#define URL_HPP__11,147
+class Url16,186
+    std::string m_protocol;Url::m_protocol29,467
+    std::string m_host;Url::m_host30,495
+    std::string m_path;Url::m_path31,519
+    std::string m_port;Url::m_port32,566
+    std::string m_url;Url::m_url33,590
+
+ClientSocket.cpp,401
+ClientSocket::ClientSocket(12,108
+ClientSocket::~ClientSocket(19,262
+bool ClientSocket::Connect(28,412
+void ClientSocket::Disconnect(68,1753
+void ClientSocket::ResetSocketParam(83,2132
+int ClientSocket::Send(97,2422
+std::string ClientSocket::Receive(115,2896
+std::string ClientSocket::NoblockReceive(140,3718
+void ClientSocket::AsynReceive(163,4427
+bool ClientSocket::IsSocketAlive(176,4733
+
+ServerTest.cpp,15
+int main(6,88
+
+ThreadPool.cpp,61
+ThreadPool::ThreadPool(5,29
+ThreadPool::~ThreadPool(37,765
+
+ClientSocket.hpp,372
+#define CLIENTSOCKET_HPP_8,72
+class ClientSocket22,282
+	int m_socketfd;ClientSocket::m_socketfd55,807
+	std::unique_ptr<SocketParam> m_sp;ClientSocket::m_sp56,824
+	struct sockaddr_in m_server;ClientSocket::m_server57,860
+	bool m_hasConnected;ClientSocket::m_hasConnected58,890
+	std::unique_ptr<std::thread> m_receiverThread;ClientSocket::m_receiverThread60,959
+
+Url.cpp,198
+Url::Url(7,81
+Url::~Url(13,204
+void Url::setUrl(18,241
+std::string Url::getProtocol(54,1280
+std::string Url::getHost(60,1346
+std::string Url::getPath(65,1403
+std::string Url::getPort(71,1459
+
+SocketCommon.cpp,74
+int getStdDomain(7,55
+int getStdType(26,584
+int getStdProtocol(42,1003
+
+ClientTest.cpp,15
+int main(6,88

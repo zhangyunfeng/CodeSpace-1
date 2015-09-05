@@ -1,5 +1,5 @@
-
 /**
+   Copyright
  * @file   HttpTest.cpp
  * @author Ken <ken@ken-Ubuntu>
  * @date   Wed Aug 19 22:46:40 2015
@@ -11,29 +11,49 @@
 
 #include <iostream>
 #include <string>
-
 #include "HttpClient.hpp"
 
 
 
-
-
-int main(int argc, char *argv[])
+class SampleDataReceiver : public HttpReceiver
 {
+  public:
+    SampleDataReceiver() {
+        
+    }
+    virtual ~SampleDataReceiver() {
+        
+    }
 
-    std::string url = "http://128.199.103.33/data/2.5/weather?lat=35&lon=139";
-    //std::string url = "http://14.17.11.164/posts/id-2897.htm";
-    //std::string url = "http://182.92.110.58/openapi/api?key=KEY&info=abc";
-    HttpClient hc(url);
+    static SampleDataReceiver GetInstance() {
+        static SampleDataReceiver sd;
+        return sd;
+    }
+
+    // OnReceive(int id, const std::string& data);
+    void OnReceive(int id, const std::string& data) {
+        std::cout << "id: " << id << " ;data: " << data << std::endl;
+    }
+
+};
+
+
+
+int main(int argc, char *argv[]) {
+    // std::string url = "http://128.199.103.33/data/2.5/weather?lat=35&lon=139";
+    std::string url = "http://api.openweathermap.org/data/2.5/weather?lat=22.33&lon=114.06";
+
     Url u(url);
+    HttpClient hc(url);  // or HttpClient hc;
     
-    std::string head = hc.MakeHttpHead(u);
+    SampleDataReceiver sd;
+    hc.RegistHttpReceiver(&sd);
+    hc.ansyRequestHttp(1, url);
+    hc.ansyRequestHttp(2, url);
 
-    std::cout << head << std::endl;
-
-    std::string data = hc.blockingRequestHttp(url);
-    std::cout << data << std::endl;
-    
+    std::cout << "ENDNDNDNDDN" << std::endl;
+    int temp;
+    std::cin >> temp;
     return 0;
 }
 
