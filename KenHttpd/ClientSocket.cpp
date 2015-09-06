@@ -6,6 +6,7 @@
 #include <cassert>
 #include <thread>
 #include <fcntl.h>
+#include <string.h>
 #include "ClientSocket.hpp"
 
 
@@ -115,9 +116,9 @@ int ClientSocket::Send(const std::string& data)
 std::string ClientSocket::Receive()
 {
     if (!m_hasConnected) { // not connecting socket
-        assert("Do not conenct a server socket, you can't receive anything");
+        assert("Do not conenct to a server socket, you can't receive anything");
     }
-    const int kBufferSize = 512;
+    const int kBufferSize = 1024;
     std::string receivedData("");
     std::string retData("");
     char buffer[kBufferSize] = {0};
@@ -129,6 +130,7 @@ std::string ClientSocket::Receive()
         if (readBytesCount > 0) {
             receivedData.assign(buffer, readBytesCount);  //
             retData += receivedData;
+            memset(buffer, 0, kBufferSize);
         }
         if (readBytesCount < kBufferSize) { //FIXME: 当readBytesCount 是kBufferSize的整数倍时，会阻塞 直到server disconnect
             break;

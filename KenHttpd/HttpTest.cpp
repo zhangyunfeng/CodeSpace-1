@@ -12,7 +12,7 @@
 #include <iostream>
 #include <string>
 #include "HttpClient.hpp"
-
+#include "HttpResponseData.hpp"
 
 
 class SampleDataReceiver : public HttpReceiver
@@ -32,7 +32,12 @@ class SampleDataReceiver : public HttpReceiver
 
     // OnReceive(int id, const std::string& data);
     void OnReceive(int id, const std::string& data) {
-        std::cout << "id: " << id << " ;data: " << data << std::endl;
+        // std::cout << "id: " << id << " ;data: " << data << std::endl;
+
+        // std::cout << "HttpResponseData: " << std::endl;
+        HttpResponseData hrd(data);
+        std::cout << "HEADER: \n" << hrd.GetResponseHeader() << std::endl;
+        std::cout << "BODY: \n" << hrd.GetResponseBody() << std::endl;
     }
 
 };
@@ -41,8 +46,8 @@ class SampleDataReceiver : public HttpReceiver
 
 int main(int argc, char *argv[]) {
     // std::string url = "http://128.199.103.33/data/2.5/weather?lat=35&lon=139";
-    std::string url = "http://api.openweathermap.org/data/2.5/weather?lat=22.33&lon=114.06";
-
+    // std::string url = "http://api.openweathermap.org/data/2.5/weather?lat=22.33&lon=114.06";
+    std::string url = "http://www.tuling123.com/openapi/api?key=KEY&info=%E6%98%8E%E5%A4%A9%E5%8C%97%E4%BA%AC%E9%A3%9E%E6%8B%89%E8%90%A8%E7%9A%84%E9%A3%9E%E6%9C%BA";
     Url u(url);
     HttpClient hc(url);  // or HttpClient hc;
     
@@ -51,7 +56,7 @@ int main(int argc, char *argv[]) {
     hc.ansyRequestHttp(1, url);
     hc.ansyRequestHttp(2, url);
 
-    std::cout << "ENDNDNDNDDN" << std::endl;
+    // std::cout << "ENDNDNDNDDN" << std::endl;
     int temp;
     std::cin >> temp;
     return 0;

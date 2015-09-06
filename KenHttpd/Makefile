@@ -19,6 +19,8 @@ COMMONSRC := SocketCommon.hpp \
 	HttpClient.cpp \
 	DNSUtil.hpp \
 	DNSUtil.cpp \
+	HttpResponseData.hpp \
+	HttpResponseData.cpp \
 	HttpTest.cpp
 
 
