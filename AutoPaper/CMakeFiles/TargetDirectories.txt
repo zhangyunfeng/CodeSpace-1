@@ -1,0 +1,3 @@
+/home/ken/KenHttpd/AutoPaper/tinyxml/CMakeFiles/tinyxml_static.dir
+/home/ken/KenHttpd/AutoPaper/CMakeFiles/autopager.dir
+/home/ken/KenHttpd/AutoPaper/tinyxml/CMakeFiles/tinyxml.dir

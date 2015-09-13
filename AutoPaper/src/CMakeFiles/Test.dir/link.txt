@@ -1,0 +1,1 @@
+/usr/bin/c++    -std=c++11 -g   CMakeFiles/Test.dir/Test.cpp.o CMakeFiles/Test.dir/MiscUtils.cpp.o CMakeFiles/Test.dir/PdfCommonData.cpp.o CMakeFiles/Test.dir/PdfXmlLoader.cpp.o CMakeFiles/Test.dir/XmlLoader.cpp.o  -o Test  -L/home/ken/KenHttpd/AutoPaper/tinyxml -rdynamic -ltinyxml -Wl,-rpath,/home/ken/KenHttpd/AutoPaper/tinyxml 

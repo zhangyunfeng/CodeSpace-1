@@ -1,0 +1,6 @@
+<PDF name="test" page_layout="layout" font="Manoca" compress_mode="normal" page_mode="A4" owner="Ken" password="123456">
+  <Page x="10" y="20" width="100" height="100">
+    <include src="page.txt"></include>
+    <image src="img.png" x="20" y="20"/>
+  </Page>
+</PDF>
