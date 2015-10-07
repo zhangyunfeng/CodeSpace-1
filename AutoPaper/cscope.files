@@ -33,12 +33,16 @@ src/CMakeFiles/3.2.1/CompilerIdC/CMakeCCompilerId.c
 src/CMakeFiles/3.2.1/CompilerIdCXX/CMakeCXXCompilerId.cpp
 src/CMakeFiles/feature_tests.c
 src/CMakeFiles/feature_tests.cxx
+src/Constants.cpp
+src/Constants.hpp
 src/GlobalInclude.hpp
 src/MiscUtils.cpp
 src/MiscUtils.hpp
 src/PdfCommonData.cpp
 src/PdfCommonData.hpp
 src/PdfGeneratorEngine.cpp
+src/PdfGeneratorEngineHelper.cpp
+src/PdfGeneratorEngineHelper.hpp
 src/PdfGeneratorEngine.hpp
 src/PdfXmlLoader.cpp
 src/PdfXmlLoader.hpp

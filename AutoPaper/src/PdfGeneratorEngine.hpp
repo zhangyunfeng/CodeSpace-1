@@ -35,7 +35,7 @@ class PdfGeneratorEngine
   public:
     PdfGeneratorEngine();
     PdfGeneratorEngine(const std::string& xmlfile);
-    virtual ~PdfGeneratorEngine();
+    virtual ~PdfGeneratorEngine(); // HPDF_Free(m_hpdf_doc);
 
     void SetPdfXmlLoader(const PdfXmlLoader* pdfXmlLoader);
     void SetPdfTitle(const std::string& title);
@@ -49,6 +49,10 @@ class PdfGeneratorEngine
     void DrawRect(const RectProperties& rectProperties, HPDF_Page& page);
     void DrawText(const TextProperties& textProperties, HPDF_Page& page);
     void DrawImage(const ImageProperties& iamgeProperties, HPDF_Page& page);
+
+    void OnDrawPdf(void);
+
+    void SaveDoc(void);
     
     static void ErrorHandler(HPDF_STATUS error_no, HPDF_STATUS detail_no, void* user_data);
   private:

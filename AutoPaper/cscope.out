@@ -1,4 +1,4 @@
-cscope 15 $HOME/KenHttpd/AutoPaper               0000446262
+cscope 15 $HOME/KenHttpd/AutoPaper               0000452821
 	@CMakeFiles/3.2.1/CompilerIdC/CMakeCCompilerId.c
 
 1 #ifdeà
@@ -28287,6 +28287,220 @@ __GXX_EXPERIMENTAL_CXX0X__
 	}
 }
 
+	@src/Constants.cpp
+
+3 
+	~"CÚ¡ªts.hµ
+"
+
+6 cÚ¡ 
+	g¡d
+::
+¡ršg
+ 
+CÚ¡ªts
+::
+Com´essMode
+::
+NONE
+ = "none";
+
+7 cÚ¡ 
+	g¡d
+::
+¡ršg
+ 
+CÚ¡ªts
+::
+Com´essMode
+::
+TEXT
+ = "text";
+
+8 cÚ¡ 
+	g¡d
+::
+¡ršg
+ 
+CÚ¡ªts
+::
+Com´essMode
+::
+IMAGE
+ = "image";
+
+9 cÚ¡ 
+	g¡d
+::
+¡ršg
+ 
+CÚ¡ªts
+::
+Com´essMode
+::
+METADATA
+ = "meta";
+
+10 cÚ¡ 
+	g¡d
+::
+¡ršg
+ 
+CÚ¡ªts
+::
+Com´essMode
+::
+ALL
+ = "all";
+
+13 cÚ¡ 
+	g¡d
+::
+¡ršg
+ 
+CÚ¡ªts
+::
+PageMode
+::
+NONE
+ = "none";
+
+14 cÚ¡ 
+	g¡d
+::
+¡ršg
+ 
+CÚ¡ªts
+::
+PageMode
+::
+THUMBS
+ = "thumbs";
+
+15 cÚ¡ 
+	g¡d
+::
+¡ršg
+ 
+CÚ¡ªts
+::
+PageMode
+::
+OUTLINE
+ = "outline";
+
+16 cÚ¡ 
+	g¡d
+::
+¡ršg
+ 
+CÚ¡ªts
+::
+PageMode
+::
+FULL_SCREEN
+ = "full_screen";
+
+	@src/Constants.hpp
+
+11 
+	~<¡ršg
+>
+
+15 
+Çme¥aû
+ 
+	gCÚ¡ªts
+ {
+
+17 þas 
+	cCom´essMode
+
+
+19 
+	gpublic
+:
+
+20 cÚ¡ 
+¡d
+::
+¡ršg
+ 
+NONE
+;
+
+21 cÚ¡ 
+	g¡d
+::
+¡ršg
+ 
+TEXT
+;
+
+22 cÚ¡ 
+	g¡d
+::
+¡ršg
+ 
+IMAGE
+;
+
+23 cÚ¡ 
+	g¡d
+::
+¡ršg
+ 
+METADATA
+;
+
+24 cÚ¡ 
+	g¡d
+::
+¡ršg
+ 
+ALL
+ ;
+
+29 þas 
+	cPageMode
+
+
+31 
+	gpublic
+:
+
+32 cÚ¡ 
+¡d
+::
+¡ršg
+ 
+NONE
+;
+
+33 cÚ¡ 
+	g¡d
+::
+¡ršg
+ 
+OUTLINE
+;
+
+34 cÚ¡ 
+	g¡d
+::
+¡ršg
+ 
+THUMBS
+;
+
+35 cÚ¡ 
+	g¡d
+::
+¡ršg
+ 
+FULL_SCREEN
+;
+
 	@src/GlobalInclude.hpp
 
 12 #iâdeà
@@ -29263,11 +29477,11 @@ ATTR_OWNER
 ATTR_PASSWD
 ;
 
-64 
+65 
 	sLšePrÝ”t›s
  {
 
-65 
+66 
 	m¡d
 ::
 ¡ršg
@@ -29275,7 +29489,7 @@ ATTR_PASSWD
 ÏbË
 ;
 
-66 
+67 
 	m¡d
 ::
 ¡ršg
@@ -29283,7 +29497,7 @@ ATTR_PASSWD
 ¡¬tX
 ;
 
-67 
+68 
 	m¡d
 ::
 ¡ršg
@@ -29291,7 +29505,7 @@ ATTR_PASSWD
 ¡¬tY
 ;
 
-68 
+69 
 	m¡d
 ::
 ¡ršg
@@ -29299,7 +29513,7 @@ ATTR_PASSWD
 ’dX
 ;
 
-69 
+70 
 	m¡d
 ::
 ¡ršg
@@ -29307,7 +29521,7 @@ ATTR_PASSWD
 ’dY
 ;
 
-70 
+71 
 	m¡d
 ::
 ¡ršg
@@ -29315,7 +29529,7 @@ ATTR_PASSWD
 lšeWidth
 ;
 
-71 
+72 
 	m¡d
 ::
 ¡ršg
@@ -29323,7 +29537,7 @@ lšeWidth
 rgb
 ;
 
-72 
+73 
 	m¡d
 ::
 ¡ršg
@@ -29331,7 +29545,7 @@ rgb
 lšeTy³
 ;
 
-74 
+75 
 LšePrÝ”t›s
 (è: 
 ÏbË
@@ -29345,7 +29559,7 @@ LšePrÝ”t›s
 ’dY
 (""),
 
-75 
+76 
 lšeWidth
 ("1"), 
 rgb
@@ -29353,7 +29567,7 @@ rgb
 lšeTy³
 ("FILL") {
 
-79 cÚ¡ 
+80 cÚ¡ 
 	m¡d
 ::
 ¡ršg
@@ -29361,7 +29575,7 @@ lšeTy³
 TAG
 ;
 
-80 cÚ¡ 
+81 cÚ¡ 
 	m¡d
 ::
 ¡ršg
@@ -29369,7 +29583,7 @@ TAG
 ATTR_LABLE
 ;
 
-81 cÚ¡ 
+82 cÚ¡ 
 	m¡d
 ::
 ¡ršg
@@ -29377,7 +29591,7 @@ ATTR_LABLE
 ATTR_X0
 ;
 
-82 cÚ¡ 
+83 cÚ¡ 
 	m¡d
 ::
 ¡ršg
@@ -29385,7 +29599,7 @@ ATTR_X0
 ATTR_Y0
 ;
 
-83 cÚ¡ 
+84 cÚ¡ 
 	m¡d
 ::
 ¡ršg
@@ -29393,7 +29607,7 @@ ATTR_Y0
 ATTR_X1
 ;
 
-84 cÚ¡ 
+85 cÚ¡ 
 	m¡d
 ::
 ¡ršg
@@ -29401,7 +29615,7 @@ ATTR_X1
 ATTR_Y1
 ;
 
-85 cÚ¡ 
+86 cÚ¡ 
 	m¡d
 ::
 ¡ršg
@@ -29409,7 +29623,7 @@ ATTR_Y1
 ATTR_LINEWIDTH
 ;
 
-86 cÚ¡ 
+87 cÚ¡ 
 	m¡d
 ::
 ¡ršg
@@ -29417,7 +29631,7 @@ ATTR_LINEWIDTH
 ATTR_RGB
 ;
 
-87 cÚ¡ 
+88 cÚ¡ 
 	m¡d
 ::
 ¡ršg
@@ -29425,11 +29639,11 @@ ATTR_RGB
 ATTR_LINETYPE
 ;
 
-95 
+96 
 	sTextPrÝ”t›s
  {
 
-96 
+97 
 	m¡d
 ::
 ¡ršg
@@ -29437,7 +29651,7 @@ ATTR_LINETYPE
 fÚt
 ;
 
-97 
+98 
 	m¡d
 ::
 ¡ršg
@@ -29445,7 +29659,7 @@ fÚt
 size
 ;
 
-98 
+99 
 	m¡d
 ::
 ¡ršg
@@ -29453,7 +29667,7 @@ size
 rgb
 ;
 
-99 
+100 
 	m¡d
 ::
 ¡ršg
@@ -29461,7 +29675,7 @@ rgb
 ‹xt
 ;
 
-100 
+101 
 	m¡d
 ::
 ¡ršg
@@ -29469,7 +29683,7 @@ rgb
 ‹xtX
 ;
 
-101 
+102 
 	m¡d
 ::
 ¡ršg
@@ -29477,7 +29691,7 @@ rgb
 ‹xtY
 ;
 
-102 
+103 
 	m¡d
 ::
 ¡ršg
@@ -29485,7 +29699,7 @@ rgb
 šþudeDoc
 ;
 
-104 
+105 
 TextPrÝ”t›s
 (è: 
 fÚt
@@ -29495,7 +29709,7 @@ size
 rgb
 ("000000"),
 
-105 
+106 
 ‹xt
 (""), 
 ‹xtX
@@ -29505,20 +29719,12 @@ rgb
 šþudeDoc
 ("") {
 
-109 cÚ¡ 
-	m¡d
-::
-¡ršg
- 
-TAG
-;
-
 110 cÚ¡ 
 	m¡d
 ::
 ¡ršg
  
-ATTR_FONT
+TAG
 ;
 
 111 cÚ¡ 
@@ -29526,7 +29732,7 @@ ATTR_FONT
 ::
 ¡ršg
  
-ATTR_SIZE
+ATTR_FONT
 ;
 
 112 cÚ¡ 
@@ -29534,7 +29740,7 @@ ATTR_SIZE
 ::
 ¡ršg
  
-ATTR_RGB
+ATTR_SIZE
 ;
 
 113 cÚ¡ 
@@ -29542,7 +29748,7 @@ ATTR_RGB
 ::
 ¡ršg
  
-ATTR_INCLUDE
+ATTR_RGB
 ;
 
 114 cÚ¡ 
@@ -29550,7 +29756,7 @@ ATTR_INCLUDE
 ::
 ¡ršg
  
-ATTR_TEXTX
+ATTR_INCLUDE
 ;
 
 115 cÚ¡ 
@@ -29558,7 +29764,7 @@ ATTR_TEXTX
 ::
 ¡ršg
  
-ATTR_TEXTY
+ATTR_TEXTX
 ;
 
 116 cÚ¡ 
@@ -29566,14 +29772,22 @@ ATTR_TEXTY
 ::
 ¡ršg
  
+ATTR_TEXTY
+;
+
+117 cÚ¡ 
+	m¡d
+::
+¡ršg
+ 
 BODY_TEXT
 ;
 
-120 
+121 
 	sReùPrÝ”t›s
  {
 
-121 
+122 
 	m¡d
 ::
 ¡ršg
@@ -29581,7 +29795,7 @@ BODY_TEXT
 lšeWidth
 ;
 
-122 
+123 
 	m¡d
 ::
 ¡ršg
@@ -29589,7 +29803,7 @@ lšeWidth
 rgb
 ;
 
-123 
+124 
 	m¡d
 ::
 ¡ršg
@@ -29597,20 +29811,12 @@ rgb
 »ùStyË
 ;
 
-124 
-	m¡d
-::
-¡ršg
- 
-x
-;
-
 125 
 	m¡d
 ::
 ¡ršg
  
-y
+x
 ;
 
 126 
@@ -29618,7 +29824,7 @@ y
 ::
 ¡ršg
  
-width
+y
 ;
 
 127 
@@ -29626,15 +29832,15 @@ width
 ::
 ¡ršg
  
-height
+width
 ;
 
-129 cÚ¡ 
+128 
 	m¡d
 ::
 ¡ršg
  
-TAG
+height
 ;
 
 130 cÚ¡ 
@@ -29642,7 +29848,7 @@ TAG
 ::
 ¡ršg
  
-ATTR_LINEWIDTH
+TAG
 ;
 
 131 cÚ¡ 
@@ -29650,7 +29856,7 @@ ATTR_LINEWIDTH
 ::
 ¡ršg
  
-ATTR_RGB
+ATTR_LINEWIDTH
 ;
 
 132 cÚ¡ 
@@ -29658,7 +29864,7 @@ ATTR_RGB
 ::
 ¡ršg
  
-ATTR_STYLE
+ATTR_RGB
 ;
 
 133 cÚ¡ 
@@ -29666,7 +29872,7 @@ ATTR_STYLE
 ::
 ¡ršg
  
-ATTR_X
+ATTR_STYLE
 ;
 
 134 cÚ¡ 
@@ -29674,7 +29880,7 @@ ATTR_X
 ::
 ¡ršg
  
-ATTR_Y
+ATTR_X
 ;
 
 135 cÚ¡ 
@@ -29682,7 +29888,7 @@ ATTR_Y
 ::
 ¡ršg
  
-ATTR_WIDTH
+ATTR_Y
 ;
 
 136 cÚ¡ 
@@ -29690,14 +29896,22 @@ ATTR_WIDTH
 ::
 ¡ršg
  
+ATTR_WIDTH
+;
+
+137 cÚ¡ 
+	m¡d
+::
+¡ršg
+ 
 ATTR_HEIGHT
 ;
 
-140 
+141 
 	sImagePrÝ”t›s
  {
 
-141 
+142 
 	m¡d
 ::
 ¡ršg
@@ -29705,7 +29919,7 @@ ATTR_HEIGHT
 ¤c
 ;
 
-142 
+143 
 	m¡d
 ::
 ¡ršg
@@ -29713,7 +29927,7 @@ ATTR_HEIGHT
 x
 ;
 
-143 
+144 
 	m¡d
 ::
 ¡ršg
@@ -29721,7 +29935,7 @@ x
 y
 ;
 
-144 
+145 
 	m¡d
 ::
 ¡ršg
@@ -29729,20 +29943,12 @@ y
 width
 ;
 
-145 
+146 
 	m¡d
 ::
 ¡ršg
  
 height
-;
-
-147 cÚ¡ 
-	m¡d
-::
-¡ršg
- 
-TAG
 ;
 
 148 cÚ¡ 
@@ -29750,7 +29956,7 @@ TAG
 ::
 ¡ršg
  
-ATTR_SRC
+TAG
 ;
 
 149 cÚ¡ 
@@ -29758,7 +29964,7 @@ ATTR_SRC
 ::
 ¡ršg
  
-ATTR_X
+ATTR_SRC
 ;
 
 150 cÚ¡ 
@@ -29766,7 +29972,7 @@ ATTR_X
 ::
 ¡ršg
  
-ATTR_Y
+ATTR_X
 ;
 
 151 cÚ¡ 
@@ -29774,7 +29980,7 @@ ATTR_Y
 ::
 ¡ršg
  
-ATTR_WIDTH
+ATTR_Y
 ;
 
 152 cÚ¡ 
@@ -29782,18 +29988,26 @@ ATTR_WIDTH
 ::
 ¡ršg
  
+ATTR_WIDTH
+;
+
+153 cÚ¡ 
+	m¡d
+::
+¡ršg
+ 
 ATTR_HEIGHT
 ;
 
-161 
+162 
 	sPagePrÝ”t›s
  {
 
-162 
+163 
 	m·ge_id
  = 0;
 
-163 
+164 
 	m¡d
 ::
 ¡ršg
@@ -29801,7 +30015,7 @@ ATTR_HEIGHT
 width
 ;
 
-164 
+165 
 	m¡d
 ::
 ¡ršg
@@ -29809,7 +30023,7 @@ width
 height
 ;
 
-165 
+166 
 	m¡d
 ::
 ¡ršg
@@ -29817,7 +30031,7 @@ height
 ·ge_size
 ;
 
-166 
+167 
 	m¡d
 ::
 ¡ršg
@@ -29825,7 +30039,7 @@ height
 ·ge_rÙ©e
 ;
 
-167 
+168 
 	m¡d
 ::
 ¡ršg
@@ -29833,7 +30047,7 @@ height
 ªnÙ
 ;
 
-168 
+169 
 	m¡d
 ::
 ¡ršg
@@ -29841,7 +30055,7 @@ height
 ·geSlideShowTy³
 ;
 
-169 
+170 
 	m¡d
 ::
 ¡ršg
@@ -29849,7 +30063,7 @@ height
 fÚŠame
 ;
 
-171 
+172 
 	m¡d
 ::
 veùÜ
@@ -29859,7 +30073,7 @@ LšePrÝ”t›s
 lšesVec
 ;
 
-172 
+173 
 	m¡d
 ::
 veùÜ
@@ -29869,7 +30083,7 @@ TextPrÝ”t›s
 ‹xtVec
 ;
 
-173 
+174 
 	m¡d
 ::
 veùÜ
@@ -29879,7 +30093,7 @@ ReùPrÝ”t›s
 »ùVec
 ;
 
-174 
+175 
 	m¡d
 ::
 veùÜ
@@ -29889,7 +30103,7 @@ ImagePrÝ”t›s
 imagesVec
 ;
 
-176 
+177 
 PagePrÝ”t›s
 (è: 
 width
@@ -29901,19 +30115,19 @@ height
 ªnÙ
 (""),
 
-177 
+178 
 ·geSlideShowTy³
 (""), 
 fÚŠame
 ("") {
 
-180 
+181 
 S‘PageId
 (
 id
 ) {
 
-181 
+182 
 	mthis
 ->
 	m·ge_id
@@ -29921,20 +30135,12 @@ id
 id
 ;
 
-184 
+185 
 G‘PageId
 () {
 
-185  
+186  
 	m·ge_id
-;
-
-188 cÚ¡ 
-	m¡d
-::
-¡ršg
- 
-TAG
 ;
 
 189 cÚ¡ 
@@ -29942,7 +30148,7 @@ TAG
 ::
 ¡ršg
  
-ATTR_WIDTH
+TAG
 ;
 
 190 cÚ¡ 
@@ -29950,7 +30156,7 @@ ATTR_WIDTH
 ::
 ¡ršg
  
-ATTR_HEIGHT
+ATTR_WIDTH
 ;
 
 191 cÚ¡ 
@@ -29958,7 +30164,7 @@ ATTR_HEIGHT
 ::
 ¡ršg
  
-ATTR_PAGESIZE
+ATTR_HEIGHT
 ;
 
 192 cÚ¡ 
@@ -29966,7 +30172,7 @@ ATTR_PAGESIZE
 ::
 ¡ršg
  
-ATTR_PAGEROTATE
+ATTR_PAGESIZE
 ;
 
 193 cÚ¡ 
@@ -29974,7 +30180,7 @@ ATTR_PAGEROTATE
 ::
 ¡ršg
  
-ATTR_ANNOT
+ATTR_PAGEROTATE
 ;
 
 194 cÚ¡ 
@@ -29982,10 +30188,18 @@ ATTR_ANNOT
 ::
 ¡ršg
  
-ATTR_SLIDESHOWTYPE
+ATTR_ANNOT
 ;
 
 195 cÚ¡ 
+	m¡d
+::
+¡ršg
+ 
+ATTR_SLIDESHOWTYPE
+;
+
+196 cÚ¡ 
 	m¡d
 ::
 ¡ršg
@@ -29998,6 +30212,298 @@ ATTR_FONT
 12 
 	~"PdfG’”©ÜEngše.hµ
 "
+
+13 
+	~"PdfG’”©ÜEngšeH–³r.hµ
+"
+
+15 
+jmp_buf
+ 
+	gPdfG’”©ÜEngše
+::
+’v
+;
+
+17 
+	gPdfG’”©ÜEngše
+::
+	$PdfG’”©ÜEngše
+() {
+
+18 
+	`š™
+();
+
+19 
+	}
+}
+
+21 
+	gPdfG’”©ÜEngše
+::
+	$PdfG’”©ÜEngše
+(cÚ¡ 
+¡d
+::
+¡ršg
+& 
+xmlfže
+è: 
+	$m_xmlfže
+(
+xmlfže
+){
+
+22 
+	`š™
+();
+
+23 
+	}
+}
+
+26 
+	gPdfG’”©ÜEngše
+::
+	$š™
+() {
+
+27 
+m_pdfXmlLßd”
+ = 
+Ãw
+ 
+	`PdfXmlLßd”
+();
+
+28 
+m_hpdf_doc
+ = 
+	`HPDF_New
+(&
+PdfG’”©ÜEngše
+::
+E¼ÜHªdËr
+, 
+nuÎ±r
+);
+
+29 ià(!
+m_hpdf_doc
+) {
+
+30 
+¡d
+::
+û¼
+ << "E¼Ü: Cª‚Ù c»©PdfDoøobbjeù" << std::
+’dl
+;
+
+34 ià(
+	`£tjmp
+(
+’v
+)) {
+
+35 
+	`HPDF_F»e
+(
+m_hpdf_doc
+);
+
+36 
+	`abÜt
+();
+
+38 
+	}
+}
+
+40 
+	gPdfG’”©ÜEngše
+::
+	$LßdXml
+() {
+
+41 ià(! 
+m_xmlfže
+.
+	`em±y
+(è&& 
+m_pdfXmlLßd”
+) {
+
+42 
+m_pdfXmlLßd”
+->
+	`LßdXml
+(
+m_xmlfže
+);
+
+44 
+	}
+}
+
+46 
+	gPdfG’”©ÜEngše
+::
+	$E¼ÜHªdËr
+(
+HPDF_STATUS
+ 
+”rÜ_no
+, HPDF_STATUS 
+d‘až_no
+, * 
+u£r_d©a
+) {
+
+47 
+	`´štf
+("ERROR:ƒ¼Ü_no=%04X, d‘až_no=%u\n", (
+HPDF_UINT
+)
+”rÜ_no
+, (HPDF_UINT)
+d‘až_no
+);
+
+48 
+	`lÚgjmp
+(
+’v
+, 1);
+
+49 
+	}
+}
+
+51 
+	gPdfG’”©ÜEngše
+::
+	$S‘Xml
+(cÚ¡ 
+¡d
+::
+¡ršg
+& 
+xmlfže
+) {
+
+52 
+m_xmlfže
+ = 
+xmlfže
+;
+
+53 
+	`HPDF_F»e
+(
+m_hpdf_doc
+);
+
+54 ià(
+m_pdfXmlLßd”
+) {
+
+55 
+d–‘e
+ 
+m_pdfXmlLßd”
+;
+
+56 
+m_pdfXmlLßd”
+ = 
+nuÎ±r
+;
+
+58 
+m_pdfXmlLßd”
+ = 
+Ãw
+ 
+	`PdfXmlLßd”
+();
+
+59 ià(
+m_pdfXmlLßd”
+) {
+
+60 
+m_pdfXmlLßd”
+->
+	`LßdXml
+(
+m_xmlfže
+);
+
+62 
+	}
+}
+
+64 
+	gPdfG’”©ÜEngše
+::
+	$CÚfigPdfPrÝ”t›s
+(cÚ¡ 
+PdfPrÝ”t›s
+& 
+pdfPrÝ”t›s
+) {
+
+65 ià(
+m_hpdf_doc
+) {
+
+67 
+	`HPDF_U£CNSFÚts
+(
+m_hpdf_doc
+);
+
+70 
+¡d
+::
+¡ršg
+ 
+com´ess_mode
+ = 
+pdfPrÝ”t›s
+.compress_mode;
+
+71 
+	`HPDF_S‘Com´essiÚMode
+(
+m_hpdf_doc
+, 
+PdfG’”©ÜEngšeH–³r
+::
+	`G‘Com´essMode
+(
+com´ess_mode
+));
+
+72 
+	`HPDF_S‘PageMode
+(
+m_hpdf_doc
+, 
+PdfG’”©ÜEngšeH–³r
+::
+	`G‘PageMode
+(
+pdfPrÝ”t›s
+.
+·ge_mode
+));
+
+74 
+	}
+}
 
 	@src/PdfGeneratorEngine.hpp
 
@@ -30015,33 +30521,67 @@ PDFGENERATORENGINE_H
 	~<memÜy
 >
 
+16 
+	~<veùÜ
+>
+
 17 
+	~<¡ršg
+>
+
+19 #ifdeà
+__CPLUSPLUS
+
+
+23 
+	~<£tjmp.h
+>
+
+25 #ifdeà
+__CPLUSPLUS
+
+
+29 
 	~"PdfXmlLßd”.hµ
 "
 
-18 
+30 
 	~"../libh¬u/šþude/hpdf.h
 "
 
-20 þas 
+31 
+	~"PdfCommÚD©a.hµ
+"
+
+33 þas 
 	cPdfG’”©ÜEngše
 
 
-22 
-	mpublic
+35 
+public
 :
 
-23 
+36 
 PdfG’”©ÜEngše
 ();
 
-24 
-	mvœtu®
+37 
+PdfG’”©ÜEngše
+(cÚ¡ 
+¡d
+::
+¡ršg
+& 
+xmlfže
+);
+
+38 
+vœtu®
  ~
 PdfG’”©ÜEngše
 ();
 
-26 
+40 
 S‘PdfXmlLßd”
 (cÚ¡ 
 PdfXmlLßd”
@@ -30049,25 +30589,435 @@ PdfXmlLßd”
 pdfXmlLßd”
 );
 
-28 
-	m´iv©e
+41 
+S‘PdfT™Ë
+(cÚ¡ 
+¡d
+::
+¡ršg
+& 
+t™Ë
+);
+
+42 
+LßdXml
+();
+
+43 
+S‘Xml
+(cÚ¡ 
+¡d
+::
+¡ršg
+& 
+xmlfže
+);
+
+45 
+CÚfigPdfPrÝ”t›s
+(cÚ¡ 
+PdfPrÝ”t›s
+& 
+pdfPrÝ”t›s
+);
+
+46 
+D¿wPage
+(cÚ¡ 
+PagePrÝ”t›s
+& 
+·gePrÝ”t›s
+);
+
+48 
+D¿wLše
+(cÚ¡ 
+LšePrÝ”t›s
+& 
+lšePrÝ”t›s
+, 
+HPDF_Page
+& 
+·ge
+);
+
+49 
+D¿wReù
+(cÚ¡ 
+ReùPrÝ”t›s
+& 
+»ùPrÝ”t›s
+, 
+HPDF_Page
+& 
+·ge
+);
+
+50 
+D¿wText
+(cÚ¡ 
+TextPrÝ”t›s
+& 
+‹xtPrÝ”t›s
+, 
+HPDF_Page
+& 
+·ge
+);
+
+51 
+D¿wImage
+(cÚ¡ 
+ImagePrÝ”t›s
+& 
+ŸmgePrÝ”t›s
+, 
+HPDF_Page
+& 
+·ge
+);
+
+53 
+SaveDoc
+();
+
+55 
+E¼ÜHªdËr
+(
+HPDF_STATUS
+ 
+”rÜ_no
+, HPDF_STATUS 
+d‘až_no
+, * 
+u£r_d©a
+);
+
+56 
+´iv©e
 :
 
-29 
+57 
+š™
+();
+
+59 
+´iv©e
+:
+
+60 
+¡d
+::
+¡ršg
+ 
+m_xmlfže
+;
+
+61 
 PdfXmlLßd”
 * 
 m_pdfXmlLßd”
 ;
 
-30 
-	m¡d
+62 
+¡d
 ::
-unique_±r
-<
+¡ršg
+ 
+m_pdfT™Ë
+;
+
+63 
 HPDF_Doc
-> 
+ 
 m_hpdf_doc
 ;
+
+64 
+¡d
+::
+veùÜ
+<
+HPDF_Page
+> 
+m_·ges
+;
+
+66 
+jmp_buf
+ 
+’v
+;
+
+	@src/PdfGeneratorEngineHelper.cpp
+
+11 
+	~"../libh¬u/šþude/hpdf.h
+"
+
+13 
+	~"CÚ¡ªts.hµ
+"
+
+14 
+	~"PdfG’”©ÜEngšeH–³r.hµ
+"
+
+25 
+HPDF_UINT
+ 
+	gPdfG’”©ÜEngšeH–³r
+::
+	$G‘Com´essMode
+(
+¡d
+::
+¡ršg
+& 
+com´ess_mode
+) {
+
+26 ià(
+CÚ¡ªts
+::
+Com´essMode
+::
+ALL
+.
+	`com·»
+(
+com´ess_mode
+) == 0) {
+
+27  
+HPDF_COMP_ALL
+;
+
+29 ià(
+CÚ¡ªts
+.
+Com´essMode
+::
+NONE
+.
+	`com·»
+(
+com´ess_mode
+) == 0) {
+
+30  
+HPDF_COMP_NONE
+;
+
+32 ià(
+CÚ¡ªts
+.
+Com´essMode
+::
+TEXT
+.
+	`com·»
+(
+com´ess_mode
+) == 0) {
+
+33  
+HPDF_COMP_TEXT
+;
+
+35 ià(
+CÚ¡ªts
+.
+Com´essMode
+::
+IMAGE
+.
+	`com·»
+(
+com´ess_mode
+) == 0) {
+
+36  
+HPDF_COMP_IMAGE
+;
+
+38 ià(
+CÚ¡ªts
+.
+Com´essMode
+::
+METADATA
+.
+	`com·»
+(
+com´ess_mode
+) == 0) {
+
+39  
+HPDF_COMP_METADATA
+;
+
+41  
+HPDF_COMP_NONE
+;
+
+42 
+	}
+}
+
+44 
+HPDF_UINT
+ 
+	gPdfG’”©ÜEngšeH–³r
+::
+	$G‘PageMode
+(cÚ¡ 
+¡d
+::
+¡ršg
+& 
+·ge_mode
+) {
+
+45 ià(
+CÚ¡ªts
+::
+PageMode
+::
+NONE
+.
+	`com·»
+(
+·ge_mode
+) == 0) {
+
+46  
+HPDF_PAGE_MODE_USE_NONE
+;
+
+48 ià(
+CÚ¡ªts
+::
+PageMode
+::
+THUMBS
+.
+	`com·»
+(
+·ge_mode
+) == 0) {
+
+49  
+HPDF_PAGE_MODE_USE_THUMBS
+;
+
+51 ià(
+CÚ¡ªts
+::
+PageMode
+::
+OUTLINE
+.
+	`com·»
+(
+·ge_mode
+) == 0) {
+
+52  
+HPDF_PAGE_MODE_USE_OUTLINE
+;
+
+54 ià(
+CÚ¡ªts
+::
+PageMode
+::
+FULL_SCREEN
+.
+	`com·»
+(
+·ge_mode
+) == 0) {
+
+55  
+HPDF_PAGE_MODE_USE_FULL_SCREEN
+;
+
+57  
+HPDF_PAGE_MODE_USE_NONE
+;
+
+58 
+	}
+}
+
+	@src/PdfGeneratorEngineHelper.hpp
+
+12 #iâdeà
+PDFGENERATORENGINEHELPER_H
+
+
+13 
+	#PDFGENERATORENGINEHELPER_H
+
+
+	)
+
+15 
+	~<¡ršg
+>
+
+16 
+	~"../libh¬u/šþude/hpdf.h
+"
+
+18 þas 
+	cPdfG’”©ÜEngšeH–³r
+
+
+20 
+	m´iv©e
+:
+
+21 
+	$PdfG’”©ÜEngšeH–³r
+(){}
+
+22 
+vœtu®
+ ~
+	$PdfG’”©ÜEngšeH–³r
+(){
+	}
+}
+
+23 
+public
+:
+
+24 
+HPDF_UINT
+ 
+G‘Com´essMode
+(cÚ¡ 
+¡d
+::
+¡ršg
+& 
+com´ess_mode
+);
+
+25 
+HPDF_UINT
+ 
+G‘PageMode
+(cÚ¡ 
+¡d
+::
+¡ršg
+& 
+·ge_mode
+);
 
 	@src/PdfXmlLoader.cpp
 
@@ -59611,6 +60561,214 @@ __v
 	g__END_DECLS
 
 
+	@/usr/include/setjmp.h
+
+22 #iâdef 
+_SETJMP_H
+
+
+23 
+	#_SETJMP_H
+ 1
+
+	)
+
+25 
+	~<ã©u»s.h
+>
+
+27 
+	g__BEGIN_DECLS
+
+
+29 
+	~<b™s/£tjmp.h
+>
+
+30 
+	~<b™s/sig£t.h
+>
+
+34 
+	s__jmp_buf_g
+
+
+40 
+__jmp_buf
+ 
+	m__jmpbuf
+;
+
+41 
+	m__mask_was_§ved
+;
+
+42 
+__sig£t_t
+ 
+	m__§ved_mask
+;
+
+46 
+__BEGIN_NAMESPACE_STD
+
+
+48 
+__jmp_buf_g
+ 
+	tjmp_buf
+[1];
+
+52 
+	$£tjmp
+ (
+jmp_buf
+ 
+__’v
+è
+__THROWNL
+;
+
+54 
+__END_NAMESPACE_STD
+
+
+59 
+	$__sig£tjmp
+ (
+__jmp_buf_g
+ 
+__’v
+[1], 
+__§vemask
+è
+__THROWNL
+;
+
+63 
+	$_£tjmp
+ (
+__jmp_buf_g
+ 
+__’v
+[1]è
+__THROWNL
+;
+
+67 
+	#£tjmp
+(
+’v
+è
+	`_£tjmp
+ (’v)
+
+	)
+
+70 
+__BEGIN_NAMESPACE_STD
+
+
+74 
+	$lÚgjmp
+ (
+__jmp_buf_g
+ 
+__’v
+[1], 
+__v®
+)
+
+75 
+__THROWNL
+ 
+	`__©Œibu‹__
+ ((
+__nÜ‘uº__
+));
+
+77 
+__END_NAMESPACE_STD
+
+
+79 #ià
+defšed
+ 
+__USE_BSD
+ || defšed 
+__USE_XOPEN
+
+
+83 
+	$_lÚgjmp
+ (
+__jmp_buf_g
+ 
+__’v
+[1], 
+__v®
+)
+
+84 
+__THROWNL
+ 
+	`__©Œibu‹__
+ ((
+__nÜ‘uº__
+));
+
+88 #ifdef 
+__USE_POSIX
+
+
+92 
+__jmp_buf_g
+ 
+	tsigjmp_buf
+[1];
+
+96 
+	#sig£tjmp
+(
+’v
+, 
+§vemask
+è
+	`__sig£tjmp
+ (’v, savemask)
+
+	)
+
+102 
+	$siglÚgjmp
+ (
+sigjmp_buf
+ 
+__’v
+, 
+__v®
+)
+
+103 
+__THROWNL
+ 
+	`__©Œibu‹__
+ ((
+__nÜ‘uº__
+));
+
+108 #ià
+__USE_FORTIFY_LEVEL
+ > 0
+
+109 
+	~<b™s/£tjmp2.h
+>
+
+112 
+__END_DECLS
+
+
 	@/usr/include/stdio.h
 
 23 #iâdeà
@@ -76744,8 +77902,8 @@ __END_DECLS
 .
 1
 /usr/include
-74
-2067
+79
+2191
 CMakeFiles/3.2.1/CompilerIdC/CMakeCCompilerId.c
 CMakeFiles/3.2.1/CompilerIdCXX/CMakeCXXCompilerId.cpp
 CMakeFiles/feature_tests.c
@@ -76781,6 +77939,8 @@ src/CMakeFiles/3.2.1/CompilerIdC/CMakeCCompilerId.c
 src/CMakeFiles/3.2.1/CompilerIdCXX/CMakeCXXCompilerId.cpp
 src/CMakeFiles/feature_tests.c
 src/CMakeFiles/feature_tests.cxx
+src/Constants.cpp
+src/Constants.hpp
 src/GlobalInclude.hpp
 src/MiscUtils.cpp
 src/MiscUtils.hpp
@@ -76788,6 +77948,8 @@ src/PdfCommonData.cpp
 src/PdfCommonData.hpp
 src/PdfGeneratorEngine.cpp
 src/PdfGeneratorEngine.hpp
+src/PdfGeneratorEngineHelper.cpp
+src/PdfGeneratorEngineHelper.hpp
 src/PdfXmlLoader.cpp
 src/PdfXmlLoader.hpp
 src/Test.cpp
@@ -76806,6 +77968,7 @@ tinyxml/tinyxmlparser.cpp
 /usr/include/assert.h
 /usr/include/ctype.h
 /usr/include/math.h
+/usr/include/setjmp.h
 /usr/include/stdio.h
 /usr/include/stdlib.h
 /usr/include/string.h

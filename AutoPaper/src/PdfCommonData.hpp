@@ -57,6 +57,7 @@ struct PdfProperties {
 
 
 
+
 /**
  *Draw line properties
  *
@@ -194,6 +195,8 @@ struct PageProperties {  //
     static const std::string ATTR_SLIDESHOWTYPE;
     static const std::string ATTR_FONT;
 };
+
+
 
 
 #endif /* PDFCOMMONDATA_H */
