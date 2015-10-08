@@ -40,8 +40,8 @@ struct PdfProperties {
     std::string password; // 文档密码
 
     // Note: 因为参数较多，所以索性不提供所有参数的构造函数
-    PdfProperties() : page_layout(""), fontname(""), compress_mode(""),
-                      page_mode(""), owner(""), password(""), docname("untitle") {
+    PdfProperties() : page_layout(""), fontname("Monaco"), compress_mode(""),
+                      page_mode(""), owner(""), password(""), docname("untitle.pdf") {
         
     }
 
@@ -72,7 +72,7 @@ struct LineProperties {
     std::string rgb;
     std::string lineType;  // 圆角  方角直线
     
-    LineProperties() : lable(""), startX(""), startY(""), endX(""), endY(""),
+    LineProperties() : lable(""), startX("0"), startY("0"), endX("0"), endY("0"),
                        lineWidth("1"), rgb("000000"), lineType("FILL") {
         
     }
@@ -102,8 +102,8 @@ struct TextProperties {
     std::string textY;
     std::string includeDoc;
     
-    TextProperties() : font(""), size("12"), rgb("000000"),
-                       text(""), textX(""), textY(""), includeDoc("") {
+    TextProperties() : font("Monaco"), size("12"), rgb("000000"),
+                       text("hello"), textX("0"), textY("0"), includeDoc("") {
         
     }
 
@@ -127,6 +127,8 @@ struct RectProperties {
     std::string width;      // 矩形的宽
     std::string height;     // 矩形的高
 
+    RectProperties() : lineWidth("1"), rgb("000000"), rectStyle(""), x("0"), y("0"), width("0"), height("0") {}
+
     static const std::string TAG;
     static const std::string ATTR_LINEWIDTH;
     static const std::string ATTR_RGB;
@@ -144,6 +146,8 @@ struct ImageProperties {
     std::string y;
     std::string width;  // 图像绘制时的宽
     std::string height; // 图像绘制时的高
+
+    ImageProperties() : src(""), x("0"), y("0"), width("0"), height("0") {}
 
     static const std::string TAG;
     static const std::string ATTR_SRC;
@@ -174,8 +178,8 @@ struct PageProperties {  //
     std::vector<RectProperties> rectVec;   // rects
     std::vector<ImageProperties> imagesVec;  // images
 
-    PageProperties() : width(""), height(""), page_rotate(""), annot(""),
-                       pageSlideShowType(""), fontname("") {
+    PageProperties() : width("0"), height("0"), page_rotate("0"), annot(""),
+                       pageSlideShowType(""), fontname("Monaco") {
     }
 
     void SetPageId(int id) {

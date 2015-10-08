@@ -175,6 +175,9 @@ CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 //Single output directory for building all executables.
 EXECUTABLE_OUTPUT_PATH:PATH=
 
+//Path to a library.
+HPDF_LIBRARY:FILEPATH=HPDF_LIBRARY-NOTFOUND
+
 //Single output directory for building all libraries.
 LIBRARY_OUTPUT_PATH:PATH=
 
@@ -183,6 +186,12 @@ TEST_BINARY_DIR:STATIC=/home/ken/KenHttpd/AutoPaper/src
 
 //Value Computed by CMake
 TEST_SOURCE_DIR:STATIC=/home/ken/KenHttpd/AutoPaper/src
+
+//Path to a library.
+hpdf:FILEPATH=hpdf-NOTFOUND
+
+//Dependencies for target
+hpdf_LIB_DEPENDS:STATIC=
 
 //The directory containing a CMake configuration file for tinyxml.
 tinyxml_DIR:PATH=tinyxml_DIR-NOTFOUND

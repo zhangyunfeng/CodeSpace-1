@@ -8,6 +8,9 @@
  * 
  */
 
+#ifndef CONSTANTS_H
+#define CONSTANTS_H
+
 #include <string>
 
 // PDF
@@ -36,3 +39,7 @@ class PageMode
 };
 
 };
+
+
+#endif /* CONSTANTS_H */
+

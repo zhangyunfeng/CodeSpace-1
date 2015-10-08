@@ -37,7 +37,7 @@ class PdfGeneratorEngine
     PdfGeneratorEngine(const std::string& xmlfile);
     virtual ~PdfGeneratorEngine(); // HPDF_Free(m_hpdf_doc);
 
-    void SetPdfXmlLoader(const PdfXmlLoader* pdfXmlLoader);
+    void SetPdfXmlLoader(PdfXmlLoader* pdfXmlLoader);
     void SetPdfTitle(const std::string& title);
     void LoadXml(void);
     void SetXml(const std::string& xmlfile);

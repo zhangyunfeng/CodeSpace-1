@@ -4,6 +4,9 @@ file(REMOVE_RECURSE
   "CMakeFiles/Test.dir/PdfCommonData.cpp.o"
   "CMakeFiles/Test.dir/PdfXmlLoader.cpp.o"
   "CMakeFiles/Test.dir/XmlLoader.cpp.o"
+  "CMakeFiles/Test.dir/PdfGeneratorEngineHelper.cpp.o"
+  "CMakeFiles/Test.dir/PdfGeneratorEngine.cpp.o"
+  "CMakeFiles/Test.dir/Constants.cpp.o"
   "Test.pdb"
   "Test"
 )

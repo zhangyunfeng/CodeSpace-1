@@ -164,13 +164,85 @@ CMakeFiles/Test.dir/XmlLoader.cpp.o.provides: CMakeFiles/Test.dir/XmlLoader.cpp.
 
 CMakeFiles/Test.dir/XmlLoader.cpp.o.provides.build: CMakeFiles/Test.dir/XmlLoader.cpp.o
 
+CMakeFiles/Test.dir/PdfGeneratorEngineHelper.cpp.o: CMakeFiles/Test.dir/flags.make
+CMakeFiles/Test.dir/PdfGeneratorEngineHelper.cpp.o: PdfGeneratorEngineHelper.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ken/KenHttpd/AutoPaper/src/CMakeFiles $(CMAKE_PROGRESS_6)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Test.dir/PdfGeneratorEngineHelper.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Test.dir/PdfGeneratorEngineHelper.cpp.o -c /home/ken/KenHttpd/AutoPaper/src/PdfGeneratorEngineHelper.cpp
+
+CMakeFiles/Test.dir/PdfGeneratorEngineHelper.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Test.dir/PdfGeneratorEngineHelper.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ken/KenHttpd/AutoPaper/src/PdfGeneratorEngineHelper.cpp > CMakeFiles/Test.dir/PdfGeneratorEngineHelper.cpp.i
+
+CMakeFiles/Test.dir/PdfGeneratorEngineHelper.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test.dir/PdfGeneratorEngineHelper.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ken/KenHttpd/AutoPaper/src/PdfGeneratorEngineHelper.cpp -o CMakeFiles/Test.dir/PdfGeneratorEngineHelper.cpp.s
+
+CMakeFiles/Test.dir/PdfGeneratorEngineHelper.cpp.o.requires:
+.PHONY : CMakeFiles/Test.dir/PdfGeneratorEngineHelper.cpp.o.requires
+
+CMakeFiles/Test.dir/PdfGeneratorEngineHelper.cpp.o.provides: CMakeFiles/Test.dir/PdfGeneratorEngineHelper.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/PdfGeneratorEngineHelper.cpp.o.provides.build
+.PHONY : CMakeFiles/Test.dir/PdfGeneratorEngineHelper.cpp.o.provides
+
+CMakeFiles/Test.dir/PdfGeneratorEngineHelper.cpp.o.provides.build: CMakeFiles/Test.dir/PdfGeneratorEngineHelper.cpp.o
+
+CMakeFiles/Test.dir/PdfGeneratorEngine.cpp.o: CMakeFiles/Test.dir/flags.make
+CMakeFiles/Test.dir/PdfGeneratorEngine.cpp.o: PdfGeneratorEngine.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ken/KenHttpd/AutoPaper/src/CMakeFiles $(CMAKE_PROGRESS_7)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Test.dir/PdfGeneratorEngine.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Test.dir/PdfGeneratorEngine.cpp.o -c /home/ken/KenHttpd/AutoPaper/src/PdfGeneratorEngine.cpp
+
+CMakeFiles/Test.dir/PdfGeneratorEngine.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Test.dir/PdfGeneratorEngine.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ken/KenHttpd/AutoPaper/src/PdfGeneratorEngine.cpp > CMakeFiles/Test.dir/PdfGeneratorEngine.cpp.i
+
+CMakeFiles/Test.dir/PdfGeneratorEngine.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test.dir/PdfGeneratorEngine.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ken/KenHttpd/AutoPaper/src/PdfGeneratorEngine.cpp -o CMakeFiles/Test.dir/PdfGeneratorEngine.cpp.s
+
+CMakeFiles/Test.dir/PdfGeneratorEngine.cpp.o.requires:
+.PHONY : CMakeFiles/Test.dir/PdfGeneratorEngine.cpp.o.requires
+
+CMakeFiles/Test.dir/PdfGeneratorEngine.cpp.o.provides: CMakeFiles/Test.dir/PdfGeneratorEngine.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/PdfGeneratorEngine.cpp.o.provides.build
+.PHONY : CMakeFiles/Test.dir/PdfGeneratorEngine.cpp.o.provides
+
+CMakeFiles/Test.dir/PdfGeneratorEngine.cpp.o.provides.build: CMakeFiles/Test.dir/PdfGeneratorEngine.cpp.o
+
+CMakeFiles/Test.dir/Constants.cpp.o: CMakeFiles/Test.dir/flags.make
+CMakeFiles/Test.dir/Constants.cpp.o: Constants.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ken/KenHttpd/AutoPaper/src/CMakeFiles $(CMAKE_PROGRESS_8)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Test.dir/Constants.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Test.dir/Constants.cpp.o -c /home/ken/KenHttpd/AutoPaper/src/Constants.cpp
+
+CMakeFiles/Test.dir/Constants.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Test.dir/Constants.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ken/KenHttpd/AutoPaper/src/Constants.cpp > CMakeFiles/Test.dir/Constants.cpp.i
+
+CMakeFiles/Test.dir/Constants.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test.dir/Constants.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ken/KenHttpd/AutoPaper/src/Constants.cpp -o CMakeFiles/Test.dir/Constants.cpp.s
+
+CMakeFiles/Test.dir/Constants.cpp.o.requires:
+.PHONY : CMakeFiles/Test.dir/Constants.cpp.o.requires
+
+CMakeFiles/Test.dir/Constants.cpp.o.provides: CMakeFiles/Test.dir/Constants.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/Constants.cpp.o.provides.build
+.PHONY : CMakeFiles/Test.dir/Constants.cpp.o.provides
+
+CMakeFiles/Test.dir/Constants.cpp.o.provides.build: CMakeFiles/Test.dir/Constants.cpp.o
+
 # Object files for target Test
 Test_OBJECTS = \
 "CMakeFiles/Test.dir/Test.cpp.o" \
 "CMakeFiles/Test.dir/MiscUtils.cpp.o" \
 "CMakeFiles/Test.dir/PdfCommonData.cpp.o" \
 "CMakeFiles/Test.dir/PdfXmlLoader.cpp.o" \
-"CMakeFiles/Test.dir/XmlLoader.cpp.o"
+"CMakeFiles/Test.dir/XmlLoader.cpp.o" \
+"CMakeFiles/Test.dir/PdfGeneratorEngineHelper.cpp.o" \
+"CMakeFiles/Test.dir/PdfGeneratorEngine.cpp.o" \
+"CMakeFiles/Test.dir/Constants.cpp.o"
 
 # External object files for target Test
 Test_EXTERNAL_OBJECTS =
@@ -180,6 +252,9 @@ Test: CMakeFiles/Test.dir/MiscUtils.cpp.o
 Test: CMakeFiles/Test.dir/PdfCommonData.cpp.o
 Test: CMakeFiles/Test.dir/PdfXmlLoader.cpp.o
 Test: CMakeFiles/Test.dir/XmlLoader.cpp.o
+Test: CMakeFiles/Test.dir/PdfGeneratorEngineHelper.cpp.o
+Test: CMakeFiles/Test.dir/PdfGeneratorEngine.cpp.o
+Test: CMakeFiles/Test.dir/Constants.cpp.o
 Test: CMakeFiles/Test.dir/build.make
 Test: CMakeFiles/Test.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable Test"
@@ -194,6 +269,9 @@ CMakeFiles/Test.dir/requires: CMakeFiles/Test.dir/MiscUtils.cpp.o.requires
 CMakeFiles/Test.dir/requires: CMakeFiles/Test.dir/PdfCommonData.cpp.o.requires
 CMakeFiles/Test.dir/requires: CMakeFiles/Test.dir/PdfXmlLoader.cpp.o.requires
 CMakeFiles/Test.dir/requires: CMakeFiles/Test.dir/XmlLoader.cpp.o.requires
+CMakeFiles/Test.dir/requires: CMakeFiles/Test.dir/PdfGeneratorEngineHelper.cpp.o.requires
+CMakeFiles/Test.dir/requires: CMakeFiles/Test.dir/PdfGeneratorEngine.cpp.o.requires
+CMakeFiles/Test.dir/requires: CMakeFiles/Test.dir/Constants.cpp.o.requires
 .PHONY : CMakeFiles/Test.dir/requires
 
 CMakeFiles/Test.dir/clean:

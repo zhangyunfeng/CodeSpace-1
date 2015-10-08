@@ -8,6 +8,9 @@
  * 
  */
 
+#ifndef PDFXMLLOADER_H
+#define PDFXMLLOADER_H
+
 #include <string>
 #include <vector>
 #include "XmlLoader.hpp"
@@ -43,4 +46,8 @@ class PdfXmlLoader : public XmlLoader
     std::vector<PageProperties> m_pageProperties;
 
 };
+
+
+
+#endif /* PDFXMLLOADER_H */
 
