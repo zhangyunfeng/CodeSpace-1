@@ -64,6 +64,7 @@ CMakeFiles/Test.dir/PdfGeneratorEngineHelper.cpp.o: Constants.hpp
 CMakeFiles/Test.dir/PdfGeneratorEngineHelper.cpp.o: PdfGeneratorEngineHelper.cpp
 
 CMakeFiles/Test.dir/PdfXmlLoader.cpp.o: GlobalInclude.hpp
+CMakeFiles/Test.dir/PdfXmlLoader.cpp.o: MiscUtils.hpp
 CMakeFiles/Test.dir/PdfXmlLoader.cpp.o: PdfCommonData.hpp
 CMakeFiles/Test.dir/PdfXmlLoader.cpp.o: PdfXmlLoader.cpp
 CMakeFiles/Test.dir/PdfXmlLoader.cpp.o: PdfXmlLoader.hpp

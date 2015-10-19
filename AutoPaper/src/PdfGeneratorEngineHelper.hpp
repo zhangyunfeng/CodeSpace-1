@@ -23,8 +23,10 @@ class PdfGeneratorEngineHelper
   public:
     static HPDF_UINT GetCompressMode(const std::string& compress_mode);
     static HPDF_PageMode GetPageMode(const std::string& page_mode);
+    static HPDF_PageSizes GetPageSize(const std::string& page_size); // a3, a4, a5...
 };
 
 
 
 #endif /* PDFGENERATORENGINEHELPER_H */
+

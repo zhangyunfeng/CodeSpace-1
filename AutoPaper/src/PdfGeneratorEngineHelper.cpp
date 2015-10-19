@@ -58,5 +58,33 @@ HPDF_PageMode PdfGeneratorEngineHelper::GetPageMode(const std::string& page_mode
 }
 
 
+HPDF_PageSizes PdfGeneratorEngineHelper::GetPageSize(const std::string& page_size) {
+    if ("letter" == page_size) {
+        return HPDF_PAGE_SIZE_LETTER;
+    } else if ("legal" == page_size) {
+        return HPDF_PAGE_SIZE_LEGAL;
+    } else if ("a3" == page_size) {
+        return HPDF_PAGE_SIZE_A3;
+    } else if ("a4" == page_size) {
+        return HPDF_PAGE_SIZE_A4; 
+    } else if ("a5" == page_size) {
+        return HPDF_PAGE_SIZE_A5;
+    } else if ("b4" == page_size) {
+        return HPDF_PAGE_SIZE_B4;
+    } else if ("b5" == page_size) {
+        return HPDF_PAGE_SIZE_B5;
+    } else if ("executive" == page_size) {
+        return HPDF_PAGE_SIZE_EXECUTIVE;
+    } else if ("us4x6" == page_size) {
+        return HPDF_PAGE_SIZE_US4x6;
+    } else if ("us4x8" == page_size) {
+        return HPDF_PAGE_SIZE_US4x8;
+    } else if ("us5x7" == page_size) {
+        return HPDF_PAGE_SIZE_US5x7;
+    } else if ("comm10" == page_size) {
+        return HPDF_PAGE_SIZE_COMM10;
+    }
+    return HPDF_PAGE_SIZE_EOF;
+}
 
 

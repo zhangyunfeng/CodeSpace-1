@@ -65,6 +65,7 @@ CMakeFiles/Test.dir/PdfGeneratorEngineHelper.cpp.o
  /home/ken/KenHttpd/AutoPaper/src/PdfGeneratorEngineHelper.cpp
 CMakeFiles/Test.dir/PdfXmlLoader.cpp.o
  /home/ken/KenHttpd/AutoPaper/src/GlobalInclude.hpp
+ /home/ken/KenHttpd/AutoPaper/src/MiscUtils.hpp
  /home/ken/KenHttpd/AutoPaper/src/PdfCommonData.hpp
  /home/ken/KenHttpd/AutoPaper/src/PdfXmlLoader.cpp
  /home/ken/KenHttpd/AutoPaper/src/PdfXmlLoader.hpp

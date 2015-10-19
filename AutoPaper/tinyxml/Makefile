@@ -42,10 +42,10 @@ RM = /usr/local/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ken/KenHttpd/AutoPaper/tinyxml
+CMAKE_SOURCE_DIR = /home/ken/KenHttpd/AutoPaper
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ken/KenHttpd/AutoPaper/tinyxml
+CMAKE_BINARY_DIR = /home/ken/KenHttpd/AutoPaper
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -113,14 +113,14 @@ install/local/fast: install/local
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ken/KenHttpd/AutoPaper/tinyxml/CMakeFiles /home/ken/KenHttpd/AutoPaper/tinyxml/CMakeFiles/progress.marks
-	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ken/KenHttpd/AutoPaper/tinyxml/CMakeFiles 0
+	cd /home/ken/KenHttpd/AutoPaper && $(CMAKE_COMMAND) -E cmake_progress_start /home/ken/KenHttpd/AutoPaper/CMakeFiles /home/ken/KenHttpd/AutoPaper/tinyxml/CMakeFiles/progress.marks
+	cd /home/ken/KenHttpd/AutoPaper && $(MAKE) -f CMakeFiles/Makefile2 tinyxml/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ken/KenHttpd/AutoPaper/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) -f CMakeFiles/Makefile2 clean
+	cd /home/ken/KenHttpd/AutoPaper && $(MAKE) -f CMakeFiles/Makefile2 tinyxml/clean
 .PHONY : clean
 
 # The main clean target
@@ -129,115 +129,117 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /home/ken/KenHttpd/AutoPaper && $(MAKE) -f CMakeFiles/Makefile2 tinyxml/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /home/ken/KenHttpd/AutoPaper && $(MAKE) -f CMakeFiles/Makefile2 tinyxml/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/ken/KenHttpd/AutoPaper && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named tinyxml
+# Convenience name for target.
+tinyxml/CMakeFiles/tinyxml.dir/rule:
+	cd /home/ken/KenHttpd/AutoPaper && $(MAKE) -f CMakeFiles/Makefile2 tinyxml/CMakeFiles/tinyxml.dir/rule
+.PHONY : tinyxml/CMakeFiles/tinyxml.dir/rule
 
-# Build rule for target.
-tinyxml: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tinyxml
+# Convenience name for target.
+tinyxml: tinyxml/CMakeFiles/tinyxml.dir/rule
 .PHONY : tinyxml
 
 # fast build rule for target.
 tinyxml/fast:
-	$(MAKE) -f CMakeFiles/tinyxml.dir/build.make CMakeFiles/tinyxml.dir/build
+	cd /home/ken/KenHttpd/AutoPaper && $(MAKE) -f tinyxml/CMakeFiles/tinyxml.dir/build.make tinyxml/CMakeFiles/tinyxml.dir/build
 .PHONY : tinyxml/fast
 
-#=============================================================================
-# Target rules for targets named tinyxml_static
+# Convenience name for target.
+tinyxml/CMakeFiles/tinyxml_static.dir/rule:
+	cd /home/ken/KenHttpd/AutoPaper && $(MAKE) -f CMakeFiles/Makefile2 tinyxml/CMakeFiles/tinyxml_static.dir/rule
+.PHONY : tinyxml/CMakeFiles/tinyxml_static.dir/rule
 
-# Build rule for target.
-tinyxml_static: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tinyxml_static
+# Convenience name for target.
+tinyxml_static: tinyxml/CMakeFiles/tinyxml_static.dir/rule
 .PHONY : tinyxml_static
 
 # fast build rule for target.
 tinyxml_static/fast:
-	$(MAKE) -f CMakeFiles/tinyxml_static.dir/build.make CMakeFiles/tinyxml_static.dir/build
+	cd /home/ken/KenHttpd/AutoPaper && $(MAKE) -f tinyxml/CMakeFiles/tinyxml_static.dir/build.make tinyxml/CMakeFiles/tinyxml_static.dir/build
 .PHONY : tinyxml_static/fast
 
 # target to build an object file
 tinystr.o:
-	$(MAKE) -f CMakeFiles/tinyxml.dir/build.make CMakeFiles/tinyxml.dir/tinystr.o
-	$(MAKE) -f CMakeFiles/tinyxml_static.dir/build.make CMakeFiles/tinyxml_static.dir/tinystr.o
+	cd /home/ken/KenHttpd/AutoPaper && $(MAKE) -f tinyxml/CMakeFiles/tinyxml.dir/build.make tinyxml/CMakeFiles/tinyxml.dir/tinystr.o
+	cd /home/ken/KenHttpd/AutoPaper && $(MAKE) -f tinyxml/CMakeFiles/tinyxml_static.dir/build.make tinyxml/CMakeFiles/tinyxml_static.dir/tinystr.o
 .PHONY : tinystr.o
 
 # target to preprocess a source file
 tinystr.i:
-	$(MAKE) -f CMakeFiles/tinyxml.dir/build.make CMakeFiles/tinyxml.dir/tinystr.i
-	$(MAKE) -f CMakeFiles/tinyxml_static.dir/build.make CMakeFiles/tinyxml_static.dir/tinystr.i
+	cd /home/ken/KenHttpd/AutoPaper && $(MAKE) -f tinyxml/CMakeFiles/tinyxml.dir/build.make tinyxml/CMakeFiles/tinyxml.dir/tinystr.i
+	cd /home/ken/KenHttpd/AutoPaper && $(MAKE) -f tinyxml/CMakeFiles/tinyxml_static.dir/build.make tinyxml/CMakeFiles/tinyxml_static.dir/tinystr.i
 .PHONY : tinystr.i
 
 # target to generate assembly for a file
 tinystr.s:
-	$(MAKE) -f CMakeFiles/tinyxml.dir/build.make CMakeFiles/tinyxml.dir/tinystr.s
-	$(MAKE) -f CMakeFiles/tinyxml_static.dir/build.make CMakeFiles/tinyxml_static.dir/tinystr.s
+	cd /home/ken/KenHttpd/AutoPaper && $(MAKE) -f tinyxml/CMakeFiles/tinyxml.dir/build.make tinyxml/CMakeFiles/tinyxml.dir/tinystr.s
+	cd /home/ken/KenHttpd/AutoPaper && $(MAKE) -f tinyxml/CMakeFiles/tinyxml_static.dir/build.make tinyxml/CMakeFiles/tinyxml_static.dir/tinystr.s
 .PHONY : tinystr.s
 
 # target to build an object file
 tinyxml.o:
-	$(MAKE) -f CMakeFiles/tinyxml.dir/build.make CMakeFiles/tinyxml.dir/tinyxml.o
-	$(MAKE) -f CMakeFiles/tinyxml_static.dir/build.make CMakeFiles/tinyxml_static.dir/tinyxml.o
+	cd /home/ken/KenHttpd/AutoPaper && $(MAKE) -f tinyxml/CMakeFiles/tinyxml.dir/build.make tinyxml/CMakeFiles/tinyxml.dir/tinyxml.o
+	cd /home/ken/KenHttpd/AutoPaper && $(MAKE) -f tinyxml/CMakeFiles/tinyxml_static.dir/build.make tinyxml/CMakeFiles/tinyxml_static.dir/tinyxml.o
 .PHONY : tinyxml.o
 
 # target to preprocess a source file
 tinyxml.i:
-	$(MAKE) -f CMakeFiles/tinyxml.dir/build.make CMakeFiles/tinyxml.dir/tinyxml.i
-	$(MAKE) -f CMakeFiles/tinyxml_static.dir/build.make CMakeFiles/tinyxml_static.dir/tinyxml.i
+	cd /home/ken/KenHttpd/AutoPaper && $(MAKE) -f tinyxml/CMakeFiles/tinyxml.dir/build.make tinyxml/CMakeFiles/tinyxml.dir/tinyxml.i
+	cd /home/ken/KenHttpd/AutoPaper && $(MAKE) -f tinyxml/CMakeFiles/tinyxml_static.dir/build.make tinyxml/CMakeFiles/tinyxml_static.dir/tinyxml.i
 .PHONY : tinyxml.i
 
 # target to generate assembly for a file
 tinyxml.s:
-	$(MAKE) -f CMakeFiles/tinyxml.dir/build.make CMakeFiles/tinyxml.dir/tinyxml.s
-	$(MAKE) -f CMakeFiles/tinyxml_static.dir/build.make CMakeFiles/tinyxml_static.dir/tinyxml.s
+	cd /home/ken/KenHttpd/AutoPaper && $(MAKE) -f tinyxml/CMakeFiles/tinyxml.dir/build.make tinyxml/CMakeFiles/tinyxml.dir/tinyxml.s
+	cd /home/ken/KenHttpd/AutoPaper && $(MAKE) -f tinyxml/CMakeFiles/tinyxml_static.dir/build.make tinyxml/CMakeFiles/tinyxml_static.dir/tinyxml.s
 .PHONY : tinyxml.s
 
 # target to build an object file
 tinyxmlerror.o:
-	$(MAKE) -f CMakeFiles/tinyxml.dir/build.make CMakeFiles/tinyxml.dir/tinyxmlerror.o
-	$(MAKE) -f CMakeFiles/tinyxml_static.dir/build.make CMakeFiles/tinyxml_static.dir/tinyxmlerror.o
+	cd /home/ken/KenHttpd/AutoPaper && $(MAKE) -f tinyxml/CMakeFiles/tinyxml.dir/build.make tinyxml/CMakeFiles/tinyxml.dir/tinyxmlerror.o
+	cd /home/ken/KenHttpd/AutoPaper && $(MAKE) -f tinyxml/CMakeFiles/tinyxml_static.dir/build.make tinyxml/CMakeFiles/tinyxml_static.dir/tinyxmlerror.o
 .PHONY : tinyxmlerror.o
 
 # target to preprocess a source file
 tinyxmlerror.i:
-	$(MAKE) -f CMakeFiles/tinyxml.dir/build.make CMakeFiles/tinyxml.dir/tinyxmlerror.i
-	$(MAKE) -f CMakeFiles/tinyxml_static.dir/build.make CMakeFiles/tinyxml_static.dir/tinyxmlerror.i
+	cd /home/ken/KenHttpd/AutoPaper && $(MAKE) -f tinyxml/CMakeFiles/tinyxml.dir/build.make tinyxml/CMakeFiles/tinyxml.dir/tinyxmlerror.i
+	cd /home/ken/KenHttpd/AutoPaper && $(MAKE) -f tinyxml/CMakeFiles/tinyxml_static.dir/build.make tinyxml/CMakeFiles/tinyxml_static.dir/tinyxmlerror.i
 .PHONY : tinyxmlerror.i
 
 # target to generate assembly for a file
 tinyxmlerror.s:
-	$(MAKE) -f CMakeFiles/tinyxml.dir/build.make CMakeFiles/tinyxml.dir/tinyxmlerror.s
-	$(MAKE) -f CMakeFiles/tinyxml_static.dir/build.make CMakeFiles/tinyxml_static.dir/tinyxmlerror.s
+	cd /home/ken/KenHttpd/AutoPaper && $(MAKE) -f tinyxml/CMakeFiles/tinyxml.dir/build.make tinyxml/CMakeFiles/tinyxml.dir/tinyxmlerror.s
+	cd /home/ken/KenHttpd/AutoPaper && $(MAKE) -f tinyxml/CMakeFiles/tinyxml_static.dir/build.make tinyxml/CMakeFiles/tinyxml_static.dir/tinyxmlerror.s
 .PHONY : tinyxmlerror.s
 
 # target to build an object file
 tinyxmlparser.o:
-	$(MAKE) -f CMakeFiles/tinyxml.dir/build.make CMakeFiles/tinyxml.dir/tinyxmlparser.o
-	$(MAKE) -f CMakeFiles/tinyxml_static.dir/build.make CMakeFiles/tinyxml_static.dir/tinyxmlparser.o
+	cd /home/ken/KenHttpd/AutoPaper && $(MAKE) -f tinyxml/CMakeFiles/tinyxml.dir/build.make tinyxml/CMakeFiles/tinyxml.dir/tinyxmlparser.o
+	cd /home/ken/KenHttpd/AutoPaper && $(MAKE) -f tinyxml/CMakeFiles/tinyxml_static.dir/build.make tinyxml/CMakeFiles/tinyxml_static.dir/tinyxmlparser.o
 .PHONY : tinyxmlparser.o
 
 # target to preprocess a source file
 tinyxmlparser.i:
-	$(MAKE) -f CMakeFiles/tinyxml.dir/build.make CMakeFiles/tinyxml.dir/tinyxmlparser.i
-	$(MAKE) -f CMakeFiles/tinyxml_static.dir/build.make CMakeFiles/tinyxml_static.dir/tinyxmlparser.i
+	cd /home/ken/KenHttpd/AutoPaper && $(MAKE) -f tinyxml/CMakeFiles/tinyxml.dir/build.make tinyxml/CMakeFiles/tinyxml.dir/tinyxmlparser.i
+	cd /home/ken/KenHttpd/AutoPaper && $(MAKE) -f tinyxml/CMakeFiles/tinyxml_static.dir/build.make tinyxml/CMakeFiles/tinyxml_static.dir/tinyxmlparser.i
 .PHONY : tinyxmlparser.i
 
 # target to generate assembly for a file
 tinyxmlparser.s:
-	$(MAKE) -f CMakeFiles/tinyxml.dir/build.make CMakeFiles/tinyxml.dir/tinyxmlparser.s
-	$(MAKE) -f CMakeFiles/tinyxml_static.dir/build.make CMakeFiles/tinyxml_static.dir/tinyxmlparser.s
+	cd /home/ken/KenHttpd/AutoPaper && $(MAKE) -f tinyxml/CMakeFiles/tinyxml.dir/build.make tinyxml/CMakeFiles/tinyxml.dir/tinyxmlparser.s
+	cd /home/ken/KenHttpd/AutoPaper && $(MAKE) -f tinyxml/CMakeFiles/tinyxml_static.dir/build.make tinyxml/CMakeFiles/tinyxml_static.dir/tinyxmlparser.s
 .PHONY : tinyxmlparser.s
 
 # Help Target
@@ -277,6 +279,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/ken/KenHttpd/AutoPaper && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

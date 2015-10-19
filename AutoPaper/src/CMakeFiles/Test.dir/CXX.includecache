@@ -123,6 +123,10 @@ string
 /home/ken/KenHttpd/AutoPaper/src/MiscUtils.cpp
 sstream
 -
+fstream
+-
+iostream
+-
 MiscUtils.hpp
 /home/ken/KenHttpd/AutoPaper/src/MiscUtils.hpp
 
@@ -185,6 +189,8 @@ PdfXmlLoader.hpp
 /home/ken/KenHttpd/AutoPaper/src/PdfXmlLoader.hpp
 GlobalInclude.hpp
 /home/ken/KenHttpd/AutoPaper/src/GlobalInclude.hpp
+MiscUtils.hpp
+/home/ken/KenHttpd/AutoPaper/src/MiscUtils.hpp
 
 /home/ken/KenHttpd/AutoPaper/src/PdfXmlLoader.hpp
 string

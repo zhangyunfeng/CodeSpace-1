@@ -11,7 +11,7 @@
 
 #include "PdfXmlLoader.hpp"
 #include "GlobalInclude.hpp"
-
+#include "MiscUtils.hpp"
 
 PdfXmlLoader::PdfXmlLoader() {
     
@@ -262,6 +262,8 @@ void PdfXmlLoader::HandleTextElement(TiXmlElement* textElement) {
     strptr = textElement->Attribute(TextProperties::ATTR_INCLUDE);
     if (strptr) {
         textProperties.includeDoc = *strptr;
+        textProperties.text += MiscUtils::GetFileText(textProperties.includeDoc);
+        std::cout << "include text: " << textProperties.text << std::endl;
         strptr = nullptr;
     }
 
@@ -277,9 +279,21 @@ void PdfXmlLoader::HandleTextElement(TiXmlElement* textElement) {
         strptr = nullptr;
     }
 
+    strptr = textElement->Attribute(TextProperties::ATTR_TEXTW);
+    if (strptr) {
+        textProperties.textWidth = *strptr;
+        strptr = nullptr;
+    }
+
+    strptr = textElement->Attribute(TextProperties::ATTR_TEXTH);
+    if (strptr) {
+        textProperties.textHeight = *strptr;
+        strptr = nullptr;
+    }
+
     if (textElement->GetText() != nullptr) {
         std::string content(textElement->GetText());
-        textProperties.text = content;
+        textProperties.text += content;
     }
 
     PageProperties& pageProperties = m_pageProperties.back();

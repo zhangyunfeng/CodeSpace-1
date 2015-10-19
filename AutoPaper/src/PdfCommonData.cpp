@@ -2,10 +2,10 @@
  * @file   PdfCommonData.cpp
  * @author Ken <ken@ken-Ubuntu>
  * @date   Wed Sep  9 23:53:28 2015
- * 
+ *
  * @brief  Implement of PdfCommonData.hpp
- * 
- * 
+ *
+ *
  */
 
 #include "PdfCommonData.hpp"
@@ -45,6 +45,8 @@ const std::string TextProperties::ATTR_RGB = "rgb";
 const std::string TextProperties::ATTR_INCLUDE = "include";
 const std::string TextProperties::ATTR_TEXTX = "x";
 const std::string TextProperties::ATTR_TEXTY = "y";
+const std::string TextProperties::ATTR_TEXTW = "width";
+const std::string TextProperties::ATTR_TEXTH = "height";
 const std::string TextProperties::BODY_TEXT = "content";
 
 

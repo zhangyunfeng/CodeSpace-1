@@ -17,12 +17,13 @@ class MiscUtils
     MiscUtils();
     ~MiscUtils();
 
-    template<typename T>
-    static int String2Int(const T& number);
-    
+    static int String2Int(const std::string& number);
+
     static short GetR(const std::string& rgb);
     static short GetG(const std::string& rgb);
     static short GetB(const std::string& rgb);
+
+    static const std::string GetFileText(const std::string& filename);
 };
 
 

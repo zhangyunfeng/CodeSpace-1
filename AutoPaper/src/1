@@ -2,10 +2,10 @@
  * @file   PdfCommonData.hpp
  * @author Ken <ken@ken-Ubuntu>
  * @date   Wed Sep  9 23:52:17 2015
- * 
+ *
  * @brief  pdf properties
- * 
- * 
+ *
+ *
  */
 
 
@@ -28,7 +28,7 @@
 
 /*
  *Pdf document properties
- */ 
+ */
 
 struct PdfProperties {
     std::string docname;       // pdf 文档名字
@@ -42,7 +42,7 @@ struct PdfProperties {
     // Note: 因为参数较多，所以索性不提供所有参数的构造函数
     PdfProperties() : page_layout(""), fontname("Monaco"), compress_mode(""),
                       page_mode(""), owner(""), password(""), docname("untitle.pdf") {
-        
+
     }
 
     static const std::string TAG;
@@ -71,10 +71,10 @@ struct LineProperties {
     std::string lineWidth;
     std::string rgb;
     std::string lineType;  // 圆角  方角直线
-    
+
     LineProperties() : lable(""), startX("0"), startY("0"), endX("0"), endY("0"),
                        lineWidth("1"), rgb("000000"), lineType("FILL") {
-        
+
     }
 
     static const std::string TAG;
@@ -103,10 +103,10 @@ struct TextProperties {
     std::string textWidth;
     std::string textHeight;
     std::string includeDoc;
-    
+
     TextProperties() : font("Monaco"), size("12"), rgb("000000"),
                        text("hello"), textX("0"), textY("0"), textWidth("0"), textHeight("0"), includeDoc("") {
-        
+
     }
 
     static const std::string TAG;
@@ -120,7 +120,7 @@ struct TextProperties {
     static const std::string ATTR_TEXTH;
     static const std::string BODY_TEXT;
 };
-        
+
 
 struct RectProperties {
     std::string lineWidth;

@@ -55,173 +55,757 @@ void TiXmlDeclaration::StreamIn(1549,35388
 const char* TiXmlDeclaration::Parse(1572,35782
 bool TiXmlText::Blank(1631,37096
 
-tinyxml/tinyxml.cpp,5745
-bool TiXmlBase::condenseWhiteSpace 36,1079
-FILE* TiXmlFOpen(39,1154
-void TiXmlBase::EncodeString(52,1423
-TiXmlNode::TiXmlNode(136,3408
-TiXmlNode::~TiXmlNode(147,3550
-void TiXmlNode::CopyTo(161,3708
-void TiXmlNode::Clear(169,3861
-TiXmlNode* TiXmlNode::LinkEndChild(186,4053
-TiXmlNode* TiXmlNode::InsertEndChild(214,4650
-TiXmlNode* TiXmlNode::InsertBeforeChild(230,5001
-TiXmlNode* TiXmlNode::InsertAfterChild(263,5672
-TiXmlNode* TiXmlNode::ReplaceChild(296,6330
-bool TiXmlNode::RemoveChild(335,7120
-const TiXmlNode* TiXmlNode::FirstChild(361,7547
-const TiXmlNode* TiXmlNode::LastChild(373,7776
-const TiXmlNode* TiXmlNode::IterateChildren(385,8003
-const TiXmlNode* TiXmlNode::IterateChildren(399,8219
-const TiXmlNode* TiXmlNode::NextSibling(413,8463
-const TiXmlNode* TiXmlNode::PreviousSibling(425,8688
-void TiXmlElement::RemoveAttribute(437,8916
-const TiXmlElement* TiXmlNode::FirstChildElement(452,9210
-const TiXmlElement* TiXmlNode::FirstChildElement(467,9440
-const TiXmlElement* TiXmlNode::NextSiblingElement(482,9707
-const TiXmlElement* TiXmlNode::NextSiblingElement(497,9939
-const TiXmlDocument* TiXmlNode::GetDocument(512,10208
-TiXmlElement::TiXmlElement 525,10413
-TiXmlElement::TiXmlElement(534,10578
-TiXmlElement::TiXmlElement(543,10737
-TiXmlElement& TiXmlElement::operator=(TiXmlElement::operator=551,10892
-TiXmlElement::~TiXmlElement(559,11015
-void TiXmlElement::ClearThis(565,11065
-const char* TiXmlElement::Attribute(577,11242
-const std::string* TiXmlElement::Attribute(587,11436
-const char* TiXmlElement::Attribute(597,11640
-const std::string* TiXmlElement::Attribute(613,11934
-const char* TiXmlElement::Attribute(629,12239
-const std::string* TiXmlElement::Attribute(645,12539
-int TiXmlElement::QueryIntAttribute(661,12850
-int TiXmlElement::QueryUnsignedAttribute(670,13072
-int TiXmlElement::QueryBoolAttribute(683,13364
-int TiXmlElement::QueryIntAttribute(710,14169
-int TiXmlElement::QueryDoubleAttribute(720,14405
-int TiXmlElement::QueryDoubleAttribute(730,14657
-void TiXmlElement::SetAttribute(740,14902
-void TiXmlElement::SetAttribute(750,15103
-void TiXmlElement::SetDoubleAttribute(760,15296
-void TiXmlElement::SetDoubleAttribute(770,15509
-void TiXmlElement::SetAttribute(780,15715
-void TiXmlElement::SetAttribute(790,15929
-void TiXmlElement::Print(800,16141
-void TiXmlElement::CopyTo(853,17333
-bool TiXmlElement::Accept(875,17837
-TiXmlNode* TiXmlElement::Clone(889,18134
-const char* TiXmlElement::GetText(900,18292
-TiXmlDocument::TiXmlDocument(913,18519
-TiXmlDocument::TiXmlDocument(920,18653
-TiXmlDocument::TiXmlDocument(930,18859
-TiXmlDocument::TiXmlDocument(940,19060
-TiXmlDocument& TiXmlDocument::operator=(TiXmlDocument::operator=946,19189
-bool TiXmlDocument::LoadFile(954,19311
-bool TiXmlDocument::SaveFile(960,19411
-bool TiXmlDocument::LoadFile(965,19482
-bool TiXmlDocument::LoadFile(986,19935
-bool TiXmlDocument::SaveFile(1084,22708
-bool TiXmlDocument::SaveFile(1098,22944
-void TiXmlDocument::CopyTo(1115,23316
-TiXmlNode* TiXmlDocument::Clone(1134,23739
-void TiXmlDocument::Print(1145,23891
-bool TiXmlDocument::Accept(1156,24112
-const TiXmlAttribute* TiXmlAttribute::Next(1170,24387
-const TiXmlAttribute* TiXmlAttribute::Previous(1190,24811
-void TiXmlAttribute::Print(1210,25243
-int TiXmlAttribute::QueryIntValue(1236,25782
-int TiXmlAttribute::QueryDoubleValue(1243,25945
-void TiXmlAttribute::SetIntValue(1250,26115
-void TiXmlAttribute::SetDoubleValue(1261,26327
-int TiXmlAttribute::IntValue(1272,26547
-double  TiXmlAttribute::DoubleValue(1277,26620
-TiXmlComment::TiXmlComment(1283,26701
-TiXmlComment& TiXmlComment::operator=(TiXmlComment::operator=1289,26826
-void TiXmlComment::Print(1297,26945
-void TiXmlComment::CopyTo(1308,27139
-bool TiXmlComment::Accept(1314,27231
-TiXmlNode* TiXmlComment::Clone(1320,27327
-void TiXmlText::Print(1332,27477
-void TiXmlText::CopyTo(1353,27861
-bool TiXmlText::Accept(1360,27971
-TiXmlNode* TiXmlText::Clone(1366,28064
-TiXmlDeclaration::TiXmlDeclaration(1379,28222
-TiXmlDeclaration::TiXmlDeclaration(1391,28495
-TiXmlDeclaration::TiXmlDeclaration(1403,28772
-TiXmlDeclaration& TiXmlDeclaration::operator=(TiXmlDeclaration::operator=1410,28915
-void TiXmlDeclaration::Print(1418,29046
-void TiXmlDeclaration::CopyTo(1440,29827
-bool TiXmlDeclaration::Accept(1450,30020
-TiXmlNode* TiXmlDeclaration::Clone(1456,30120
-void TiXmlUnknown::Print(1468,30283
-void TiXmlUnknown::CopyTo(1476,30447
-bool TiXmlUnknown::Accept(1482,30539
-TiXmlNode* TiXmlUnknown::Clone(1488,30635
-TiXmlAttributeSet::TiXmlAttributeSet(1500,30785
-TiXmlAttributeSet::~TiXmlAttributeSet(1507,30886
-void TiXmlAttributeSet::Add(1514,31010
-void TiXmlAttributeSet::Remove(1529,31399
-TiXmlAttribute* TiXmlAttributeSet::Find(1549,31794
-TiXmlAttribute* TiXmlAttributeSet::FindOrCreate(1559,32016
-TiXmlAttribute* TiXmlAttributeSet::Find(1572,32261
-TiXmlAttribute* TiXmlAttributeSet::FindOrCreate(1583,32498
-std::istream& operator>> 1596,32751
-std::ostream& operator<< 1609,32991
-std::string& operator<< 1620,33183
-TiXmlHandle TiXmlHandle::FirstChild(1632,33386
-TiXmlHandle TiXmlHandle::FirstChild(1644,33569
-TiXmlHandle TiXmlHandle::FirstChildElement(1656,33779
-TiXmlHandle TiXmlHandle::FirstChildElement(1668,33979
-TiXmlHandle TiXmlHandle::Child(1680,34206
-TiXmlHandle TiXmlHandle::Child(1699,34501
-TiXmlHandle TiXmlHandle::ChildElement(1718,34829
-TiXmlHandle TiXmlHandle::ChildElement(1737,35148
-bool TiXmlPrinter::VisitEnter(1756,35500
-bool TiXmlPrinter::VisitExit(1761,35573
-bool TiXmlPrinter::VisitEnter(1766,35645
-bool TiXmlPrinter::VisitExit(1803,36325
-bool TiXmlPrinter::Visit(1829,36651
-bool TiXmlPrinter::Visit(1857,37107
-bool TiXmlPrinter::Visit(1866,37257
-bool TiXmlPrinter::Visit(1877,37427
+tinyxml/tinyxml.cpp,5774
+#define TIXML_USE_STL28,950
+bool TiXmlBase::condenseWhiteSpace 41,1132
+FILE* TiXmlFOpen(44,1207
+void TiXmlBase::EncodeString(57,1476
+TiXmlNode::TiXmlNode(141,3461
+TiXmlNode::~TiXmlNode(152,3603
+void TiXmlNode::CopyTo(166,3761
+void TiXmlNode::Clear(174,3914
+TiXmlNode* TiXmlNode::LinkEndChild(191,4106
+TiXmlNode* TiXmlNode::InsertEndChild(219,4703
+TiXmlNode* TiXmlNode::InsertBeforeChild(235,5054
+TiXmlNode* TiXmlNode::InsertAfterChild(268,5725
+TiXmlNode* TiXmlNode::ReplaceChild(301,6383
+bool TiXmlNode::RemoveChild(340,7173
+const TiXmlNode* TiXmlNode::FirstChild(366,7600
+const TiXmlNode* TiXmlNode::LastChild(378,7829
+const TiXmlNode* TiXmlNode::IterateChildren(390,8056
+const TiXmlNode* TiXmlNode::IterateChildren(404,8272
+const TiXmlNode* TiXmlNode::NextSibling(418,8516
+const TiXmlNode* TiXmlNode::PreviousSibling(430,8741
+void TiXmlElement::RemoveAttribute(442,8969
+const TiXmlElement* TiXmlNode::FirstChildElement(457,9263
+const TiXmlElement* TiXmlNode::FirstChildElement(472,9493
+const TiXmlElement* TiXmlNode::NextSiblingElement(487,9760
+const TiXmlElement* TiXmlNode::NextSiblingElement(502,9992
+const TiXmlDocument* TiXmlNode::GetDocument(517,10261
+TiXmlElement::TiXmlElement 530,10466
+TiXmlElement::TiXmlElement(539,10631
+TiXmlElement::TiXmlElement(548,10790
+TiXmlElement& TiXmlElement::operator=(TiXmlElement::operator=556,10945
+TiXmlElement::~TiXmlElement(564,11068
+void TiXmlElement::ClearThis(570,11118
+const char* TiXmlElement::Attribute(582,11295
+const std::string* TiXmlElement::Attribute(592,11507
+const char* TiXmlElement::Attribute(602,11714
+const std::string* TiXmlElement::Attribute(618,12008
+const char* TiXmlElement::Attribute(634,12313
+const std::string* TiXmlElement::Attribute(650,12613
+int TiXmlElement::QueryIntAttribute(666,12924
+int TiXmlElement::QueryUnsignedAttribute(675,13146
+int TiXmlElement::QueryBoolAttribute(688,13438
+int TiXmlElement::QueryIntAttribute(715,14243
+int TiXmlElement::QueryDoubleAttribute(725,14479
+int TiXmlElement::QueryDoubleAttribute(735,14731
+void TiXmlElement::SetAttribute(745,14976
+void TiXmlElement::SetAttribute(755,15177
+void TiXmlElement::SetDoubleAttribute(765,15370
+void TiXmlElement::SetDoubleAttribute(775,15583
+void TiXmlElement::SetAttribute(785,15789
+void TiXmlElement::SetAttribute(795,16003
+void TiXmlElement::Print(805,16215
+void TiXmlElement::CopyTo(858,17407
+bool TiXmlElement::Accept(880,17911
+TiXmlNode* TiXmlElement::Clone(894,18208
+const char* TiXmlElement::GetText(905,18366
+TiXmlDocument::TiXmlDocument(918,18593
+TiXmlDocument::TiXmlDocument(925,18727
+TiXmlDocument::TiXmlDocument(935,18933
+TiXmlDocument::TiXmlDocument(945,19134
+TiXmlDocument& TiXmlDocument::operator=(TiXmlDocument::operator=951,19263
+bool TiXmlDocument::LoadFile(959,19385
+bool TiXmlDocument::SaveFile(965,19485
+bool TiXmlDocument::LoadFile(970,19556
+bool TiXmlDocument::LoadFile(991,20009
+bool TiXmlDocument::SaveFile(1089,22782
+bool TiXmlDocument::SaveFile(1103,23018
+void TiXmlDocument::CopyTo(1120,23390
+TiXmlNode* TiXmlDocument::Clone(1139,23813
+void TiXmlDocument::Print(1150,23965
+bool TiXmlDocument::Accept(1161,24186
+const TiXmlAttribute* TiXmlAttribute::Next(1175,24461
+const TiXmlAttribute* TiXmlAttribute::Previous(1195,24885
+void TiXmlAttribute::Print(1215,25317
+int TiXmlAttribute::QueryIntValue(1241,25856
+int TiXmlAttribute::QueryDoubleValue(1248,26019
+void TiXmlAttribute::SetIntValue(1255,26189
+void TiXmlAttribute::SetDoubleValue(1266,26401
+int TiXmlAttribute::IntValue(1277,26621
+double  TiXmlAttribute::DoubleValue(1282,26694
+TiXmlComment::TiXmlComment(1288,26775
+TiXmlComment& TiXmlComment::operator=(TiXmlComment::operator=1294,26900
+void TiXmlComment::Print(1302,27019
+void TiXmlComment::CopyTo(1313,27213
+bool TiXmlComment::Accept(1319,27305
+TiXmlNode* TiXmlComment::Clone(1325,27401
+void TiXmlText::Print(1337,27551
+void TiXmlText::CopyTo(1358,27935
+bool TiXmlText::Accept(1365,28045
+TiXmlNode* TiXmlText::Clone(1371,28138
+TiXmlDeclaration::TiXmlDeclaration(1384,28296
+TiXmlDeclaration::TiXmlDeclaration(1396,28569
+TiXmlDeclaration::TiXmlDeclaration(1408,28846
+TiXmlDeclaration& TiXmlDeclaration::operator=(TiXmlDeclaration::operator=1415,28989
+void TiXmlDeclaration::Print(1423,29120
+void TiXmlDeclaration::CopyTo(1445,29901
+bool TiXmlDeclaration::Accept(1455,30094
+TiXmlNode* TiXmlDeclaration::Clone(1461,30194
+void TiXmlUnknown::Print(1473,30357
+void TiXmlUnknown::CopyTo(1481,30521
+bool TiXmlUnknown::Accept(1487,30613
+TiXmlNode* TiXmlUnknown::Clone(1493,30709
+TiXmlAttributeSet::TiXmlAttributeSet(1505,30859
+TiXmlAttributeSet::~TiXmlAttributeSet(1512,30960
+void TiXmlAttributeSet::Add(1519,31084
+void TiXmlAttributeSet::Remove(1534,31473
+TiXmlAttribute* TiXmlAttributeSet::Find(1554,31868
+TiXmlAttribute* TiXmlAttributeSet::FindOrCreate(1564,32090
+TiXmlAttribute* TiXmlAttributeSet::Find(1577,32335
+TiXmlAttribute* TiXmlAttributeSet::FindOrCreate(1588,32572
+std::istream& operator>> 1601,32825
+std::ostream& operator<< 1614,33065
+std::string& operator<< 1625,33257
+TiXmlHandle TiXmlHandle::FirstChild(1637,33460
+TiXmlHandle TiXmlHandle::FirstChild(1649,33643
+TiXmlHandle TiXmlHandle::FirstChildElement(1661,33853
+TiXmlHandle TiXmlHandle::FirstChildElement(1673,34053
+TiXmlHandle TiXmlHandle::Child(1685,34280
+TiXmlHandle TiXmlHandle::Child(1704,34575
+TiXmlHandle TiXmlHandle::ChildElement(1723,34903
+TiXmlHandle TiXmlHandle::ChildElement(1742,35222
+bool TiXmlPrinter::VisitEnter(1761,35574
+bool TiXmlPrinter::VisitExit(1766,35647
+bool TiXmlPrinter::VisitEnter(1771,35719
+bool TiXmlPrinter::VisitExit(1808,36399
+bool TiXmlPrinter::Visit(1834,36725
+bool TiXmlPrinter::Visit(1862,37181
+bool TiXmlPrinter::Visit(1871,37331
+bool TiXmlPrinter::Visit(1882,37501
 
 tinyxml/tinyxmlerror.cpp,67
 const char* TiXmlBase::errorString[TiXmlBase::errorString34,1201
 
-src/PdfCommonData.hpp,692
+tinyxml/CMakeFiles/3.2.1/CompilerIdCXX/CMakeCXXCompilerId.cpp,6050
+# define COMPILER_ID 13,390
+# define COMPILER_VERSION_MAJOR 15,451
+# define COMPILER_VERSION_MINOR 16,511
+# define COMPILER_ID 19,622
+#  define SIMULATE_ID 21,674
+# define COMPILER_VERSION_MAJOR 24,742
+# define COMPILER_VERSION_MINOR 25,800
+#  define COMPILER_VERSION_PATCH 27,900
+#  define COMPILER_VERSION_PATCH 29,969
+#  define COMPILER_VERSION_TWEAK 33,1128
+#  define SIMULATE_VERSION_MAJOR 37,1250
+#  define SIMULATE_VERSION_MINOR 38,1303
+# define COMPILER_ID 42,1391
+# define COMPILER_VERSION_MAJOR 43,1424
+# define COMPILER_VERSION_MINOR 44,1472
+#  define COMPILER_VERSION_PATCH 46,1562
+# define COMPILER_ID 50,1693
+# define COMPILER_VERSION_MAJOR 51,1728
+# define COMPILER_VERSION_MINOR 52,1800
+# define COMPILER_VERSION_PATCH 53,1872
+# define COMPILER_ID 56,1973
+# define COMPILER_VERSION_MAJOR 58,2033
+# define COMPILER_VERSION_MINOR 59,2086
+# define COMPILER_ID 62,2193
+# define COMPILER_VERSION_MAJOR 64,2251
+# define COMPILER_VERSION_MINOR 65,2306
+#  define COMPILER_VERSION_PATCH 67,2395
+# define COMPILER_ID 71,2486
+# define COMPILER_VERSION_MAJOR 73,2555
+# define COMPILER_VERSION_MINOR 74,2619
+#  define COMPILER_VERSION_PATCH 76,2708
+# define COMPILER_ID 80,2799
+#  define COMPILER_VERSION_MAJOR 83,2886
+#  define COMPILER_VERSION_MINOR 84,2940
+#  define COMPILER_VERSION_PATCH 85,3000
+#  define COMPILER_VERSION_MAJOR 88,3095
+#  define COMPILER_VERSION_MINOR 89,3148
+#  define COMPILER_VERSION_PATCH 90,3207
+# define COMPILER_ID 94,3299
+# define COMPILER_VERSION_MAJOR 96,3351
+# define COMPILER_VERSION_MINOR 97,3403
+# define COMPILER_VERSION_PATCH 98,3459
+# define COMPILER_ID 101,3540
+# define COMPILER_VERSION_MAJOR 103,3603
+# define COMPILER_VERSION_MINOR 104,3662
+# define COMPILER_VERSION_PATCH 105,3726
+# define COMPILER_ID 108,3848
+# define COMPILER_VERSION_MAJOR 110,3900
+# define COMPILER_VERSION_MINOR 111,3952
+# define COMPILER_VERSION_PATCH 112,4008
+# define COMPILER_ID 115,4142
+# define COMPILER_VERSION_MAJOR 117,4193
+# define COMPILER_VERSION_MINOR 118,4245
+# define COMPILER_VERSION_PATCH 119,4301
+# define COMPILER_ID 122,4434
+# define COMPILER_VERSION_MAJOR 124,4492
+# define COMPILER_VERSION_MINOR 125,4544
+# define COMPILER_VERSION_PATCH 126,4600
+# define COMPILER_ID 129,4678
+# define COMPILER_VERSION_MAJOR 130,4705
+# define COMPILER_VERSION_MINOR 131,4751
+#  define COMPILER_VERSION_PATCH 133,4837
+# define COMPILER_ID 137,4926
+# define COMPILER_VERSION_MAJOR 138,4954
+# define COMPILER_VERSION_MINOR 139,5000
+# define COMPILER_ID 142,5092
+# define COMPILER_VERSION_MAJOR 144,5162
+# define COMPILER_VERSION_MINOR 145,5231
+# define COMPILER_VERSION_PATCH 146,5306
+# define COMPILER_ID 149,5459
+# define COMPILER_ID 152,5522
+# define COMPILER_ID 155,5611
+#  define SIMULATE_ID 157,5668
+# define COMPILER_VERSION_MAJOR 159,5705
+# define COMPILER_VERSION_MINOR 160,5758
+# define COMPILER_VERSION_PATCH 161,5811
+#  define SIMULATE_VERSION_MAJOR 164,5917
+#  define SIMULATE_VERSION_MINOR 165,5970
+# define COMPILER_VERSION_TWEAK 167,6031
+# define COMPILER_ID 170,6118
+#  define SIMULATE_ID 172,6170
+# define COMPILER_VERSION_MAJOR 174,6207
+# define COMPILER_VERSION_MINOR 175,6260
+# define COMPILER_VERSION_PATCH 176,6313
+#  define SIMULATE_VERSION_MAJOR 179,6419
+#  define SIMULATE_VERSION_MINOR 180,6472
+# define COMPILER_ID 184,6558
+# define COMPILER_VERSION_MAJOR 185,6585
+# define COMPILER_VERSION_MINOR 186,6631
+#  define COMPILER_VERSION_PATCH 188,6717
+# define COMPILER_ID 192,6808
+# define COMPILER_VERSION_MAJOR 194,6860
+# define COMPILER_VERSION_MINOR 195,6912
+#   define COMPILER_VERSION_PATCH 199,7051
+#   define COMPILER_VERSION_PATCH 202,7156
+#  define COMPILER_VERSION_TWEAK 206,7259
+# define COMPILER_ID 210,7431
+# define COMPILER_VERSION_MAJOR 213,7535
+# define COMPILER_VERSION_MINOR 214,7597
+# define COMPILER_VERSION_PATCH 215,7666
+# define COMPILER_ID 219,7809
+# define COMPILER_ID 222,7904
+#  define COMPILER_VERSION_MAJOR 225,8007
+#  define COMPILER_VERSION_MINOR 226,8071
+#  define COMPILER_VERSION_PATCH 227,8139
+#  define COMPILER_VERSION_MAJOR 230,8246
+#  define COMPILER_VERSION_MINOR 231,8306
+#  define COMPILER_VERSION_PATCH 232,8370
+# define COMPILER_ID 240,8631
+# define COMPILER_ID 243,8704
+# define COMPILER_ID 246,8760
+char const* info_compiler 253,9058
+char const* info_simulate 255,9145
+char const* qnxnto 259,9239
+# define PLATFORM_ID 264,9393
+# define PLATFORM_ID 267,9449
+# define PLATFORM_ID 270,9507
+# define PLATFORM_ID 273,9562
+# define PLATFORM_ID 276,9655
+# define PLATFORM_ID 279,9736
+# define PLATFORM_ID 282,9815
+# define PLATFORM_ID 285,9895
+# define PLATFORM_ID 288,9964
+# define PLATFORM_ID 291,10090
+# define PLATFORM_ID 294,10176
+# define PLATFORM_ID 297,10248
+# define PLATFORM_ID 300,10303
+# define PLATFORM_ID 303,10394
+# define PLATFORM_ID 306,10469
+# define PLATFORM_ID 309,10561
+# define PLATFORM_ID 312,10638
+# define PLATFORM_ID 315,10736
+# define PLATFORM_ID 318,10793
+# define PLATFORM_ID 321,10850
+# define PLATFORM_ID 324,10920
+# define PLATFORM_ID 327,10992
+# define PLATFORM_ID 330,11082
+# define PLATFORM_ID 333,11180
+# define PLATFORM_ID 336,11273
+#  define PLATFORM_ID 340,11354
+#  define PLATFORM_ID 343,11409
+#  define PLATFORM_ID 346,11462
+#  define PLATFORM_ID 349,11519
+#  define PLATFORM_ID 352,11584
+# define PLATFORM_ID 356,11647
+#  define ARCHITECTURE_ID 367,11990
+#  define ARCHITECTURE_ID 370,12068
+#  define ARCHITECTURE_ID 373,12125
+#  define ARCHITECTURE_ID 376,12181
+#  define ARCHITECTURE_ID 379,12238
+#  define ARCHITECTURE_ID 382,12294
+#  define ARCHITECTURE_ID 385,12361
+#  define ARCHITECTURE_ID 390,12447
+#  define ARCHITECTURE_ID 393,12504
+#  define ARCHITECTURE_ID 396,12571
+#  define ARCHITECTURE_ID 400,12615
+#define DEC(404,12702
+#define HEX(415,13051
+char const info_version[info_version427,13413
+char const info_simulate_version[info_simulate_version445,13910
+char const* info_platform 465,14579
+char const* info_arch 466,14647
+int main(473,14795
+
+src/PdfCommonData.hpp,7188
 #define PDFCOMMONDATA_H13,169
-struct PageProperties 45,841
-    int width;PageProperties::width46,870
-    int height;PageProperties::height47,909
-    int page_rotate;PageProperties::page_rotate48,949
-    std::string annot;PageProperties::annot49,997
-    int pageSlideShowType;PageProperties::pageSlideShowType50,1036
-    std::string fontname;PageProperties::fontname51,1083
-    PageProperties(PageProperties::PageProperties53,1130
-    void SetPageSize(PageProperties::SetPageSize63,1489
-    void SetPageRotate(PageProperties::SetPageRotate68,1594
-    void SetSlideShowType(PageProperties::SetSlideShowType72,1690
-    void SetFontName(PageProperties::SetFontName76,1775
+#define STR_SETTER(18,231
+#define STR_GETTER(23,360
+struct PdfProperties 33,528
+    std::string docname;PdfProperties::docname34,551
+    std::string page_layout;PdfProperties::page_layout35,602
+    std::string fontname;PdfProperties::fontname36,657
+    std::string compress_mode;PdfProperties::compress_mode37,734
+    std::string page_mode;PdfProperties::page_mode38,787
+    std::string owner;PdfProperties::owner39,833
+    std::string password;PdfProperties::password40,897
+    PdfProperties(PdfProperties::PdfProperties43,1023
+    static const std::string TAG;PdfProperties::TAG48,1204
+    static const std::string ATTR_DOCNAME;PdfProperties::ATTR_DOCNAME49,1238
+    static const std::string ATTR_PAGELAYOUT;PdfProperties::ATTR_PAGELAYOUT50,1281
+    static const std::string ATTR_FONT;PdfProperties::ATTR_FONT51,1327
+    static const std::string ATTR_COMPRESSMODE;PdfProperties::ATTR_COMPRESSMODE52,1367
+    static const std::string ATTR_PAGEMODE;PdfProperties::ATTR_PAGEMODE53,1415
+    static const std::string ATTR_OWNER;PdfProperties::ATTR_OWNER54,1459
+    static const std::string ATTR_PASSWD;PdfProperties::ATTR_PASSWD55,1500
+struct LineProperties 65,1583
+    std::string lable;LineProperties::lable66,1607
+    std::string startX;LineProperties::startX67,1630
+    std::string startY;LineProperties::startY68,1654
+    std::string endX;LineProperties::endX69,1678
+    std::string endY;LineProperties::endY70,1700
+    std::string lineWidth;LineProperties::lineWidth71,1722
+    std::string rgb;LineProperties::rgb72,1749
+    std::string lineType;LineProperties::lineType73,1770
+    LineProperties(LineProperties::LineProperties75,1826
+    static const std::string TAG;LineProperties::TAG80,1997
+    static const std::string ATTR_LABLE;LineProperties::ATTR_LABLE81,2031
+    static const std::string ATTR_X0;LineProperties::ATTR_X082,2072
+    static const std::string ATTR_Y0;LineProperties::ATTR_Y083,2110
+    static const std::string ATTR_X1;LineProperties::ATTR_X184,2148
+    static const std::string ATTR_Y1;LineProperties::ATTR_Y185,2186
+    static const std::string ATTR_LINEWIDTH;LineProperties::ATTR_LINEWIDTH86,2224
+    static const std::string ATTR_RGB;LineProperties::ATTR_RGB87,2269
+    static const std::string ATTR_LINETYPE;LineProperties::ATTR_LINETYPE88,2308
+struct TextProperties 96,2386
+    std::string font;TextProperties::font97,2410
+    std::string size;TextProperties::size98,2432
+    std::string rgb;TextProperties::rgb99,2454
+    std::string text;TextProperties::text100,2475
+    std::string textX;TextProperties::textX101,2497
+    std::string textY;TextProperties::textY102,2520
+    std::string textWidth;TextProperties::textWidth103,2543
+    std::string textHeight;TextProperties::textHeight104,2570
+    std::string includeDoc;TextProperties::includeDoc105,2598
+    TextProperties(TextProperties::TextProperties107,2631
+    static const std::string TAG;TextProperties::TAG112,2825
+    static const std::string ATTR_FONT;TextProperties::ATTR_FONT113,2859
+    static const std::string ATTR_SIZE;TextProperties::ATTR_SIZE114,2899
+    static const std::string ATTR_RGB;TextProperties::ATTR_RGB115,2939
+    static const std::string ATTR_INCLUDE;TextProperties::ATTR_INCLUDE116,2978
+    static const std::string ATTR_TEXTX;TextProperties::ATTR_TEXTX117,3021
+    static const std::string ATTR_TEXTY;TextProperties::ATTR_TEXTY118,3062
+    static const std::string ATTR_TEXTW;TextProperties::ATTR_TEXTW119,3103
+    static const std::string ATTR_TEXTH;TextProperties::ATTR_TEXTH120,3144
+    static const std::string BODY_TEXT;TextProperties::BODY_TEXT121,3185
+struct RectProperties 125,3238
+    std::string lineWidth;RectProperties::lineWidth126,3262
+    std::string rgb;RectProperties::rgb127,3289
+    std::string rectStyle;RectProperties::rectStyle128,3310
+    std::string x;RectProperties::x129,3357
+    std::string y;RectProperties::y130,3414
+    std::string width;RectProperties::width131,3471
+    std::string height;RectProperties::height132,3515
+    RectProperties(RectProperties::RectProperties134,3560
+    static const std::string TAG;RectProperties::TAG136,3673
+    static const std::string ATTR_LINEWIDTH;RectProperties::ATTR_LINEWIDTH137,3707
+    static const std::string ATTR_RGB;RectProperties::ATTR_RGB138,3752
+    static const std::string ATTR_STYLE;RectProperties::ATTR_STYLE139,3791
+    static const std::string ATTR_X;RectProperties::ATTR_X140,3832
+    static const std::string ATTR_Y;RectProperties::ATTR_Y141,3869
+    static const std::string ATTR_WIDTH;RectProperties::ATTR_WIDTH142,3906
+    static const std::string ATTR_HEIGHT;RectProperties::ATTR_HEIGHT143,3947
+struct ImageProperties 147,3994
+    std::string src;ImageProperties::src148,4019
+    std::string x;ImageProperties::x149,4040
+    std::string y;ImageProperties::y150,4059
+    std::string width;ImageProperties::width151,4078
+    std::string height;ImageProperties::height152,4127
+    ImageProperties(ImageProperties::ImageProperties154,4177
+    static const std::string TAG;ImageProperties::TAG156,4254
+    static const std::string ATTR_SRC;ImageProperties::ATTR_SRC157,4288
+    static const std::string ATTR_X;ImageProperties::ATTR_X158,4327
+    static const std::string ATTR_Y;ImageProperties::ATTR_Y159,4364
+    static const std::string ATTR_WIDTH;ImageProperties::ATTR_WIDTH160,4401
+    static const std::string ATTR_HEIGHT;ImageProperties::ATTR_HEIGHT161,4442
+struct PageProperties 170,4521
+    int page_id PageProperties::page_id171,4549
+    std::string width;PageProperties::width172,4585
+    std::string height;PageProperties::height173,4649
+    std::string page_size;PageProperties::page_size174,4714
+    std::string page_rotate;PageProperties::page_rotate175,4766
+    std::string annot;PageProperties::annot176,4821
+    std::string pageSlideShowType;PageProperties::pageSlideShowType177,4864
+    std::string fontname;PageProperties::fontname178,4925
+    std::vector<LineProperties> linesVec;PageProperties::linesVec180,4964
+    std::vector<TextProperties> textVec;PageProperties::textVec181,5016
+    std::vector<RectProperties> rectVec;PageProperties::rectVec182,5067
+    std::vector<ImageProperties> imagesVec;PageProperties::imagesVec183,5119
+    PageProperties(PageProperties::PageProperties185,5175
+    void SetPageId(PageProperties::SetPageId189,5341
+    int GetPageId(PageProperties::GetPageId193,5405
+    static const std::string TAG;PageProperties::TAG197,5462
+    static const std::string ATTR_WIDTH;PageProperties::ATTR_WIDTH198,5496
+    static const std::string ATTR_HEIGHT;PageProperties::ATTR_HEIGHT199,5537
+    static const std::string ATTR_PAGESIZE;PageProperties::ATTR_PAGESIZE200,5579
+    static const std::string ATTR_PAGEROTATE;PageProperties::ATTR_PAGEROTATE201,5623
+    static const std::string ATTR_ANNOT;PageProperties::ATTR_ANNOT202,5669
+    static const std::string ATTR_SLIDESHOWTYPE;PageProperties::ATTR_SLIDESHOWTYPE203,5710
+    static const std::string ATTR_FONT;PageProperties::ATTR_FONT204,5759
 
 src/MiscUtils.hpp,48
 #define MISCUTILS_H3,21
-class MiscUtils12,132
+class MiscUtils14,151
 
-src/XmlLoader.hpp,262
+src/PdfGeneratorEngine.cpp,810
+jmp_buf PdfGeneratorEngine::env;16,236
+PdfGeneratorEngine::PdfGeneratorEngine(18,270
+PdfGeneratorEngine::PdfGeneratorEngine(22,328
+PdfGeneratorEngine::~PdfGeneratorEngine(30,466
+void PdfGeneratorEngine::init(42,671
+void PdfGeneratorEngine::LoadXml(57,1050
+void PdfGeneratorEngine::ErrorHandler(63,1193
+void PdfGeneratorEngine::SetXml(68,1414
+void PdfGeneratorEngine::ConfigPdfProperties(81,1745
+void PdfGeneratorEngine::DrawLine(98,2469
+void PdfGeneratorEngine::DrawRect(110,2895
+void PdfGeneratorEngine::DrawPage(118,3223
+void PdfGeneratorEngine::DrawText(168,5383
+void PdfGeneratorEngine::DrawImage(204,7041
+void PdfGeneratorEngine::OnDrawPdf(221,7633
+void PdfGeneratorEngine::SaveDoc(237,8310
+void PdfGeneratorEngine::SetPdfTitle(246,8461
+void PdfGeneratorEngine::SetPdfXmlLoader(250,8553
+
+src/XmlLoader.hpp,246
 #define XMLLOADER_H12,167
-class XmlLoader20,276
-    std::unique_ptr<TiXmlDocument> m_document;XmlLoader::m_document31,523
-    std::unique_ptr<TiXmlElement> m_rootElement;XmlLoader::m_rootElement32,570
-    std::string m_xmlfile;XmlLoader::m_xmlfile33,619
+class XmlLoader21,305
+    std::unique_ptr<TiXmlDocument> m_document;XmlLoader::m_document33,594
+    TiXmlElement* m_rootElement;XmlLoader::m_rootElement34,641
+    std::string m_xmlfile;XmlLoader::m_xmlfile35,674
 
-src/PdfXmlLoader.hpp,27
-class PdfXmlLoader 14,173
+src/PdfGeneratorEngineHelper.hpp,266
+#define PDFGENERATORENGINEHELPER_H13,177
+class PdfGeneratorEngineHelper18,269
+    PdfGeneratorEngineHelper(PdfGeneratorEngineHelper::PdfGeneratorEngineHelper21,313
+    virtual ~PdfGeneratorEngineHelper(PdfGeneratorEngineHelper::~PdfGeneratorEngineHelper22,346
 
-src/XmlLoader.cpp,153
+src/GlobalInclude.hpp,60
+#define GLOBALINCLUDE_H13,155
+#define TIXML_USE_STL18,229
+
+src/Constants.cpp,498
+const std::string Constants::CompressMode::NONE 6,29
+const std::string Constants::CompressMode::TEXT 7,87
+const std::string Constants::CompressMode::IMAGE 8,145
+const std::string Constants::CompressMode::METADATA 9,205
+const std::string Constants::CompressMode::ALL 10,267
+const std::string Constants::PageMode::NONE 13,325
+const std::string Constants::PageMode::THUMBS 14,379
+const std::string Constants::PageMode::OUTLINE 15,437
+const std::string Constants::PageMode::FULL_SCREEN 16,497
+
+src/MiscUtils.cpp,233
+MiscUtils::MiscUtils(11,120
+MiscUtils::~MiscUtils(15,153
+int MiscUtils::String2Int(20,204
+short MiscUtils::GetR(28,365
+short MiscUtils::GetG(36,582
+short MiscUtils::GetB(44,801
+const std::string MiscUtils::GetFileText(53,1017
+
+src/PdfGeneratorEngineHelper.cpp,183
+HPDF_UINT PdfGeneratorEngineHelper::GetCompressMode(25,377
+HPDF_PageMode PdfGeneratorEngineHelper::GetPageMode(44,1033
+HPDF_PageSizes PdfGeneratorEngineHelper::GetPageSize(61,1605
+
+src/PdfXmlLoader.cpp,565
+PdfXmlLoader::PdfXmlLoader(16,213
+PdfXmlLoader::PdfXmlLoader(20,252
+PdfXmlLoader::~PdfXmlLoader(24,337
+void PdfXmlLoader::ParseXml(29,378
+void PdfXmlLoader::HandlePdfElement(73,2172
+void PdfXmlLoader::HandlePageElement(123,3523
+void PdfXmlLoader::HandleLineElement(179,5015
+void PdfXmlLoader::HandleTextElement(237,6661
+void PdfXmlLoader::HandleRectElement(304,8528
+void PdfXmlLoader::HandleImageElement(360,9973
+const PdfProperties& PdfXmlLoader::GetPdfProperties(402,11080
+const std::vector<PageProperties>& PdfXmlLoader::GetPagesProperties(406,11171
+
+src/PdfCommonData.cpp,2596
+const std::string PdfProperties::TAG 16,193
+const std::string PdfProperties::ATTR_PAGELAYOUT 17,239
+const std::string PdfProperties::ATTR_FONT 18,305
+const std::string PdfProperties::ATTR_COMPRESSMODE 19,358
+const std::string PdfProperties::ATTR_PAGEMODE 20,428
+const std::string PdfProperties::ATTR_OWNER 21,490
+const std::string PdfProperties::ATTR_PASSWD 22,545
+const std::string PdfProperties::ATTR_DOCNAME 23,604
+const std::string LineProperties::TAG 29,668
+const std::string LineProperties::ATTR_LABLE 30,716
+const std::string LineProperties::ATTR_X0 31,772
+const std::string LineProperties::ATTR_Y0 32,822
+const std::string LineProperties::ATTR_X1 33,872
+const std::string LineProperties::ATTR_Y1 34,922
+const std::string LineProperties::ATTR_LINEWIDTH 35,972
+const std::string LineProperties::ATTR_RGB 36,1037
+const std::string LineProperties::ATTR_LINETYPE 37,1089
+const std::string TextProperties::TAG 41,1155
+const std::string TextProperties::ATTR_FONT 42,1203
+const std::string TextProperties::ATTR_SIZE 43,1257
+const std::string TextProperties::ATTR_RGB 44,1311
+const std::string TextProperties::ATTR_INCLUDE 45,1363
+const std::string TextProperties::ATTR_TEXTX 46,1423
+const std::string TextProperties::ATTR_TEXTY 47,1475
+const std::string TextProperties::ATTR_TEXTW 48,1527
+const std::string TextProperties::ATTR_TEXTH 49,1583
+const std::string TextProperties::BODY_TEXT 50,1640
+const std::string RectProperties::TAG 54,1700
+const std::string RectProperties::ATTR_LINEWIDTH 55,1748
+const std::string RectProperties::ATTR_RGB 56,1813
+const std::string RectProperties::ATTR_STYLE 57,1865
+const std::string RectProperties::ATTR_X 58,1921
+const std::string RectProperties::ATTR_Y 59,1969
+const std::string RectProperties::ATTR_WIDTH 60,2017
+const std::string RectProperties::ATTR_HEIGHT 61,2073
+const std::string ImageProperties::TAG 66,2135
+const std::string ImageProperties::ATTR_SRC 67,2185
+const std::string ImageProperties::ATTR_X 68,2238
+const std::string ImageProperties::ATTR_Y 69,2287
+const std::string ImageProperties::ATTR_WIDTH 70,2336
+const std::string ImageProperties::ATTR_HEIGHT 71,2393
+const std::string PageProperties::TAG 76,2456
+const std::string PageProperties::ATTR_WIDTH 77,2504
+const std::string PageProperties::ATTR_HEIGHT 78,2560
+const std::string PageProperties::ATTR_PAGESIZE 79,2618
+const std::string PageProperties::ATTR_PAGEROTATE 80,2676
+const std::string PageProperties::ATTR_ANNOT 81,2738
+const std::string PageProperties::ATTR_SLIDESHOWTYPE 82,2794
+const std::string PageProperties::ATTR_FONT 83,2868
+
+src/Test.cpp,17
+int main(19,253
+
+src/PdfXmlLoader.hpp,219
+#define PDFXMLLOADER_H12,222
+class PdfXmlLoader 22,368
+    PdfProperties m_pdfProperties;PdfXmlLoader::m_pdfProperties45,1101
+    std::vector<PageProperties> m_pageProperties;PdfXmlLoader::m_pageProperties46,1136
+
+src/PdfGeneratorEngine.hpp,469
+#define PDFGENERATORENGINE_H13,165
+class PdfGeneratorEngine33,435
+    std::string m_xmlfile;PdfGeneratorEngine::m_xmlfile62,1408
+    PdfXmlLoader* m_pdfXmlLoader;PdfGeneratorEngine::m_pdfXmlLoader63,1435
+    std::string m_pdfTitle;PdfGeneratorEngine::m_pdfTitle64,1469
+    HPDF_Doc m_hpdf_doc;PdfGeneratorEngine::m_hpdf_doc65,1497
+    std::vector<HPDF_Page> m_pages;PdfGeneratorEngine::m_pages66,1522
+    static jmp_buf env;PdfGeneratorEngine::env68,1559
+
+src/XmlLoader.cpp,203
 XmlLoader::XmlLoader(14,153
 XmlLoader::XmlLoader(18,259
 XmlLoader::~XmlLoader(22,416
 void XmlLoader::LoadXml(28,476
-void XmlLoader::ParseXml(45,894
+void XmlLoader::ParseXml(45,857
+std::string XmlLoader::GetRootElementNode(50,951
+
+src/CMakeFiles/3.2.1/CompilerIdCXX/CMakeCXXCompilerId.cpp,6050
+# define COMPILER_ID 13,390
+# define COMPILER_VERSION_MAJOR 15,451
+# define COMPILER_VERSION_MINOR 16,511
+# define COMPILER_ID 19,622
+#  define SIMULATE_ID 21,674
+# define COMPILER_VERSION_MAJOR 24,742
+# define COMPILER_VERSION_MINOR 25,800
+#  define COMPILER_VERSION_PATCH 27,900
+#  define COMPILER_VERSION_PATCH 29,969
+#  define COMPILER_VERSION_TWEAK 33,1128
+#  define SIMULATE_VERSION_MAJOR 37,1250
+#  define SIMULATE_VERSION_MINOR 38,1303
+# define COMPILER_ID 42,1391
+# define COMPILER_VERSION_MAJOR 43,1424
+# define COMPILER_VERSION_MINOR 44,1472
+#  define COMPILER_VERSION_PATCH 46,1562
+# define COMPILER_ID 50,1693
+# define COMPILER_VERSION_MAJOR 51,1728
+# define COMPILER_VERSION_MINOR 52,1800
+# define COMPILER_VERSION_PATCH 53,1872
+# define COMPILER_ID 56,1973
+# define COMPILER_VERSION_MAJOR 58,2033
+# define COMPILER_VERSION_MINOR 59,2086
+# define COMPILER_ID 62,2193
+# define COMPILER_VERSION_MAJOR 64,2251
+# define COMPILER_VERSION_MINOR 65,2306
+#  define COMPILER_VERSION_PATCH 67,2395
+# define COMPILER_ID 71,2486
+# define COMPILER_VERSION_MAJOR 73,2555
+# define COMPILER_VERSION_MINOR 74,2619
+#  define COMPILER_VERSION_PATCH 76,2708
+# define COMPILER_ID 80,2799
+#  define COMPILER_VERSION_MAJOR 83,2886
+#  define COMPILER_VERSION_MINOR 84,2940
+#  define COMPILER_VERSION_PATCH 85,3000
+#  define COMPILER_VERSION_MAJOR 88,3095
+#  define COMPILER_VERSION_MINOR 89,3148
+#  define COMPILER_VERSION_PATCH 90,3207
+# define COMPILER_ID 94,3299
+# define COMPILER_VERSION_MAJOR 96,3351
+# define COMPILER_VERSION_MINOR 97,3403
+# define COMPILER_VERSION_PATCH 98,3459
+# define COMPILER_ID 101,3540
+# define COMPILER_VERSION_MAJOR 103,3603
+# define COMPILER_VERSION_MINOR 104,3662
+# define COMPILER_VERSION_PATCH 105,3726
+# define COMPILER_ID 108,3848
+# define COMPILER_VERSION_MAJOR 110,3900
+# define COMPILER_VERSION_MINOR 111,3952
+# define COMPILER_VERSION_PATCH 112,4008
+# define COMPILER_ID 115,4142
+# define COMPILER_VERSION_MAJOR 117,4193
+# define COMPILER_VERSION_MINOR 118,4245
+# define COMPILER_VERSION_PATCH 119,4301
+# define COMPILER_ID 122,4434
+# define COMPILER_VERSION_MAJOR 124,4492
+# define COMPILER_VERSION_MINOR 125,4544
+# define COMPILER_VERSION_PATCH 126,4600
+# define COMPILER_ID 129,4678
+# define COMPILER_VERSION_MAJOR 130,4705
+# define COMPILER_VERSION_MINOR 131,4751
+#  define COMPILER_VERSION_PATCH 133,4837
+# define COMPILER_ID 137,4926
+# define COMPILER_VERSION_MAJOR 138,4954
+# define COMPILER_VERSION_MINOR 139,5000
+# define COMPILER_ID 142,5092
+# define COMPILER_VERSION_MAJOR 144,5162
+# define COMPILER_VERSION_MINOR 145,5231
+# define COMPILER_VERSION_PATCH 146,5306
+# define COMPILER_ID 149,5459
+# define COMPILER_ID 152,5522
+# define COMPILER_ID 155,5611
+#  define SIMULATE_ID 157,5668
+# define COMPILER_VERSION_MAJOR 159,5705
+# define COMPILER_VERSION_MINOR 160,5758
+# define COMPILER_VERSION_PATCH 161,5811
+#  define SIMULATE_VERSION_MAJOR 164,5917
+#  define SIMULATE_VERSION_MINOR 165,5970
+# define COMPILER_VERSION_TWEAK 167,6031
+# define COMPILER_ID 170,6118
+#  define SIMULATE_ID 172,6170
+# define COMPILER_VERSION_MAJOR 174,6207
+# define COMPILER_VERSION_MINOR 175,6260
+# define COMPILER_VERSION_PATCH 176,6313
+#  define SIMULATE_VERSION_MAJOR 179,6419
+#  define SIMULATE_VERSION_MINOR 180,6472
+# define COMPILER_ID 184,6558
+# define COMPILER_VERSION_MAJOR 185,6585
+# define COMPILER_VERSION_MINOR 186,6631
+#  define COMPILER_VERSION_PATCH 188,6717
+# define COMPILER_ID 192,6808
+# define COMPILER_VERSION_MAJOR 194,6860
+# define COMPILER_VERSION_MINOR 195,6912
+#   define COMPILER_VERSION_PATCH 199,7051
+#   define COMPILER_VERSION_PATCH 202,7156
+#  define COMPILER_VERSION_TWEAK 206,7259
+# define COMPILER_ID 210,7431
+# define COMPILER_VERSION_MAJOR 213,7535
+# define COMPILER_VERSION_MINOR 214,7597
+# define COMPILER_VERSION_PATCH 215,7666
+# define COMPILER_ID 219,7809
+# define COMPILER_ID 222,7904
+#  define COMPILER_VERSION_MAJOR 225,8007
+#  define COMPILER_VERSION_MINOR 226,8071
+#  define COMPILER_VERSION_PATCH 227,8139
+#  define COMPILER_VERSION_MAJOR 230,8246
+#  define COMPILER_VERSION_MINOR 231,8306
+#  define COMPILER_VERSION_PATCH 232,8370
+# define COMPILER_ID 240,8631
+# define COMPILER_ID 243,8704
+# define COMPILER_ID 246,8760
+char const* info_compiler 253,9058
+char const* info_simulate 255,9145
+char const* qnxnto 259,9239
+# define PLATFORM_ID 264,9393
+# define PLATFORM_ID 267,9449
+# define PLATFORM_ID 270,9507
+# define PLATFORM_ID 273,9562
+# define PLATFORM_ID 276,9655
+# define PLATFORM_ID 279,9736
+# define PLATFORM_ID 282,9815
+# define PLATFORM_ID 285,9895
+# define PLATFORM_ID 288,9964
+# define PLATFORM_ID 291,10090
+# define PLATFORM_ID 294,10176
+# define PLATFORM_ID 297,10248
+# define PLATFORM_ID 300,10303
+# define PLATFORM_ID 303,10394
+# define PLATFORM_ID 306,10469
+# define PLATFORM_ID 309,10561
+# define PLATFORM_ID 312,10638
+# define PLATFORM_ID 315,10736
+# define PLATFORM_ID 318,10793
+# define PLATFORM_ID 321,10850
+# define PLATFORM_ID 324,10920
+# define PLATFORM_ID 327,10992
+# define PLATFORM_ID 330,11082
+# define PLATFORM_ID 333,11180
+# define PLATFORM_ID 336,11273
+#  define PLATFORM_ID 340,11354
+#  define PLATFORM_ID 343,11409
+#  define PLATFORM_ID 346,11462
+#  define PLATFORM_ID 349,11519
+#  define PLATFORM_ID 352,11584
+# define PLATFORM_ID 356,11647
+#  define ARCHITECTURE_ID 367,11990
+#  define ARCHITECTURE_ID 370,12068
+#  define ARCHITECTURE_ID 373,12125
+#  define ARCHITECTURE_ID 376,12181
+#  define ARCHITECTURE_ID 379,12238
+#  define ARCHITECTURE_ID 382,12294
+#  define ARCHITECTURE_ID 385,12361
+#  define ARCHITECTURE_ID 390,12447
+#  define ARCHITECTURE_ID 393,12504
+#  define ARCHITECTURE_ID 396,12571
+#  define ARCHITECTURE_ID 400,12615
+#define DEC(404,12702
+#define HEX(415,13051
+char const info_version[info_version427,13413
+char const info_simulate_version[info_simulate_version445,13910
+char const* info_platform 465,14579
+char const* info_arch 466,14647
+int main(473,14795
+
+src/Constants.hpp,747
+#define CONSTANTS_H12,170
+namespace Constants 18,218
+class CompressModeConstants::CompressMode20,241
+    static const std::string NONE;Constants::CompressMode::NONE23,272
+    static const std::string TEXT;Constants::CompressMode::TEXT24,307
+    static const std::string IMAGE;Constants::CompressMode::IMAGE25,342
+    static const std::string METADATA;Constants::CompressMode::METADATA26,378
+    static const std::string ALL Constants::CompressMode::ALL27,417
+class PageMode32,458
+    static const std::string NONE;PageMode::NONE35,485
+    static const std::string OUTLINE;PageMode::OUTLINE36,520
+    static const std::string THUMBS;PageMode::THUMBS37,558
+    static const std::string FULL_SCREEN;PageMode::FULL_SCREEN38,595
 
 CMakeFiles/3.2.1/CompilerIdCXX/CMakeCXXCompilerId.cpp,6050
 # define COMPILER_ID 13,390
@@ -387,9 +971,3 @@ char const info_simulate_version[info_simulate_version445,13910
 char const* info_platform 465,14579
 char const* info_arch 466,14647
 int main(473,14795
-
-src/PdfCommonData.cpp,0
-
-src/PdfXmlLoader.cpp,0
-
-src/MiscUtils.cpp,0

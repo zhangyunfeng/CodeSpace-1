@@ -35,111 +35,111 @@ RM = /usr/local/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ken/KenHttpd/AutoPaper/tinyxml
+CMAKE_SOURCE_DIR = /home/ken/KenHttpd/AutoPaper
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ken/KenHttpd/AutoPaper/tinyxml
+CMAKE_BINARY_DIR = /home/ken/KenHttpd/AutoPaper
 
 # Include any dependencies generated for this target.
-include CMakeFiles/tinyxml.dir/depend.make
+include tinyxml/CMakeFiles/tinyxml.dir/depend.make
 
 # Include the progress variables for this target.
-include CMakeFiles/tinyxml.dir/progress.make
+include tinyxml/CMakeFiles/tinyxml.dir/progress.make
 
 # Include the compile flags for this target's objects.
-include CMakeFiles/tinyxml.dir/flags.make
+include tinyxml/CMakeFiles/tinyxml.dir/flags.make
 
-CMakeFiles/tinyxml.dir/tinystr.o: CMakeFiles/tinyxml.dir/flags.make
-CMakeFiles/tinyxml.dir/tinystr.o: tinystr.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ken/KenHttpd/AutoPaper/tinyxml/CMakeFiles $(CMAKE_PROGRESS_1)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/tinyxml.dir/tinystr.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/tinyxml.dir/tinystr.o -c /home/ken/KenHttpd/AutoPaper/tinyxml/tinystr.cpp
+tinyxml/CMakeFiles/tinyxml.dir/tinystr.o: tinyxml/CMakeFiles/tinyxml.dir/flags.make
+tinyxml/CMakeFiles/tinyxml.dir/tinystr.o: tinyxml/tinystr.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ken/KenHttpd/AutoPaper/CMakeFiles $(CMAKE_PROGRESS_1)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object tinyxml/CMakeFiles/tinyxml.dir/tinystr.o"
+	cd /home/ken/KenHttpd/AutoPaper/tinyxml && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/tinyxml.dir/tinystr.o -c /home/ken/KenHttpd/AutoPaper/tinyxml/tinystr.cpp
 
-CMakeFiles/tinyxml.dir/tinystr.i: cmake_force
+tinyxml/CMakeFiles/tinyxml.dir/tinystr.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/tinyxml.dir/tinystr.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ken/KenHttpd/AutoPaper/tinyxml/tinystr.cpp > CMakeFiles/tinyxml.dir/tinystr.i
+	cd /home/ken/KenHttpd/AutoPaper/tinyxml && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ken/KenHttpd/AutoPaper/tinyxml/tinystr.cpp > CMakeFiles/tinyxml.dir/tinystr.i
 
-CMakeFiles/tinyxml.dir/tinystr.s: cmake_force
+tinyxml/CMakeFiles/tinyxml.dir/tinystr.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tinyxml.dir/tinystr.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ken/KenHttpd/AutoPaper/tinyxml/tinystr.cpp -o CMakeFiles/tinyxml.dir/tinystr.s
+	cd /home/ken/KenHttpd/AutoPaper/tinyxml && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ken/KenHttpd/AutoPaper/tinyxml/tinystr.cpp -o CMakeFiles/tinyxml.dir/tinystr.s
 
-CMakeFiles/tinyxml.dir/tinystr.o.requires:
-.PHONY : CMakeFiles/tinyxml.dir/tinystr.o.requires
+tinyxml/CMakeFiles/tinyxml.dir/tinystr.o.requires:
+.PHONY : tinyxml/CMakeFiles/tinyxml.dir/tinystr.o.requires
 
-CMakeFiles/tinyxml.dir/tinystr.o.provides: CMakeFiles/tinyxml.dir/tinystr.o.requires
-	$(MAKE) -f CMakeFiles/tinyxml.dir/build.make CMakeFiles/tinyxml.dir/tinystr.o.provides.build
-.PHONY : CMakeFiles/tinyxml.dir/tinystr.o.provides
+tinyxml/CMakeFiles/tinyxml.dir/tinystr.o.provides: tinyxml/CMakeFiles/tinyxml.dir/tinystr.o.requires
+	$(MAKE) -f tinyxml/CMakeFiles/tinyxml.dir/build.make tinyxml/CMakeFiles/tinyxml.dir/tinystr.o.provides.build
+.PHONY : tinyxml/CMakeFiles/tinyxml.dir/tinystr.o.provides
 
-CMakeFiles/tinyxml.dir/tinystr.o.provides.build: CMakeFiles/tinyxml.dir/tinystr.o
+tinyxml/CMakeFiles/tinyxml.dir/tinystr.o.provides.build: tinyxml/CMakeFiles/tinyxml.dir/tinystr.o
 
-CMakeFiles/tinyxml.dir/tinyxmlparser.o: CMakeFiles/tinyxml.dir/flags.make
-CMakeFiles/tinyxml.dir/tinyxmlparser.o: tinyxmlparser.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ken/KenHttpd/AutoPaper/tinyxml/CMakeFiles $(CMAKE_PROGRESS_2)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/tinyxml.dir/tinyxmlparser.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/tinyxml.dir/tinyxmlparser.o -c /home/ken/KenHttpd/AutoPaper/tinyxml/tinyxmlparser.cpp
+tinyxml/CMakeFiles/tinyxml.dir/tinyxmlparser.o: tinyxml/CMakeFiles/tinyxml.dir/flags.make
+tinyxml/CMakeFiles/tinyxml.dir/tinyxmlparser.o: tinyxml/tinyxmlparser.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ken/KenHttpd/AutoPaper/CMakeFiles $(CMAKE_PROGRESS_2)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object tinyxml/CMakeFiles/tinyxml.dir/tinyxmlparser.o"
+	cd /home/ken/KenHttpd/AutoPaper/tinyxml && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/tinyxml.dir/tinyxmlparser.o -c /home/ken/KenHttpd/AutoPaper/tinyxml/tinyxmlparser.cpp
 
-CMakeFiles/tinyxml.dir/tinyxmlparser.i: cmake_force
+tinyxml/CMakeFiles/tinyxml.dir/tinyxmlparser.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/tinyxml.dir/tinyxmlparser.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ken/KenHttpd/AutoPaper/tinyxml/tinyxmlparser.cpp > CMakeFiles/tinyxml.dir/tinyxmlparser.i
+	cd /home/ken/KenHttpd/AutoPaper/tinyxml && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ken/KenHttpd/AutoPaper/tinyxml/tinyxmlparser.cpp > CMakeFiles/tinyxml.dir/tinyxmlparser.i
 
-CMakeFiles/tinyxml.dir/tinyxmlparser.s: cmake_force
+tinyxml/CMakeFiles/tinyxml.dir/tinyxmlparser.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tinyxml.dir/tinyxmlparser.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ken/KenHttpd/AutoPaper/tinyxml/tinyxmlparser.cpp -o CMakeFiles/tinyxml.dir/tinyxmlparser.s
+	cd /home/ken/KenHttpd/AutoPaper/tinyxml && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ken/KenHttpd/AutoPaper/tinyxml/tinyxmlparser.cpp -o CMakeFiles/tinyxml.dir/tinyxmlparser.s
 
-CMakeFiles/tinyxml.dir/tinyxmlparser.o.requires:
-.PHONY : CMakeFiles/tinyxml.dir/tinyxmlparser.o.requires
+tinyxml/CMakeFiles/tinyxml.dir/tinyxmlparser.o.requires:
+.PHONY : tinyxml/CMakeFiles/tinyxml.dir/tinyxmlparser.o.requires
 
-CMakeFiles/tinyxml.dir/tinyxmlparser.o.provides: CMakeFiles/tinyxml.dir/tinyxmlparser.o.requires
-	$(MAKE) -f CMakeFiles/tinyxml.dir/build.make CMakeFiles/tinyxml.dir/tinyxmlparser.o.provides.build
-.PHONY : CMakeFiles/tinyxml.dir/tinyxmlparser.o.provides
+tinyxml/CMakeFiles/tinyxml.dir/tinyxmlparser.o.provides: tinyxml/CMakeFiles/tinyxml.dir/tinyxmlparser.o.requires
+	$(MAKE) -f tinyxml/CMakeFiles/tinyxml.dir/build.make tinyxml/CMakeFiles/tinyxml.dir/tinyxmlparser.o.provides.build
+.PHONY : tinyxml/CMakeFiles/tinyxml.dir/tinyxmlparser.o.provides
 
-CMakeFiles/tinyxml.dir/tinyxmlparser.o.provides.build: CMakeFiles/tinyxml.dir/tinyxmlparser.o
+tinyxml/CMakeFiles/tinyxml.dir/tinyxmlparser.o.provides.build: tinyxml/CMakeFiles/tinyxml.dir/tinyxmlparser.o
 
-CMakeFiles/tinyxml.dir/tinyxmlerror.o: CMakeFiles/tinyxml.dir/flags.make
-CMakeFiles/tinyxml.dir/tinyxmlerror.o: tinyxmlerror.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ken/KenHttpd/AutoPaper/tinyxml/CMakeFiles $(CMAKE_PROGRESS_3)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/tinyxml.dir/tinyxmlerror.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/tinyxml.dir/tinyxmlerror.o -c /home/ken/KenHttpd/AutoPaper/tinyxml/tinyxmlerror.cpp
+tinyxml/CMakeFiles/tinyxml.dir/tinyxmlerror.o: tinyxml/CMakeFiles/tinyxml.dir/flags.make
+tinyxml/CMakeFiles/tinyxml.dir/tinyxmlerror.o: tinyxml/tinyxmlerror.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ken/KenHttpd/AutoPaper/CMakeFiles $(CMAKE_PROGRESS_3)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object tinyxml/CMakeFiles/tinyxml.dir/tinyxmlerror.o"
+	cd /home/ken/KenHttpd/AutoPaper/tinyxml && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/tinyxml.dir/tinyxmlerror.o -c /home/ken/KenHttpd/AutoPaper/tinyxml/tinyxmlerror.cpp
 
-CMakeFiles/tinyxml.dir/tinyxmlerror.i: cmake_force
+tinyxml/CMakeFiles/tinyxml.dir/tinyxmlerror.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/tinyxml.dir/tinyxmlerror.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ken/KenHttpd/AutoPaper/tinyxml/tinyxmlerror.cpp > CMakeFiles/tinyxml.dir/tinyxmlerror.i
+	cd /home/ken/KenHttpd/AutoPaper/tinyxml && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ken/KenHttpd/AutoPaper/tinyxml/tinyxmlerror.cpp > CMakeFiles/tinyxml.dir/tinyxmlerror.i
 
-CMakeFiles/tinyxml.dir/tinyxmlerror.s: cmake_force
+tinyxml/CMakeFiles/tinyxml.dir/tinyxmlerror.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tinyxml.dir/tinyxmlerror.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ken/KenHttpd/AutoPaper/tinyxml/tinyxmlerror.cpp -o CMakeFiles/tinyxml.dir/tinyxmlerror.s
+	cd /home/ken/KenHttpd/AutoPaper/tinyxml && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ken/KenHttpd/AutoPaper/tinyxml/tinyxmlerror.cpp -o CMakeFiles/tinyxml.dir/tinyxmlerror.s
 
-CMakeFiles/tinyxml.dir/tinyxmlerror.o.requires:
-.PHONY : CMakeFiles/tinyxml.dir/tinyxmlerror.o.requires
+tinyxml/CMakeFiles/tinyxml.dir/tinyxmlerror.o.requires:
+.PHONY : tinyxml/CMakeFiles/tinyxml.dir/tinyxmlerror.o.requires
 
-CMakeFiles/tinyxml.dir/tinyxmlerror.o.provides: CMakeFiles/tinyxml.dir/tinyxmlerror.o.requires
-	$(MAKE) -f CMakeFiles/tinyxml.dir/build.make CMakeFiles/tinyxml.dir/tinyxmlerror.o.provides.build
-.PHONY : CMakeFiles/tinyxml.dir/tinyxmlerror.o.provides
+tinyxml/CMakeFiles/tinyxml.dir/tinyxmlerror.o.provides: tinyxml/CMakeFiles/tinyxml.dir/tinyxmlerror.o.requires
+	$(MAKE) -f tinyxml/CMakeFiles/tinyxml.dir/build.make tinyxml/CMakeFiles/tinyxml.dir/tinyxmlerror.o.provides.build
+.PHONY : tinyxml/CMakeFiles/tinyxml.dir/tinyxmlerror.o.provides
 
-CMakeFiles/tinyxml.dir/tinyxmlerror.o.provides.build: CMakeFiles/tinyxml.dir/tinyxmlerror.o
+tinyxml/CMakeFiles/tinyxml.dir/tinyxmlerror.o.provides.build: tinyxml/CMakeFiles/tinyxml.dir/tinyxmlerror.o
 
-CMakeFiles/tinyxml.dir/tinyxml.o: CMakeFiles/tinyxml.dir/flags.make
-CMakeFiles/tinyxml.dir/tinyxml.o: tinyxml.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ken/KenHttpd/AutoPaper/tinyxml/CMakeFiles $(CMAKE_PROGRESS_4)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/tinyxml.dir/tinyxml.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/tinyxml.dir/tinyxml.o -c /home/ken/KenHttpd/AutoPaper/tinyxml/tinyxml.cpp
+tinyxml/CMakeFiles/tinyxml.dir/tinyxml.o: tinyxml/CMakeFiles/tinyxml.dir/flags.make
+tinyxml/CMakeFiles/tinyxml.dir/tinyxml.o: tinyxml/tinyxml.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ken/KenHttpd/AutoPaper/CMakeFiles $(CMAKE_PROGRESS_4)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object tinyxml/CMakeFiles/tinyxml.dir/tinyxml.o"
+	cd /home/ken/KenHttpd/AutoPaper/tinyxml && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/tinyxml.dir/tinyxml.o -c /home/ken/KenHttpd/AutoPaper/tinyxml/tinyxml.cpp
 
-CMakeFiles/tinyxml.dir/tinyxml.i: cmake_force
+tinyxml/CMakeFiles/tinyxml.dir/tinyxml.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/tinyxml.dir/tinyxml.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ken/KenHttpd/AutoPaper/tinyxml/tinyxml.cpp > CMakeFiles/tinyxml.dir/tinyxml.i
+	cd /home/ken/KenHttpd/AutoPaper/tinyxml && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ken/KenHttpd/AutoPaper/tinyxml/tinyxml.cpp > CMakeFiles/tinyxml.dir/tinyxml.i
 
-CMakeFiles/tinyxml.dir/tinyxml.s: cmake_force
+tinyxml/CMakeFiles/tinyxml.dir/tinyxml.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tinyxml.dir/tinyxml.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ken/KenHttpd/AutoPaper/tinyxml/tinyxml.cpp -o CMakeFiles/tinyxml.dir/tinyxml.s
+	cd /home/ken/KenHttpd/AutoPaper/tinyxml && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ken/KenHttpd/AutoPaper/tinyxml/tinyxml.cpp -o CMakeFiles/tinyxml.dir/tinyxml.s
 
-CMakeFiles/tinyxml.dir/tinyxml.o.requires:
-.PHONY : CMakeFiles/tinyxml.dir/tinyxml.o.requires
+tinyxml/CMakeFiles/tinyxml.dir/tinyxml.o.requires:
+.PHONY : tinyxml/CMakeFiles/tinyxml.dir/tinyxml.o.requires
 
-CMakeFiles/tinyxml.dir/tinyxml.o.provides: CMakeFiles/tinyxml.dir/tinyxml.o.requires
-	$(MAKE) -f CMakeFiles/tinyxml.dir/build.make CMakeFiles/tinyxml.dir/tinyxml.o.provides.build
-.PHONY : CMakeFiles/tinyxml.dir/tinyxml.o.provides
+tinyxml/CMakeFiles/tinyxml.dir/tinyxml.o.provides: tinyxml/CMakeFiles/tinyxml.dir/tinyxml.o.requires
+	$(MAKE) -f tinyxml/CMakeFiles/tinyxml.dir/build.make tinyxml/CMakeFiles/tinyxml.dir/tinyxml.o.provides.build
+.PHONY : tinyxml/CMakeFiles/tinyxml.dir/tinyxml.o.provides
 
-CMakeFiles/tinyxml.dir/tinyxml.o.provides.build: CMakeFiles/tinyxml.dir/tinyxml.o
+tinyxml/CMakeFiles/tinyxml.dir/tinyxml.o.provides.build: tinyxml/CMakeFiles/tinyxml.dir/tinyxml.o
 
 # Object files for target tinyxml
 tinyxml_OBJECTS = \
@@ -151,37 +151,37 @@ tinyxml_OBJECTS = \
 # External object files for target tinyxml
 tinyxml_EXTERNAL_OBJECTS =
 
-libtinyxml.so.1.0: CMakeFiles/tinyxml.dir/tinystr.o
-libtinyxml.so.1.0: CMakeFiles/tinyxml.dir/tinyxmlparser.o
-libtinyxml.so.1.0: CMakeFiles/tinyxml.dir/tinyxmlerror.o
-libtinyxml.so.1.0: CMakeFiles/tinyxml.dir/tinyxml.o
-libtinyxml.so.1.0: CMakeFiles/tinyxml.dir/build.make
-libtinyxml.so.1.0: CMakeFiles/tinyxml.dir/link.txt
+tinyxml/libtinyxml.so.1.0: tinyxml/CMakeFiles/tinyxml.dir/tinystr.o
+tinyxml/libtinyxml.so.1.0: tinyxml/CMakeFiles/tinyxml.dir/tinyxmlparser.o
+tinyxml/libtinyxml.so.1.0: tinyxml/CMakeFiles/tinyxml.dir/tinyxmlerror.o
+tinyxml/libtinyxml.so.1.0: tinyxml/CMakeFiles/tinyxml.dir/tinyxml.o
+tinyxml/libtinyxml.so.1.0: tinyxml/CMakeFiles/tinyxml.dir/build.make
+tinyxml/libtinyxml.so.1.0: tinyxml/CMakeFiles/tinyxml.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX shared library libtinyxml.so"
-	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/tinyxml.dir/link.txt --verbose=$(VERBOSE)
-	$(CMAKE_COMMAND) -E cmake_symlink_library libtinyxml.so.1.0 libtinyxml.so.1 libtinyxml.so
+	cd /home/ken/KenHttpd/AutoPaper/tinyxml && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/tinyxml.dir/link.txt --verbose=$(VERBOSE)
+	cd /home/ken/KenHttpd/AutoPaper/tinyxml && $(CMAKE_COMMAND) -E cmake_symlink_library libtinyxml.so.1.0 libtinyxml.so.1 libtinyxml.so
 
-libtinyxml.so.1: libtinyxml.so.1.0
-	@$(CMAKE_COMMAND) -E touch_nocreate libtinyxml.so.1
+tinyxml/libtinyxml.so.1: tinyxml/libtinyxml.so.1.0
+	@$(CMAKE_COMMAND) -E touch_nocreate tinyxml/libtinyxml.so.1
 
-libtinyxml.so: libtinyxml.so.1.0
-	@$(CMAKE_COMMAND) -E touch_nocreate libtinyxml.so
+tinyxml/libtinyxml.so: tinyxml/libtinyxml.so.1.0
+	@$(CMAKE_COMMAND) -E touch_nocreate tinyxml/libtinyxml.so
 
 # Rule to build all files generated by this target.
-CMakeFiles/tinyxml.dir/build: libtinyxml.so
-.PHONY : CMakeFiles/tinyxml.dir/build
+tinyxml/CMakeFiles/tinyxml.dir/build: tinyxml/libtinyxml.so
+.PHONY : tinyxml/CMakeFiles/tinyxml.dir/build
 
-CMakeFiles/tinyxml.dir/requires: CMakeFiles/tinyxml.dir/tinystr.o.requires
-CMakeFiles/tinyxml.dir/requires: CMakeFiles/tinyxml.dir/tinyxmlparser.o.requires
-CMakeFiles/tinyxml.dir/requires: CMakeFiles/tinyxml.dir/tinyxmlerror.o.requires
-CMakeFiles/tinyxml.dir/requires: CMakeFiles/tinyxml.dir/tinyxml.o.requires
-.PHONY : CMakeFiles/tinyxml.dir/requires
+tinyxml/CMakeFiles/tinyxml.dir/requires: tinyxml/CMakeFiles/tinyxml.dir/tinystr.o.requires
+tinyxml/CMakeFiles/tinyxml.dir/requires: tinyxml/CMakeFiles/tinyxml.dir/tinyxmlparser.o.requires
+tinyxml/CMakeFiles/tinyxml.dir/requires: tinyxml/CMakeFiles/tinyxml.dir/tinyxmlerror.o.requires
+tinyxml/CMakeFiles/tinyxml.dir/requires: tinyxml/CMakeFiles/tinyxml.dir/tinyxml.o.requires
+.PHONY : tinyxml/CMakeFiles/tinyxml.dir/requires
 
-CMakeFiles/tinyxml.dir/clean:
-	$(CMAKE_COMMAND) -P CMakeFiles/tinyxml.dir/cmake_clean.cmake
-.PHONY : CMakeFiles/tinyxml.dir/clean
+tinyxml/CMakeFiles/tinyxml.dir/clean:
+	cd /home/ken/KenHttpd/AutoPaper/tinyxml && $(CMAKE_COMMAND) -P CMakeFiles/tinyxml.dir/cmake_clean.cmake
+.PHONY : tinyxml/CMakeFiles/tinyxml.dir/clean
 
-CMakeFiles/tinyxml.dir/depend:
-	cd /home/ken/KenHttpd/AutoPaper/tinyxml && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ken/KenHttpd/AutoPaper/tinyxml /home/ken/KenHttpd/AutoPaper/tinyxml /home/ken/KenHttpd/AutoPaper/tinyxml /home/ken/KenHttpd/AutoPaper/tinyxml /home/ken/KenHttpd/AutoPaper/tinyxml/CMakeFiles/tinyxml.dir/DependInfo.cmake --color=$(COLOR)
-.PHONY : CMakeFiles/tinyxml.dir/depend
+tinyxml/CMakeFiles/tinyxml.dir/depend:
+	cd /home/ken/KenHttpd/AutoPaper && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ken/KenHttpd/AutoPaper /home/ken/KenHttpd/AutoPaper/tinyxml /home/ken/KenHttpd/AutoPaper /home/ken/KenHttpd/AutoPaper/tinyxml /home/ken/KenHttpd/AutoPaper/tinyxml/CMakeFiles/tinyxml.dir/DependInfo.cmake --color=$(COLOR)
+.PHONY : tinyxml/CMakeFiles/tinyxml.dir/depend
 
