@@ -106,7 +106,7 @@ void PdfGeneratorEngine::DrawLine(const LineProperties& lineProperties, HPDF_Pag
     HPDF_Page_SetLineJoin(page, HPDF_MITER_JOIN);
 
     int startx = MiscUtils::String2Int(lineProperties.startX);
-    int starty =  HPDF_Page_GetHeight(page) -  MiscUtils::String2Int(lineProperties.startY);
+    int starty =  HPDF_Page_GetHeight(page) -  MiscUtils::String2Int(lineProperties.startY); 
     HPDF_Page_MoveTo(page, startx, starty);
     int endx = MiscUtils::String2Int(lineProperties.endX);
     int endy =  HPDF_Page_GetHeight(page) - MiscUtils::String2Int(lineProperties.endY);
@@ -122,9 +122,22 @@ void PdfGeneratorEngine::DrawLine(const LineProperties& lineProperties, HPDF_Pag
  * @param page 
  */
 void PdfGeneratorEngine::DrawRect(const RectProperties& rectProperties, HPDF_Page& page) {
-    HPDF_Page_Rectangle(page, MiscUtils::String2Int(rectProperties.x), MiscUtils::String2Int(rectProperties.y),
-                       MiscUtils::String2Int(rectProperties.width), MiscUtils::String2Int(rectProperties.height));
-    
+    std::cout << "DrawRect\n" << std::endl;
+
+    HPDF_Page_SetLineWidth(page, MiscUtils::String2Int(rectProperties.lineWidth));
+
+    int r = MiscUtils::GetR(rectProperties.rgb);
+    int g = MiscUtils::GetG(rectProperties.rgb);
+    int b = MiscUtils::GetB(rectProperties.rgb);
+    HPDF_Page_SetRGBStroke (page, r / 255.0f, g / 255.0f, b / 255.0f);
+
+    int rectWidth = MiscUtils::String2Int(rectProperties.width);
+    int rectHeight = MiscUtils::String2Int(rectProperties.height);
+    int rectx = MiscUtils::String2Int(rectProperties.x);
+    int recty = HPDF_Page_GetHeight(page) - MiscUtils::String2Int(rectProperties.y) - rectHeight;
+
+    HPDF_Page_Rectangle(page, rectx, recty, rectWidth, rectHeight);
+    HPDF_Page_Stroke(page);
 }
 
 
@@ -218,12 +231,20 @@ void PdfGeneratorEngine::DrawImage(const ImageProperties& imageProperties, HPDF_
     // image png format
     // TODO: need add HPDF_LoadJpegImageFromFile 
     image = HPDF_LoadPngImageFromFile(m_hpdf_doc, imageProperties.src.c_str());
-    const int image_width = HPDF_Image_GetWidth(image);
-    const int image_height = HPDF_Image_GetHeight(image);
-    // draw image(png) to the canvas
-    HPDF_Page_DrawImage(page, image, MiscUtils::String2Int(imageProperties.x), MiscUtils::String2Int(imageProperties.y), image_width, image_height);
-}
+    int image_width = MiscUtils::String2Int(imageProperties.width);
+    int image_height = MiscUtils::String2Int(imageProperties.height);
+    if (image_width == 0 || image_height == 0) {
+        image_width = HPDF_Image_GetWidth(image);
+        image_height = HPDF_Image_GetHeight(image);
+    }         
 
+    int page_height = HPDF_Page_GetHeight(page);
+    int imageX = MiscUtils::String2Int(imageProperties.x);
+    int imageY = page_height - MiscUtils::String2Int(imageProperties.y) - image_height;
+    std::cout << "page_height: " << page_height << " image_height: " << image_height << " imageY: " << imageY << std::endl;
+    // draw image(png) to the canvas
+    HPDF_Page_DrawImage(page, image, imageX, imageY, image_width, image_height);
+}
 
 /** 
  * 
