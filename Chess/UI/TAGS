@@ -1,0 +1,94 @@
+
+GoBang/Source/MainComponent.cpp,187
+MainContentComponent::MainContentComponent(13,327
+MainContentComponent::~MainContentComponent(18,406
+void MainContentComponent::paint 22,461
+void MainContentComponent::resized(31,705
+
+GoBang/Source/Main.cpp,933
+class GoBangApplication 16,455
+    GoBangApplication(GoBangApplication::GoBangApplication20,604
+    const String getApplicationName(GoBangApplication::getApplicationName22,634
+    const String getApplicationVersion(GoBangApplication::getApplicationVersion23,725
+    bool moreThanOneInstanceAllowed(GoBangApplication::moreThanOneInstanceAllowed24,818
+    void initialise GoBangApplication::initialise27,977
+    void shutdown(GoBangApplication::shutdown34,1203
+    void systemRequestedQuit(GoBangApplication::systemRequestedQuit42,1448
+    void anotherInstanceStarted GoBangApplication::anotherInstanceStarted49,1702
+    class MainWindow GoBangApplication::MainWindow61,2237
+        MainWindow GoBangApplication::MainWindow::MainWindow64,2306
+        void closeButtonPressed(GoBangApplication::MainWindow::closeButtonPressed75,2741
+    ScopedPointer<MainWindow> mainWindow;GoBangApplication::mainWindow95,3599
+
+GoBang/Source/MainComponent.cpp,187
+MainContentComponent::MainContentComponent(13,327
+MainContentComponent::~MainContentComponent(18,406
+void MainContentComponent::paint 22,461
+void MainContentComponent::resized(31,705
+
+GoBang/Source/Main.cpp,933
+class GoBangApplication 16,455
+    GoBangApplication(GoBangApplication::GoBangApplication20,604
+    const String getApplicationName(GoBangApplication::getApplicationName22,634
+    const String getApplicationVersion(GoBangApplication::getApplicationVersion23,725
+    bool moreThanOneInstanceAllowed(GoBangApplication::moreThanOneInstanceAllowed24,818
+    void initialise GoBangApplication::initialise27,977
+    void shutdown(GoBangApplication::shutdown34,1203
+    void systemRequestedQuit(GoBangApplication::systemRequestedQuit42,1448
+    void anotherInstanceStarted GoBangApplication::anotherInstanceStarted49,1702
+    class MainWindow GoBangApplication::MainWindow61,2237
+        MainWindow GoBangApplication::MainWindow::MainWindow64,2306
+        void closeButtonPressed(GoBangApplication::MainWindow::closeButtonPressed75,2741
+    ScopedPointer<MainWindow> mainWindow;GoBangApplication::mainWindow95,3599
+
+GoBang/Source/MainComponent.h,75
+#define MAINCOMPONENT_H_INCLUDED10,247
+class MainContentComponent 20,535
+
+GoBang/JuceLibraryCode/JuceHeader.h,101
+#define __APPHEADERFILE_CSFW3W__14,471
+ using namespace juce;34,1434
+namespace ProjectInfo38,1505
+
+GoBang/JuceLibraryCode/AppConfig.h,800
+#define __JUCE_APPCONFIG_CSFW3W__15,508
+#define JUCE_MODULE_AVAILABLE_juce_audio_basics 25,863
+#define JUCE_MODULE_AVAILABLE_juce_audio_devices 26,923
+#define JUCE_MODULE_AVAILABLE_juce_audio_formats 27,983
+#define JUCE_MODULE_AVAILABLE_juce_audio_processors 28,1043
+#define JUCE_MODULE_AVAILABLE_juce_core 29,1103
+#define JUCE_MODULE_AVAILABLE_juce_cryptography 30,1163
+#define JUCE_MODULE_AVAILABLE_juce_data_structures 31,1223
+#define JUCE_MODULE_AVAILABLE_juce_events 32,1283
+#define JUCE_MODULE_AVAILABLE_juce_graphics 33,1343
+#define JUCE_MODULE_AVAILABLE_juce_gui_basics 34,1403
+#define JUCE_MODULE_AVAILABLE_juce_gui_extra 35,1463
+#define JUCE_MODULE_AVAILABLE_juce_opengl 36,1523
+#define JUCE_MODULE_AVAILABLE_juce_video 37,1583
+ #define   JUCE_STANDALONE_APPLICATION 41,1767
+
+GoBang/JuceLibraryCode/modules/juce_graphics/juce_graphics.h,0
+
+GoBang/JuceLibraryCode/modules/juce_audio_basics/juce_audio_basics.h,0
+
+GoBang/JuceLibraryCode/modules/juce_gui_basics/juce_gui_basics.h,0
+
+GoBang/JuceLibraryCode/modules/juce_video/juce_video.h,0
+
+GoBang/JuceLibraryCode/modules/juce_audio_formats/juce_audio_formats.h,0
+
+GoBang/JuceLibraryCode/modules/juce_audio_processors/juce_audio_processors.h,0
+
+GoBang/JuceLibraryCode/modules/juce_opengl/juce_opengl.h,0
+
+GoBang/JuceLibraryCode/modules/juce_core/juce_core.h,0
+
+GoBang/JuceLibraryCode/modules/juce_gui_extra/juce_gui_extra.h,0
+
+GoBang/JuceLibraryCode/modules/juce_data_structures/juce_data_structures.h,0
+
+GoBang/JuceLibraryCode/modules/juce_cryptography/juce_cryptography.h,0
+
+GoBang/JuceLibraryCode/modules/juce_audio_devices/juce_audio_devices.h,0
+
+GoBang/JuceLibraryCode/modules/juce_events/juce_events.h,0
