@@ -13,6 +13,7 @@
 
 #include <iostream>
 #include <string>
+#include <vector>
 
 #define CHESS_ROW_COUNT 19
 #define CHESS_COLUMN_COUNT 19
@@ -80,6 +81,8 @@ class GoBangBoard {
     bool IsBoardFull();
 
     void ClearBoard();
+
+    std::vector<short> GetBoardValues() const;
     
   protected:
     /** 

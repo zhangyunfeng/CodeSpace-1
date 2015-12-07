@@ -13,7 +13,7 @@
 #include "../../../GoBangBoard.hpp"
 #include "../../../Player.hpp"
 #include "../../../GameControl.hpp"
-
+#include "../../../CommonUtils.h"
 
 // board config
 namespace {
@@ -63,12 +63,19 @@ public:
     float getSpaceBetweenPieces();
 
     void startNewGame();
+
+protected:
+    void onBoardClicked(const MouseEvent& event);
+    void onSaveBoardButtonClicked(const MouseEvent& event);
+    
 private:
     bool mWhitePieceFirst;
     std::vector<stPiece> mPiecesPoints;
     GameControl mGameControl;
 
     TextButton mNewGameTextButton;
+    TextButton mSaveBoardTextButton;
+    
     //==============================================================================
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (MainContentComponent)
 };

@@ -10,11 +10,13 @@
 #include "ResultComponent.h"
 #include "NewGameTextButtonMouseListener.h"
 //==============================================================================
-MainContentComponent::MainContentComponent() : mNewGameTextButton("New Game", "End this game, and begin a new battle.")
+MainContentComponent::MainContentComponent() : mNewGameTextButton("New Game", "End this game, and begin a new battle."),
+                                               mSaveBoardTextButton("Save Game", "Save game")
 {
     setSize (BOARD_WIDTH + 150, BOARD_HEIGHT);
     
     addChildComponent(&mNewGameTextButton);
+    addChildComponent(&mSaveBoardTextButton);
     configChildComponents();
     
     mWhitePieceFirst = true;
@@ -25,6 +27,11 @@ void MainContentComponent::configChildComponents() {
     mNewGameTextButton.setVisible(true);
     mNewGameTextButton.setSize(80, 50);
     mNewGameTextButton.addMouseListener(new NewGameTextButtonMouseListener(this), true);
+
+    mSaveBoardTextButton.setTopRightPosition(650, 75);
+    mSaveBoardTextButton.setVisible(true);
+    mSaveBoardTextButton.setSize(80, 50);
+    mSaveBoardTextButton.addMouseListener(this, true);
 }
 
 MainContentComponent::~MainContentComponent()
@@ -37,24 +44,37 @@ float MainContentComponent::getSpaceBetweenPieces() {
 }
 
 void MainContentComponent::mouseDown(const MouseEvent& event) {
+
+    if (event.originalComponent == &mSaveBoardTextButton) {
+        std::cout << "Click saveBoardTextButton" << std::endl;
+        onSaveBoardButtonClicked(event);
+    } else {
+        onBoardClicked(event);
+    } // else
+
+}
+
+void MainContentComponent::onSaveBoardButtonClicked(const MouseEvent& event) {
+    CommonUtils::SaveBoard(mGameControl.GetBoard(), "./board_2015_12_07.txt");
+}
+
+void MainContentComponent::onBoardClicked(const MouseEvent& event) {
     int x = event.getMouseDownX();
     int y = event.getMouseDownY();
     
     float hspaceBetweenPieces = getSpaceBetweenPieces();
-    int v = std::floor((x - EDGE_SPACE + hspaceBetweenPieces / 2.0f) / hspaceBetweenPieces);
-    int h = std::floor((y - EDGE_SPACE + hspaceBetweenPieces / 2.0f) / hspaceBetweenPieces);
+    int row = std::floor((x - EDGE_SPACE + hspaceBetweenPieces / 2.0f) / hspaceBetweenPieces);
+    int col = std::floor((y - EDGE_SPACE + hspaceBetweenPieces / 2.0f) / hspaceBetweenPieces);
 
     int result = 0;
     if (mWhitePieceFirst) {
         // x: 行 y: 列
-        result = mGameControl.PlacePiece(WHITE_PIECE, v, h);
-        handlePlacePieceResult(WHITE_PIECE, result, v, h);
+        result = mGameControl.PlacePiece(WHITE_PIECE, row, col);  // 
+        handlePlacePieceResult(WHITE_PIECE, result, row, col);
     } else {
-        result = mGameControl.PlacePiece(BLACK_PIECE, v, h);
-        handlePlacePieceResult(BLACK_PIECE, result, v, h);
+        result = mGameControl.PlacePiece(BLACK_PIECE, row, col);
+        handlePlacePieceResult(BLACK_PIECE, result, row, col);
     }
-
-
 }
 
 void MainContentComponent::paint (Graphics& g)
@@ -115,7 +135,6 @@ void MainContentComponent::insertPiece(PieceEnum piece, float x, float y) {
     mPiecesPoints.push_back(stPiece(x, y, piece));
     repaint();
 }
-
 
 void MainContentComponent::cleanBoard() {
     mGameControl.GetBoard().ClearBoard();

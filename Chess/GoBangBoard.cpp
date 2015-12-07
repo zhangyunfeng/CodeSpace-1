@@ -22,6 +22,22 @@ void GoBangBoard::ClearBoard() {
     initBoard();
 }
 
+/** 
+ * from left->right  top->bottom
+ * 
+ * 
+ * @return 
+ */
+std::vector<short> GoBangBoard::GetBoardValues() const {
+    std::vector<short> ret;
+    for (int i = 0; i < CHESS_ROW_COUNT; i++) {
+        for (int j = 0; j < CHESS_COLUMN_COUNT; j++) {
+            ret.push_back(mBoard[i][j]);
+        }
+    }
+    return ret;
+}
+
 void GoBangBoard::PrintBoard() {
     int blackChessValue = getChessValue(BLACK_PIECE);
     int whiteChessValue = getChessValue(WHITE_PIECE);
@@ -46,22 +62,22 @@ void GoBangBoard::PrintBoard() {
 int GoBangBoard::InsertPieces(PieceEnum pieceEnum, int x, int y) {
 
     /// 检查棋子超出边界
-    if (!checkChessOutBound(x, y)) {
+    if (!checkChessOutBound(y, x)) {
         return -2;
     }
 
     /// 检查位置被占用
-    if (checkReplacedPosition(x, y)) {
+    if (checkReplacedPosition(y, x)) {
         return -1;
     }
 
     switch (pieceEnum) {
         case BLACK_PIECE:
-            mBoard[x][y] = getChessValue(pieceEnum);
+            mBoard[y][x] = getChessValue(pieceEnum);
             mTotalSteps++;
             return 0;
         case WHITE_PIECE:
-            mBoard[x][y] = getChessValue(pieceEnum);
+            mBoard[y][x] = getChessValue(pieceEnum);
             mTotalSteps++;
             return 0;
         default:
@@ -103,10 +119,10 @@ int GoBangBoard::getChessValue(PieceEnum piece) {
  */
 bool GoBangBoard::InFiveChessLine(PieceEnum piece, int x, int y) {
     int maxCount = 0;
-    maxCount = checkRowCount(piece, x, y); // 横向
-    maxCount = std::max(maxCount, checkColumnCount(piece, x, y)); // 竖向
-    maxCount = std::max(maxCount, checkSlashCount(piece, x, y)); // 斜线方向
-    maxCount = std::max(maxCount, checkBackSlashCount(piece, x, y)); // 反斜线方向
+    maxCount = checkRowCount(piece, y, x); // 横向
+    maxCount = std::max(maxCount, checkColumnCount(piece, y, x)); // 竖向
+    maxCount = std::max(maxCount, checkSlashCount(piece, y, x)); // 斜线方向
+    maxCount = std::max(maxCount, checkBackSlashCount(piece, y, x)); // 反斜线方向
     if (maxCount >= 5) {
         return true;
     }
@@ -121,27 +137,27 @@ bool GoBangBoard::checkChessOutBound(int x, int y) {
     return false;
 }
 
-bool GoBangBoard::checkReplacedPosition(int x, int y) {
-    if (mBoard[x][y] == -1) {
+bool GoBangBoard::checkReplacedPosition(int whichRow, int whichCol) {
+    if (mBoard[whichRow][whichCol] == -1) {
         return false;
     }
     return true;
 }
 
 
-int GoBangBoard::checkRowCount(PieceEnum piece, int x, int y) {
+int GoBangBoard::checkRowCount(PieceEnum piece, int whichRow, int whichCol) {
     int value = getChessValue(piece);
     int count = 0;
     // (x,y)和 piece不匹配 或者 是空
-    if (mBoard[x][y] != value) {
+    if (mBoard[whichRow][whichCol] != value) {
         return count;
     }
     // from (x,y) to left
     for (int i = 0; i > -5; i--) {
-        if (!checkChessOutBound(x+i, y)) {
+        if (!checkChessOutBound(whichRow+i, whichCol)) {
             break;
         }
-        if (value == mBoard[x+i][y]) {
+        if (value == mBoard[whichRow+i][whichCol]) {
             count ++;
         } else {
             break;
@@ -150,10 +166,10 @@ int GoBangBoard::checkRowCount(PieceEnum piece, int x, int y) {
 
     // from (x, y) to right
     for (int i = 1; i < 5; i++) {
-        if (!checkChessOutBound(x+i, y)) {
+        if (!checkChessOutBound(whichRow+i, whichCol)) {
             break;
         }
-        if (value == mBoard[x+i][y]) {
+        if (value == mBoard[whichRow+i][whichCol]) {
             count ++;
         } else {
             break;
@@ -162,19 +178,19 @@ int GoBangBoard::checkRowCount(PieceEnum piece, int x, int y) {
     return count;
 }
 
-int GoBangBoard::checkColumnCount(PieceEnum piece, int x, int y) {
+int GoBangBoard::checkColumnCount(PieceEnum piece, int whichRow, int whichCol) {
     int value = getChessValue(piece);
     int count = 0;
     // (x,y) 和 piece不匹配或者是空
-    if (mBoard[x][y] != value) {
+    if (mBoard[whichRow][whichCol] != value) {
         return count;
     }
     // from (x,y) to top
     for (int i = 0; i > -5; i--) {
-        if (!checkChessOutBound(x, y+i)) {
+        if (!checkChessOutBound(whichRow, whichCol+i)) {
             break;
         }
-        if (value == mBoard[x][y+i]) {
+        if (value == mBoard[whichRow][whichCol+i]) {
             count++;
         } else {
             break;
@@ -183,10 +199,10 @@ int GoBangBoard::checkColumnCount(PieceEnum piece, int x, int y) {
 
     // from (x,y) to bottom
     for (int i = 1; i < 5; i++) {
-        if (!checkChessOutBound(x, y+i)) {
+        if (!checkChessOutBound(whichRow, whichCol+i)) {
             break;
         }
-        if (value == mBoard[x][y+i]) {
+        if (value == mBoard[whichRow][whichCol+i]) {
             count++;
         } else {
             break;
@@ -195,19 +211,19 @@ int GoBangBoard::checkColumnCount(PieceEnum piece, int x, int y) {
     return count;
 }
 
-int GoBangBoard::checkSlashCount(PieceEnum piece, int x, int y) {
+int GoBangBoard::checkSlashCount(PieceEnum piece, int whichRow, int whichCol) {
     int value = getChessValue(piece);
     int count = 0;
     // (x,y) 和 piece不匹配
-    if (mBoard[x][y] != value) {
+    if (mBoard[whichRow][whichCol] != value) {
         return count;
     }
     // from (x,y) to left-top
     for (int i = 0; i > -5; i--) {
-        if (!checkChessOutBound(x+i, y+i)) {
+        if (!checkChessOutBound(whichRow+i, whichCol+i)) {
             break;
         }
-        if (value == mBoard[x+i][y+i]) {
+        if (value == mBoard[whichRow+i][whichCol+i]) {
             count ++;
         } else {
             break;
@@ -216,10 +232,10 @@ int GoBangBoard::checkSlashCount(PieceEnum piece, int x, int y) {
 
     // from (x,y) to right-top
     for (int i = 1; i < 5; i++) {
-        if (!checkChessOutBound(x+i, y+i)) {
+        if (!checkChessOutBound(whichRow+i, whichCol+i)) {
             break;
         }
-        if (value == mBoard[x+i][y+i]) {
+        if (value == mBoard[whichRow+i][whichCol+i]) {
             count ++;
         } else {
             break;
@@ -228,19 +244,19 @@ int GoBangBoard::checkSlashCount(PieceEnum piece, int x, int y) {
     return count; 
 }
 
-int GoBangBoard::checkBackSlashCount(PieceEnum piece, int x, int y) {
+int GoBangBoard::checkBackSlashCount(PieceEnum piece, int whichRow, int whichCol) {
     int value = getChessValue(piece);
     int count = 0;
     // (x,y) 和 piece不匹配
-    if (mBoard[x][y] != value) {
+    if (mBoard[whichRow][whichCol] != value) {
         return count;
     }
     // from (x,y) to right-top
     for (int i = 0; i > -5; i--) {
-        if (!checkChessOutBound(x-i, y+i)) {
+        if (!checkChessOutBound(whichRow-i, whichCol+i)) {
             break;
         }
-        if (value == mBoard[x-i][y+i]) {
+        if (value == mBoard[whichRow-i][whichCol+i]) {
             count ++;
         } else {
             break;
@@ -248,10 +264,10 @@ int GoBangBoard::checkBackSlashCount(PieceEnum piece, int x, int y) {
     }
     // from (x,y) to left-down
     for (int i = 1; i < 5; i++) {
-        if (!checkChessOutBound(x-i, y+i)) {
+        if (!checkChessOutBound(whichRow-i, whichCol+i)) {
             break;
         }
-        if (value == mBoard[x-i][y+i]) {
+        if (value == mBoard[whichRow-i][whichCol+i]) {
             count ++;
         } else {
             break;

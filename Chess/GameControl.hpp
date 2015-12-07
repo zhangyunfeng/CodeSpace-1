@@ -29,6 +29,7 @@ class GameControl {
     int PlacePiece(PieceEnum piece, int x, int y);
 
     void StartNewGame();
+
   private:
     GoBangBoard mBoard;
     Player mBlackPlayer;

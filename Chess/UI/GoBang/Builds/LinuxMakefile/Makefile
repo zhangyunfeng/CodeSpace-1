@@ -74,6 +74,7 @@ OBJECTS := \
 	$(OBJDIR)/GameControl.o \
 	$(OBJDIR)/ResultComponent.o \
 	$(OBJDIR)/NewGameTextButtonMouseListener.o \
+	$(OBJDIR)/CommonUtils.o \
 
 .PHONY: clean
 
@@ -190,6 +191,11 @@ $(OBJDIR)/ResultComponent.o:../../Source/ResultComponent.cpp
 $(OBJDIR)/NewGameTextButtonMouseListener.o:../../Source/NewGameTextButtonMouseListener.cpp
 	-@mkdir -p $(OBJDIR)
 	@echo "Compiling NewGameTextButtonMouseListener.cpp"
+	@$(CXX) $(CXXFLAGS) -o "$@" -c "$<"
+
+$(OBJDIR)/CommonUtils.o:../../../../CommonUtils.cpp
+	-@mkdir -p $(OBJDIR)
+	@echo "Compiling CommonUtils.cpp"
 	@$(CXX) $(CXXFLAGS) -o "$@" -c "$<"
 
 -include $(OBJECTS:%.o=%.d)
