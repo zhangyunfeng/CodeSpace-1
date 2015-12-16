@@ -189,3 +189,197 @@ UI/GoBang/JuceLibraryCode/modules/juce_cryptography/juce_cryptography.h,0
 UI/GoBang/JuceLibraryCode/modules/juce_audio_devices/juce_audio_devices.h,0
 
 UI/GoBang/JuceLibraryCode/modules/juce_events/juce_events.h,0
+
+maintest.cpp,15
+int main(4,29
+
+Player.cpp,85
+Player::Player(5,25
+void Player::SetPiece(9,83
+PieceEnum& Player::GetChess(13,147
+
+GoBangBoard.cpp,770
+GoBangBoard::GoBangBoard(3,28
+void GoBangBoard::initBoard(12,231
+void GoBangBoard::ClearBoard(21,439
+std::vector<short> GoBangBoard::GetBoardValues(31,554
+void GoBangBoard::PrintBoard(41,818
+int GoBangBoard::InsertPieces(62,1442
+void GoBangBoard::InsertValue2Board(88,2036
+bool GoBangBoard::CheckWinning(104,2535
+int GoBangBoard::GetChessValue(116,2817
+bool GoBangBoard::InFiveChessLine(136,3145
+bool GoBangBoard::checkChessOutBound(148,3605
+bool GoBangBoard::checkReplacedPosition(156,3820
+int GoBangBoard::checkVerticalCount(164,3955
+int GoBangBoard::checkHorizontalCount(197,4702
+int GoBangBoard::checkBackSlashCount(230,5447
+int GoBangBoard::checkSlashCount(263,6198
+bool GoBangBoard::IsBoardFull(295,6944
+short GoBangBoard::GetPieceValue(300,7051
+
+UI/GoBang/Builds/LinuxMakefile/IfStreamTest.cpp,17
+int main(10,119
+
+UI/GoBang/Source/MainComponent.cpp,888
+MainContentComponent::MainContentComponent(13,398
+void MainContentComponent::configChildComponents(27,997
+MainContentComponent::~MainContentComponent(44,1686
+float MainContentComponent::getSpaceBetweenPieces(48,1741
+void MainContentComponent::mouseDown(53,1932
+void MainContentComponent::onSaveBoardButtonClicked(69,2465
+void MainContentComponent::onLoadBoardButtonClicked(78,2669
+void MainContentComponent::onBoardClicked(120,4682
+void MainContentComponent::paint 139,5449
+void MainContentComponent::resized(146,5546
+void MainContentComponent::drawBoard(153,5755
+void MainContentComponent::drawPieces(180,6673
+void MainContentComponent::insertPiece(193,7153
+void MainContentComponent::cleanBoard(198,7303
+void MainContentComponent::handlePlacePieceResult(206,7442
+bool MainContentComponent::checkFivePiecesALine(255,9266
+void MainContentComponent::startNewGame(264,9490
+
+UI/GoBang/Source/MainComponent.h,696
+#define MAINCOMPONENT_H_INCLUDED10,247
+namespace 19,487
+struct stPiece 26,639
+    float x;27,657
+    float y;28,671
+    PieceEnum piece;29,685
+    stPiece(30,707
+class MainContentComponent 42,1040
+    bool mWhitePieceFirst;MainContentComponent::mWhitePieceFirst72,1982
+    std::vector<stPiece> mPiecesPoints;MainContentComponent::mPiecesPoints73,2010
+    GameControl mGameControl;MainContentComponent::mGameControl74,2051
+    TextButton mNewGameTextButton;MainContentComponent::mNewGameTextButton76,2084
+    TextButton mSaveBoardTextButton;MainContentComponent::mSaveBoardTextButton77,2120
+    TextButton mLoadBoardTextButton;MainContentComponent::mLoadBoardTextButton78,2158
+
+UI/GoBang/Source/ResultComponent.cpp,251
+ResultContentComponent::ResultContentComponent(4,33
+ResultContentComponent::ResultContentComponent(8,121
+ResultContentComponent::~ResultContentComponent(12,244
+void ResultContentComponent::paint(16,322
+void ResultContentComponent::resized(25,546
+
+UI/GoBang/Source/ResultComponent.h,136
+#define RESULTCOMPONENT_H10,231
+class ResultContentComponent 19,501
+    std::string mMessage;ResultContentComponent::mMessage34,895
+
+UI/GoBang/Source/Main.cpp,933
+class GoBangApplication 16,455
+    GoBangApplication(GoBangApplication::GoBangApplication20,604
+    const String getApplicationName(GoBangApplication::getApplicationName22,634
+    const String getApplicationVersion(GoBangApplication::getApplicationVersion23,725
+    bool moreThanOneInstanceAllowed(GoBangApplication::moreThanOneInstanceAllowed24,818
+    void initialise GoBangApplication::initialise27,977
+    void shutdown(GoBangApplication::shutdown34,1203
+    void systemRequestedQuit(GoBangApplication::systemRequestedQuit42,1448
+    void anotherInstanceStarted GoBangApplication::anotherInstanceStarted49,1702
+    class MainWindow GoBangApplication::MainWindow61,2237
+        MainWindow GoBangApplication::MainWindow::MainWindow64,2306
+        void closeButtonPressed(GoBangApplication::MainWindow::closeButtonPressed75,2741
+    ScopedPointer<MainWindow> mainWindow;GoBangApplication::mainWindow95,3599
+
+UI/GoBang/Source/NewGameTextButtonMouseListener.cpp,252
+NewGameTextButtonMouseListener::NewGameTextButtonMouseListener(5,47
+NewGameTextButtonMouseListener::NewGameTextButtonMouseListener(9,144
+void NewGameTextButtonMouseListener::setComponent(13,258
+void NewGameTextButtonMouseListener::mouseDown(17,358
+
+UI/GoBang/Source/NewGameTextButtonMouseListener.h,181
+#define NEWGAMETEXTBUTTONMOUSELISTENER_H12,186
+class NewGameTextButtonMouseListener 17,299
+    MainContentComponent* mComponent;NewGameTextButtonMouseListener::mComponent25,589
+
+UI/GoBang/JuceLibraryCode/JuceHeader.h,101
+#define __APPHEADERFILE_CSFW3W__14,471
+ using namespace juce;34,1434
+namespace ProjectInfo38,1505
+
+UI/GoBang/JuceLibraryCode/AppConfig.h,800
+#define __JUCE_APPCONFIG_CSFW3W__15,508
+#define JUCE_MODULE_AVAILABLE_juce_audio_basics 25,863
+#define JUCE_MODULE_AVAILABLE_juce_audio_devices 26,923
+#define JUCE_MODULE_AVAILABLE_juce_audio_formats 27,983
+#define JUCE_MODULE_AVAILABLE_juce_audio_processors 28,1043
+#define JUCE_MODULE_AVAILABLE_juce_core 29,1103
+#define JUCE_MODULE_AVAILABLE_juce_cryptography 30,1163
+#define JUCE_MODULE_AVAILABLE_juce_data_structures 31,1223
+#define JUCE_MODULE_AVAILABLE_juce_events 32,1283
+#define JUCE_MODULE_AVAILABLE_juce_graphics 33,1343
+#define JUCE_MODULE_AVAILABLE_juce_gui_basics 34,1403
+#define JUCE_MODULE_AVAILABLE_juce_gui_extra 35,1463
+#define JUCE_MODULE_AVAILABLE_juce_opengl 36,1523
+#define JUCE_MODULE_AVAILABLE_juce_video 37,1583
+ #define   JUCE_STANDALONE_APPLICATION 41,1767
+
+GameControl.cpp,346
+GameControl::GameControl(14,157
+int GameControl::PlaceChess(18,259
+int GameControl::PlacePiece(23,415
+GoBangBoard& GameControl::GetBoard(28,549
+Player& GameControl::GetBlackPlayer(32,610
+Player& GameControl::GetWhitePlayer(36,678
+void GameControl::StartNewGame(40,746
+void GameControl::RunGame(50,846
+void GameControl::SetBoard(101,2460
+
+GoBangBoard.hpp,334
+#define CHESS_H12,138
+#define CHESS_ROW_COUNT 18,212
+#define CHESS_COLUMN_COUNT 19,239
+enum PieceEnum 25,305
+    WHITE_PIECE,PieceEnum::WHITE_PIECE26,322
+    BLACK_PIECEPieceEnum::BLACK_PIECE27,339
+class GoBangBoard 34,414
+    short mBoard[GoBangBoard::mBoard174,2915
+    int mTotalSteps;GoBangBoard::mTotalSteps175,2970
+
+Player.hpp,85
+#define PLAYER_H2,17
+class Player 6,63
+    PieceEnum mPiece;Player::mPiece13,214
+
+CommonUtils.cpp,79
+void CommonUtils::SaveBoard(28,301
+GoBangBoard CommonUtils::LoadBoard(41,773
+
+GameControl.hpp,222
+#define GAMECONTROL_H12,150
+class GameControl 18,241
+    GoBangBoard mBoard;GameControl::mBoard35,583
+    Player mBlackPlayer;GameControl::mBlackPlayer36,607
+    Player mWhitePlayer;GameControl::mWhitePlayer37,632
+
+CommonUtils.h,55
+#define COMMONUTILS_H13,149
+class CommonUtils 19,219
+
+UI/GoBang/JuceLibraryCode/modules/juce_graphics/juce_graphics.h,0
+
+UI/GoBang/JuceLibraryCode/modules/juce_audio_basics/juce_audio_basics.h,0
+
+UI/GoBang/JuceLibraryCode/modules/juce_gui_basics/juce_gui_basics.h,0
+
+UI/GoBang/JuceLibraryCode/modules/juce_video/juce_video.h,0
+
+UI/GoBang/JuceLibraryCode/modules/juce_audio_formats/juce_audio_formats.h,0
+
+UI/GoBang/JuceLibraryCode/modules/juce_audio_processors/juce_audio_processors.h,0
+
+UI/GoBang/JuceLibraryCode/modules/juce_opengl/juce_opengl.h,0
+
+UI/GoBang/JuceLibraryCode/modules/juce_core/juce_core.h,0
+
+UI/GoBang/JuceLibraryCode/modules/juce_gui_extra/juce_gui_extra.h,0
+
+UI/GoBang/JuceLibraryCode/modules/juce_data_structures/juce_data_structures.h,0
+
+UI/GoBang/JuceLibraryCode/modules/juce_cryptography/juce_cryptography.h,0
+
+UI/GoBang/JuceLibraryCode/modules/juce_audio_devices/juce_audio_devices.h,0
+
+UI/GoBang/JuceLibraryCode/modules/juce_events/juce_events.h,0

@@ -8,8 +8,22 @@
  * 
  */
 
+
 #include <fstream>
 #include "CommonUtils.h"
+
+#include "GoBangBoard.hpp"
+
+#ifdef __CPLUSPLUS
+extern "C" {
+#endif
+
+#include <string.h>
+    
+#ifdef __CPLUSPLUS    
+}
+#endif
+
 
 void CommonUtils::SaveBoard(const GoBangBoard& board, const std::string& path) {
     
@@ -25,6 +39,28 @@ void CommonUtils::SaveBoard(const GoBangBoard& board, const std::string& path) {
  }
 
 GoBangBoard CommonUtils::LoadBoard(const std::string& boardFile) {
-    // TODO: 
-    return GoBangBoard();
+    // TODO:
+    std::ifstream inFileStream(boardFile, std::ios::in);
+    short pieceValue;
+    char sink[3] = {""};
+    int size = 3;
+    char delim = '|';
+
+    GoBangBoard ret;
+    for (int i = 0; i < CHESS_COLUMN_COUNT; i++) {
+        for (int j = 0; j < CHESS_ROW_COUNT; j++) {
+            if (inFileStream.good() && 0 != inFileStream.getline(sink, size, delim)) {
+                ret.InsertValue2Board(atoi(sink), i, j);
+            }
+            bzero(sink, 3);
+        }
+    }
+
+    inFileStream.close();
+
+    ret.PrintBoard();
+
+    return ret;
 }
+
+

@@ -30,6 +30,7 @@ class GameControl {
 
     void StartNewGame();
 
+    void SetBoard(GoBangBoard& board);
   private:
     GoBangBoard mBoard;
     Player mBlackPlayer;

@@ -67,6 +67,10 @@ public:
 protected:
     void onBoardClicked(const MouseEvent& event);
     void onSaveBoardButtonClicked(const MouseEvent& event);
+    void onLoadBoardButtonClicked(const MouseEvent& event);
+
+private:
+    void convertLogicXY2ViewXY(int logicx, int logicy, int& viewx, int& viewy);
     
 private:
     bool mWhitePieceFirst;
@@ -75,7 +79,7 @@ private:
 
     TextButton mNewGameTextButton;
     TextButton mSaveBoardTextButton;
-    
+    TextButton mLoadBoardTextButton;
     //==============================================================================
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (MainContentComponent)
 };

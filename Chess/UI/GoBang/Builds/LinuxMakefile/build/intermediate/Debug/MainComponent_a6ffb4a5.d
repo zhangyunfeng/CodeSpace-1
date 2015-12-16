@@ -471,5 +471,5 @@ build/intermediate/Debug/MainComponent_a6ffb4a5.o: \
  ../../Source/../../../GoBangBoard.hpp ../../Source/../../../Player.hpp \
  ../../Source/../../../GoBangBoard.hpp \
  ../../Source/../../../GameControl.hpp ../../Source/../../../Player.hpp \
- ../../Source/ResultComponent.h \
+ ../../Source/../../../CommonUtils.h ../../Source/ResultComponent.h \
  ../../Source/NewGameTextButtonMouseListener.h

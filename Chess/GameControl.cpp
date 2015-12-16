@@ -98,3 +98,7 @@ void GameControl::RunGame() {
     }
 }
 
+void GameControl::SetBoard(GoBangBoard& board) {
+    board.PrintBoard();
+    mBoard = board;
+}

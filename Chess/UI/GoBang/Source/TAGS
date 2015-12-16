@@ -1,0 +1,73 @@
+
+MainComponent.cpp,888
+MainContentComponent::MainContentComponent(13,398
+void MainContentComponent::configChildComponents(27,997
+MainContentComponent::~MainContentComponent(44,1686
+float MainContentComponent::getSpaceBetweenPieces(48,1741
+void MainContentComponent::mouseDown(53,1932
+void MainContentComponent::onSaveBoardButtonClicked(69,2465
+void MainContentComponent::onLoadBoardButtonClicked(78,2669
+void MainContentComponent::onBoardClicked(120,4682
+void MainContentComponent::paint 139,5449
+void MainContentComponent::resized(146,5546
+void MainContentComponent::drawBoard(153,5755
+void MainContentComponent::drawPieces(180,6673
+void MainContentComponent::insertPiece(193,7153
+void MainContentComponent::cleanBoard(198,7303
+void MainContentComponent::handlePlacePieceResult(206,7442
+bool MainContentComponent::checkFivePiecesALine(255,9266
+void MainContentComponent::startNewGame(264,9490
+
+MainComponent.h,696
+#define MAINCOMPONENT_H_INCLUDED10,247
+namespace 19,487
+struct stPiece 26,639
+    float x;27,657
+    float y;28,671
+    PieceEnum piece;29,685
+    stPiece(30,707
+class MainContentComponent 42,1040
+    bool mWhitePieceFirst;MainContentComponent::mWhitePieceFirst72,1982
+    std::vector<stPiece> mPiecesPoints;MainContentComponent::mPiecesPoints73,2010
+    GameControl mGameControl;MainContentComponent::mGameControl74,2051
+    TextButton mNewGameTextButton;MainContentComponent::mNewGameTextButton76,2084
+    TextButton mSaveBoardTextButton;MainContentComponent::mSaveBoardTextButton77,2120
+    TextButton mLoadBoardTextButton;MainContentComponent::mLoadBoardTextButton78,2158
+
+ResultComponent.cpp,251
+ResultContentComponent::ResultContentComponent(4,33
+ResultContentComponent::ResultContentComponent(8,121
+ResultContentComponent::~ResultContentComponent(12,244
+void ResultContentComponent::paint(16,322
+void ResultContentComponent::resized(25,546
+
+ResultComponent.h,136
+#define RESULTCOMPONENT_H10,231
+class ResultContentComponent 19,501
+    std::string mMessage;ResultContentComponent::mMessage34,895
+
+Main.cpp,933
+class GoBangApplication 16,455
+    GoBangApplication(GoBangApplication::GoBangApplication20,604
+    const String getApplicationName(GoBangApplication::getApplicationName22,634
+    const String getApplicationVersion(GoBangApplication::getApplicationVersion23,725
+    bool moreThanOneInstanceAllowed(GoBangApplication::moreThanOneInstanceAllowed24,818
+    void initialise GoBangApplication::initialise27,977
+    void shutdown(GoBangApplication::shutdown34,1203
+    void systemRequestedQuit(GoBangApplication::systemRequestedQuit42,1448
+    void anotherInstanceStarted GoBangApplication::anotherInstanceStarted49,1702
+    class MainWindow GoBangApplication::MainWindow61,2237
+        MainWindow GoBangApplication::MainWindow::MainWindow64,2306
+        void closeButtonPressed(GoBangApplication::MainWindow::closeButtonPressed75,2741
+    ScopedPointer<MainWindow> mainWindow;GoBangApplication::mainWindow95,3599
+
+NewGameTextButtonMouseListener.cpp,252
+NewGameTextButtonMouseListener::NewGameTextButtonMouseListener(5,47
+NewGameTextButtonMouseListener::NewGameTextButtonMouseListener(9,144
+void NewGameTextButtonMouseListener::setComponent(13,258
+void NewGameTextButtonMouseListener::mouseDown(17,358
+
+NewGameTextButtonMouseListener.h,181
+#define NEWGAMETEXTBUTTONMOUSELISTENER_H12,186
+class NewGameTextButtonMouseListener 17,299
+    MainContentComponent* mComponent;NewGameTextButtonMouseListener::mComponent25,589

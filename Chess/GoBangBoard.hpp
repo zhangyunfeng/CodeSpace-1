@@ -46,6 +46,10 @@ class GoBangBoard {
      */
     int InsertPieces(PieceEnum pieceEnum, int x, int y);
 
+
+    void InsertValue2Board(short value, int x, int y);
+    
+
     /** 
      * 检查棋子是否5连线
      * 
@@ -83,6 +87,8 @@ class GoBangBoard {
     void ClearBoard();
 
     std::vector<short> GetBoardValues() const;
+
+    short GetPieceValue(int x, int y);
     
   protected:
     /** 
@@ -95,6 +101,7 @@ class GoBangBoard {
      */
     bool checkReplacedPosition(int x, int y);
 
+  public:
     /** 
      * 
      * 获取棋子的值
@@ -102,7 +109,7 @@ class GoBangBoard {
      * 
      * @return 
      */
-    int getChessValue(PieceEnum piece);
+    int GetChessValue(PieceEnum piece);
 
     /** 
      * 
@@ -112,22 +119,24 @@ class GoBangBoard {
      * 
      * @return 
      */
+
+  protected:
     bool checkChessOutBound(int x, int y);
 
 
     /** 
      * 
-     * 检查棋子横向有多少个
+     * 检查棋子垂直向有多少个
      * @param piece 
      * @param x 
      * @param y 
      * 
      * @return 
      */
-    int checkRowCount(PieceEnum piece, int x, int y);
+    int checkVerticalCount(PieceEnum piece, int x, int y);
 
     /** 
-     * 检查棋子竖向有多少个
+     * 检查棋子横向有多少个
      * 
      * @param piece 
      * @param x 
@@ -135,7 +144,7 @@ class GoBangBoard {
      * 
      * @return 
      */
-    int checkColumnCount(PieceEnum piece, int x, int y);
+    int checkHorizontalCount(PieceEnum piece, int x, int y);
 
     /** 
      * 检查棋子斜线方向有多少个
