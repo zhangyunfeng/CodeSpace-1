@@ -63,4 +63,3 @@ GoBangBoard CommonUtils::LoadBoard(const std::string& boardFile) {
     return ret;
 }
 
-

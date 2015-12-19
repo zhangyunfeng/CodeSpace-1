@@ -1,0 +1,40 @@
+#!/usr/bin/env python
+import shutil
+import traceback
+try:
+    import xml.etree.cElementTree as ET
+except ImportError:
+    import xml.etree.ElementTree
+
+
+def copy_dir_recursively(src, dst):
+    '''
+    copy a directory from src to dst recursively
+    '''
+    shutil.copytree(src, dst, True)
+
+
+def delete_dir(dirname):
+    shutil.rmtree(dirname)
+
+def replace_string_infile(oldstr, newstr, filename):
+    with open(filename, "r+") as rw:
+        content = rw.read()
+        content.replace(oldstr, newstr)
+        rw.write(content)
+
+def main():
+    '''
+    main test
+    '''
+    try:
+#        copy_dir_recursively('a', './b')
+#        delete_dir('./b')
+        replace_string_infile("hello", "world", "./b/a.txt")
+    except (IOError, OSError) as e:
+        print "[FILENAME:", e.filename, "] [ERRORNO:", e.errno, "]",\
+            traceback.format_exc()
+
+
+if __name__ == '__main__':
+    main()

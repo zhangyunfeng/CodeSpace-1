@@ -1,0 +1,13 @@
+<project name="watchface">
+  <dir name="a">
+    <file name="a.txt">
+      <operator name="replace" oldstr="hello" newstr="world"/>
+      <operator name="comment" linefrom="1" lineto="2" commentchar="#"/>
+      <operator name="uncomment" linefrom="3" lineto="4" commentchar="#"/>
+      <operator name="check" includedstr="hello" echo_true="existed" echo_false="not existed"/>
+    </file>
+    <file name="b.txt">
+      <operator name="delete"/>
+    </file>
+  </dir>
+</project>

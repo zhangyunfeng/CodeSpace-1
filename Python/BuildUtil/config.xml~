@@ -1,0 +1,6 @@
+<project name="watchface">
+  <dir name="test1">
+    <file operator="delete">
+    </file>
+  </dir>
+</project>
