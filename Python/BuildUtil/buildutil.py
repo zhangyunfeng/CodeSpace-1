@@ -19,12 +19,24 @@
 import shutil
 import traceback
 import os
-import sys
+from functools import wraps
+import subprocess
+
 try:
     import xml.etree.cElementTree as ET
 except ImportError:
     import xml.etree.ElementTree
 
+
+def debug(func):
+    # func is function to be wrapped
+    @wraps(func)
+    def wrapper(*args, **kwargs):
+        print func.__qualname__
+        return func(*args, **kwargs)
+    return wrapper
+
+@debug
 def copy_dir_recursively(src, dst):
     '''
     copy a directory from src to dst recursively
@@ -32,14 +44,17 @@ def copy_dir_recursively(src, dst):
     shutil.copytree(src, dst, True)
 
 
+@debug    
 def delete_dir(dirname):
     shutil.rmtree(dirname)
 
 
+@debug
 def delete_file(filepath):
     os.remove(filepath)
 
 
+@debug
 def comment_blocks(filepath, linefrom, lineto, commentchar):
     with open(filepath, "r+") as filereader:
         content = ""
@@ -54,6 +69,7 @@ def comment_blocks(filepath, linefrom, lineto, commentchar):
             filewriter.write(content)
 
 
+@debug
 def uncomment_blocks(filepath, linefrom, lineto, commentchar):
     with open(filepath, "r+") as filereader:
         content = ""
@@ -69,6 +85,7 @@ def uncomment_blocks(filepath, linefrom, lineto, commentchar):
             filewriter.write(content)
 
 
+@debug
 def replace_string_infile(oldstr, newstr, filename):
     with open(filename, "r+") as readfile:
         content = readfile.read()
@@ -79,6 +96,7 @@ def replace_string_infile(oldstr, newstr, filename):
             writefile.write(content)
 
 
+@debug
 def check_and_echo(filepath, checkedstr, echotrue, echofalse):
     with open(filepath, "r+") as filereader:
         for line in filereader.readlines():
@@ -169,6 +187,10 @@ class ProjectXmlParser(object):
             self.handle_dir_element(node)
 
 
+def exec_command(command):
+    subprocess.check_call(command)
+
+
 def main():
     '''
     main test
@@ -177,8 +199,9 @@ def main():
 #        copy_dir_recursively('a', './b')
 #        delete_dir('./b')
        # replace_string_infile("hello", "world", "./b/a.txt")
-        pxp = ProjectXmlParser("config.xml")
-        pxp.parse_xml()
+       # pxp = ProjectXmlParser("config.xml")
+       # pxp.parse_xml()
+        exec_command(["ls", "-l"])
     except (IOError, OSError) as e:
         print "[FILENAME:", e.filename, "] [ERRORNO:", e.errno, "]",\
             traceback.format_exc()
