@@ -132,6 +132,25 @@ class ProjectXmlParser(object):
         for node in filenode.iterfind("operator"):
             self.handle_operator_element(node)
 
+    def handle_match_files_elements(self, filesnode):
+        '''´¦Àí "files" element, support fuzzy match 
+        '''
+        patternstr = fileesnode.attrib['pattern']
+        pattern = re.compile(pattern)
+        for root, subdirs, files in os.walk(self.dir_handling):
+            pos = root.find(self.dir_handling)
+            subdir = root[pos + len(self.dir_handling) + 1:]
+            if subdir == None or subdir == "":
+                subdir = "."
+            for file_ in files:
+                ## to filter to get files we want
+                if pattern.match(file_) != None:
+                    self.file_handling = subdir + "/" + file_
+                    print self.file_handling
+                    ## handle operator nodes
+                    for node in filesnode.iterfind("operator"):
+                        self.handle_operator_element(node)
+
     def handle_operator_element(self, operatornode):
         print "handle_operator_element: ", operatornode
         operator = operatornode.attrib['name']
