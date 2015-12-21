@@ -1,26 +1,27 @@
 #!/usr/bin/env python
 
 # About the config.xml this util can handled:
-####################################################################################
+####################################################################
 # All elements:
 #    project: this is root element, every config.xml
 #          attribute: name  project name
 #should only have one project element
 #
-#    dir: this is a dir elemment that include some file elements as sub elements
+#    dir: this is a dir elemment that include some file elements
+#          as sub elements
 #         attribute: name directory name
 #
 #    file: this is the file element will be modified.
 #         attribute: name  file name
 #
-#    operator: 
-
+#    operator:
 
 import shutil
 import traceback
 import os
 from functools import wraps
 import subprocess
+import re
 
 try:
     import xml.etree.cElementTree as ET
@@ -32,19 +33,26 @@ def debug(func):
     # func is function to be wrapped
     @wraps(func)
     def wrapper(*args, **kwargs):
-        print func.__qualname__
+        print func.__name__
         return func(*args, **kwargs)
     return wrapper
+
 
 @debug
 def copy_dir_recursively(src, dst):
     '''
     copy a directory from src to dst recursively
     '''
-    shutil.copytree(src, dst, True)
+    if os.path.exists(dst):
+        print dst, " has existed.\n"
+        return
+    try:
+        shutil.copytree(src, dst, True)
+    except OSError as e:
+        print "OSError: error ", e.message
 
 
-@debug    
+@debug
 def delete_dir(dirname):
     shutil.rmtree(dirname)
 
@@ -125,7 +133,7 @@ class ProjectXmlParser(object):
             print "ERROR: filenode has no name attribute", e.message
             return
         
-        if not os.path.exists(self.file_handling):
+        if not os.path.exists(self.dir_handling + "/" + self.file_handling):
             print "ERROR: ", self.file_handling, " is not existed."
             return
         
@@ -133,18 +141,16 @@ class ProjectXmlParser(object):
             self.handle_operator_element(node)
 
     def handle_match_files_elements(self, filesnode):
-        '''´¦Àí "files" element, support fuzzy match 
-        '''
-        patternstr = fileesnode.attrib['pattern']
-        pattern = re.compile(pattern)
+        patternstr = filesnode.attrib['pattern']
+        pattern = re.compile(patternstr)
         for root, subdirs, files in os.walk(self.dir_handling):
             pos = root.find(self.dir_handling)
             subdir = root[pos + len(self.dir_handling) + 1:]
-            if subdir == None or subdir == "":
+            if subdir is None or subdir == "":
                 subdir = "."
             for file_ in files:
                 ## to filter to get files we want
-                if pattern.match(file_) != None:
+                if pattern.match(file_) is not None:
                     self.file_handling = subdir + "/" + file_
                     print self.file_handling
                     ## handle operator nodes
@@ -218,9 +224,13 @@ def main():
 #        copy_dir_recursively('a', './b')
 #        delete_dir('./b')
        # replace_string_infile("hello", "world", "./b/a.txt")
-       # pxp = ProjectXmlParser("config.xml")
-       # pxp.parse_xml()
-        exec_command(["ls", "-l"])
+       # exec_command(["ls", "-l"])
+       # setp1 pre-process
+        copy_dir_recursively('/home/ken/workspace/buildtest', "./buildtest_tmp")
+        pxp = ProjectXmlParser("build_config.xml")
+        pxp.parse_xml()
+        exec_command(["ant", "-f", "./buildtest_tmp/build.xml"])
+        ## delete_dir("./buildtest_tmp")  # 
     except (IOError, OSError) as e:
         print "[FILENAME:", e.filename, "] [ERRORNO:", e.errno, "]",\
             traceback.format_exc()
