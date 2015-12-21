@@ -9,5 +9,9 @@
     <file name="b.txt">
       <operator name="delete"/>
     </file>
+
+    <files pattern="*.txt">
+      <operator name="replace" oldstr="hello" newstr="world"/>
+    </files>
   </dir>
 </project>
