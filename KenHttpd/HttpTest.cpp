@@ -16,7 +16,6 @@
 #include "OnRequestListener.hpp"
 #include "HttpManager.hpp"
 
-
 class MyOnRequestListener : public OnRequestListener {
   public:
 
@@ -29,41 +28,11 @@ class MyOnRequestListener : public OnRequestListener {
     }
 };
 
-class SampleDataReceiver : public HttpReceiver
-{
-  public:
-    SampleDataReceiver() {
-        
-    }
-    virtual ~SampleDataReceiver() {
-        
-    }
-
-    static SampleDataReceiver GetInstance() {
-        static SampleDataReceiver sd;
-        return sd;
-    }
-
-    // OnReceive(int id, const std::string& data);
-    void OnReceive(int id, const std::string& data) {
-        // std::cout << "id: " << id << " ;data: " << data << std::endl;
-
-        // std::cout << "HttpResponseData: " << std::endl;
-        HttpResponseData hrd(data);
-        std::cout << "HEADER: \n" << hrd.GetResponseHeader() << std::endl;
-        std::cout << "BODY: \n" << hrd.GetResponseBody() << std::endl;
-    }
-
-};
-
-
-
-
-
 int main(int argc, char *argv[]) {
-    // std::string url = "http://128.199.103.33/data/2.5/weather?lat=35&lon=139";
-    std::string url2 = "http://api.openweathermap.org/data/2.5/weather?lat=22.33&lon=114.06";
-    std::string url = "http://www.tuling123.com/openapi/api?key=KEY&info=%E6%98%8E%E5%A4%A9%E5%8C%97%E4%BA%AC%E9%A3%9E%E6%8B%89%E8%90%A8%E7%9A%84%E9%A3%9E%E6%9C%BA";
+    std::string url2 = "http://128.199.103.33/data/2.5/weather?lat=35&lon=139";
+    //    std::string url2 = "http://api.openweathermap.org/data/2.5/weather?lat=22.33&lon=114.06";
+    std::string url = "http://www.tuling123.com/openapi/api?key=1ca80891c02111111736b8ce41591426&info=%E6%98%8E%E5%A4%A9%E5%8C%97%E4%BA%AC%E9%A3%9E%E6%8B%89%E8%90%A8%E7%9A%84%E9%A3%9E%E6%9C%BA";
+    std::string url3 = "http://www.baidu.com";
     // Url u(url);
     // HttpClient hc(url);  // or HttpClient hc;
     
@@ -82,7 +51,7 @@ int main(int argc, char *argv[]) {
 
     HttpManager::GetInstance().Request(2, url2, listener);
 
-    HttpManager::GetInstance().Request(3, url, listener);
+    HttpManager::GetInstance().Request(3, url3, listener);
 
     std::cin >> temp;
     return 0;

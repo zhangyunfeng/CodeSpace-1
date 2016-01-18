@@ -25,6 +25,7 @@ COMMONSRC := SocketCommon.hpp \
 	HttpManager.hpp \
 	HttpManager.cpp \
 	OnRequestListener.hpp \
+	HttpError.hpp \
 
 
 $(OBJECT):$(COMMONSRC) HttpTest.cpp

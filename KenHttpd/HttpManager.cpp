@@ -9,6 +9,8 @@
  */
 
 #include "HttpManager.hpp"
+#include "HttpResponseData.hpp"
+#include "HttpError.hpp"
 
 HttpManager::HttpManager() : m_threadPool(COUNT_THREADS) {
     
@@ -26,16 +28,23 @@ HttpManager::~HttpManager() {
 
 
 void HttpManager::Request(int id, const std::string& url, OnRequestListener* listener) {
-    m_threadPool.Enqueue([=, &url, &listener] {
+    m_threadPool.Enqueue([=] {
             this->request(id, url, listener);
         });
 }
 
 void HttpManager::request(int id, const std::string& url, OnRequestListener* listener) {
     HttpClient hc(url);
-    const std::string result = hc.blockingRequestHttp(url);
+    const std::string result = hc.blockingRequestHttp();
+    
     if (listener != nullptr) {
-        listener->OnReceived(id, result);
+        HttpResponseData hrd(result);
+        if (hrd.GetHttpCode() == 200) {
+            listener->OnReceived(id, hrd.GetResponseBody());            
+        } else {
+            listener->OnFailed(id, hrd.GetHttpCode(), HttpError::GetErrMsgByErrCode(hrd.GetHttpCode()) + "  " + hrd.GetResponseBody());
+        }
+
     }
 }
 

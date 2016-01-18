@@ -12,57 +12,51 @@
 #include <string>
 
 #include <thread>
-
 #include "HttpClient.hpp"
 #include "ClientSocket.hpp"
 #include "ThreadPool.hpp"
 #include "DNSUtil.hpp"
 
 HttpClient::HttpClient(const std::string& url):
-    m_url(url), m_receiver(nullptr) {
+    m_url(url) {
 }
 
 
-void HttpClient::requestHttp(int id, const Url& url) {
-    std::string ip(DNSUtil::GetIPByHostName(url.getHost()).front());
+// void HttpClient::requestHttp(int id, const Url& url) {
+//     std::string ip(DNSUtil::GetIPByHostName(url.getHost()).front());
+//     std::unique_ptr<SocketParam> sp(new SocketParam(ip,
+//                                                     std::stoi(url.getPort()),
+//                                                     Domain::INET,
+//                                                     Type::STREAM,
+//                                                     Protocol::DEFAULT));
+
+//     ClientSocket cs(sp);
+//     cs.Connect();
+//     std::string httpHead("");
+//     httpHead = HttpClient::MakeHttpHead(url);
+//     cs.Send(httpHead);
+//     while (true) {
+//         std::string data = cs.Receive();
+//     }
+// }
+
+// void HttpClient::ansyRequestHttp(int id, const std::string& url) {
+//     m_url.setUrl(url);
+//     std::thread t(&HttpClient::requestHttp, this, id,  m_url);
+//     t.detach();
+// }
+
+
+const std::string HttpClient::blockingRequestHttp() {
+    std::string ip(DNSUtil::GetIPByHostName(m_url.getHost()).front());
     std::unique_ptr<SocketParam> sp(new SocketParam(ip,
-                                                    std::stoi(url.getPort()),
-                                                    Domain::INET,
-                                                    Type::STREAM,
-                                                    Protocol::DEFAULT));
-
-    ClientSocket cs(sp);
-    cs.Connect();
-    std::string httpHead("");
-    httpHead = HttpClient::MakeHttpHead(url);
-    cs.Send(httpHead);
-    while (true) {
-        std::string data = cs.Receive();
-        if (m_receiver != nullptr) {
-            m_receiver->OnReceive(id, data);
-            return;
-        }
-    }
-}
-
-void HttpClient::ansyRequestHttp(int id, const std::string& url) {
-    m_url.setUrl(url);
-    std::thread t(&HttpClient::requestHttp, this, id,  m_url);
-    t.detach();
-}
-
-
-const std::string HttpClient::blockingRequestHttp(const std::string& url) {
-    Url url_(url);
-    std::string ip(DNSUtil::GetIPByHostName(url_.getHost()).front());
-    std::unique_ptr<SocketParam> sp(new SocketParam(ip,
-                                                    std::stoi(url_.getPort()),
+                                                    std::stoi(m_url.getPort()),
                                                     Domain::INET,
                                                     Type::STREAM,
                                                     Protocol::DEFAULT));
     ClientSocket cs(sp);
     cs.Connect();
-    std::string head = HttpClient::MakeHttpHead(url_);
+    std::string head = HttpClient::MakeHttpHead(m_url);
     cs.Send(head);
     std::string data = cs.Receive();
 
@@ -100,6 +94,3 @@ std::string HttpClient::MakeHttpHead(const Url& url) {
     return head;
 }
 
-void HttpClient::RegistHttpReceiver(HttpReceiver* httpReceiver) {
-    this->m_receiver = httpReceiver;
-}
