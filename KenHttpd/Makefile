@@ -13,6 +13,8 @@ COMMONSRC := SocketCommon.hpp \
 	ServerSocket.cpp  \
 	ThreadPool.hpp \
 	ThreadPool.cpp \
+	MiscUtils.hpp \
+	MiscUtils.cpp \
 	Url.hpp \
 	Url.cpp \
 	HttpClient.hpp \

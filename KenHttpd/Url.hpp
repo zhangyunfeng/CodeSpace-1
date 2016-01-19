@@ -17,7 +17,7 @@ class Url
 {
 public:
     Url() = delete;
-    Url(const std::string& url);
+    Url(const std::string& undecoded_url);
     virtual ~Url();
 
     std::string getProtocol() const;
@@ -26,11 +26,11 @@ public:
     std::string getPort() const;
     void setUrl(const std::string& url);
 private:
-    std::string m_protocol;
+    std::string m_url;
     std::string m_host;
     std::string m_path; //Get url, server path
+    std::string m_protocol;
     std::string m_port;
-    std::string m_url;
 };
 
 #endif  // URL_HPP__
