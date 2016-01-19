@@ -1,0 +1,7 @@
+<project name="buildtest">
+  <dir name="/home/ken/Github/Python/BuildUtil/buildtest_tmp">
+    <file name="AndroidManifest.xml">
+      <operator name="replace" oldstr="package=&quot;com.example.buildtest&quot;" newstr="package=&quot;com.kenzhang.buildtest&quot;"/>
+    </file>
+  </dir>
+</project>

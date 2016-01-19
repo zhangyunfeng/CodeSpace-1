@@ -10,6 +10,7 @@
 #include "ClientSocket.hpp"
 
 
+
 ClientSocket::ClientSocket(std::unique_ptr<SocketParam>& sp) 
 {
     this->m_sp = std::move(sp);
@@ -40,7 +41,6 @@ bool ClientSocket::Connect()
 
         m_socketfd = socket(domain, type, protocol);
         assert(m_socketfd > 0);
-		
         bzero((char*)&m_server, sizeof(m_server));
         m_server.sin_family = domain;
         //memcpy((char*)&m_server.sin_addr, m_sp->serverIp.c_str(), m_sp->serverIp.length());

@@ -21,7 +21,11 @@ COMMONSRC := SocketCommon.hpp \
 	DNSUtil.cpp \
 	HttpResponseData.hpp \
 	HttpResponseData.cpp \
-	HttpTest.cpp
+	HttpTest.cpp \
+	HttpManager.hpp \
+	HttpManager.cpp \
+	OnRequestListener.hpp \
+	HttpError.hpp \
 
 
 $(OBJECT):$(COMMONSRC) HttpTest.cpp

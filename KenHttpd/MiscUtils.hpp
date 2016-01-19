@@ -20,6 +20,9 @@
 class MiscUtils {
   public:
     // some misc utils here
+    static inline std::string Base64_encode(unsigned char* const bytes_to_encode, unsigned int in_len);
+
+    static inline std::string Base64_decode(std::string const& encoded_string);
 };
 
 
