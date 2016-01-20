@@ -2,11 +2,12 @@
 #include <cassert>
 #include <algorithm>
 #include "Url.hpp"
+#include "MiscUtils.hpp"
 
 
-Url::Url(const std::string& url) : m_url(url), m_host(""), m_path(""), m_protocol(""), m_port("80")
+Url::Url(const std::string& undecoded_url) : m_url(undecoded_url), m_host(""), m_path(""), m_protocol(""), m_port("80")
 {
-    setUrl(url);
+    setUrl(m_url);
 }
 
 
@@ -17,11 +18,11 @@ Url::~Url()
 
 void Url::setUrl(const std::string& url)
 {
+    
     //url: http://google.com/index
     if (url.empty()) {
 	return;
     }
-    m_url = url;
     
     // http    protocol
     std::string::size_type position = m_url.find("://"); // http://

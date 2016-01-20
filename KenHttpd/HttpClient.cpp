@@ -74,15 +74,17 @@ std::string HttpClient::MakeHttpHead(const Url& url) {
 
         // Host: github.com
         head += "Host: ";
-        std::string ip = DNSUtil::GetIPByHostName(url.getHost()).front();
-        head += ip;
+        // std::string ip = DNSUtil::GetIPByHostName(url.getHost()).front();
+        // head += ip;
+        head += url.getHost();
         head += "\r\n";
 
         // Connection: keep-alive
         head += "Connection: keep-alive";
         head += "\r\n";
 
-        head += "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8";
+        //head += "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8";
+        head += "*/*";
         head += "\r\n";
 
         head += "User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.118 Safari/537.36";
@@ -91,6 +93,7 @@ std::string HttpClient::MakeHttpHead(const Url& url) {
         head += "\r\n";
     }
 
+    //std::cout << "{ " << head << " }" << std::endl;
     return head;
 }
 
