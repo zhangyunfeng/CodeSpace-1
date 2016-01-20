@@ -31,7 +31,7 @@ void Url::setUrl(const std::string& url)
         assert("protocol error");
     }
 
-    // port :8080
+    // port :80
     std::string::size_type port_position = m_url.find_last_of(":");
     if (port_position != std::string::npos && port_position != position) {
         m_port = m_url.substr(port_position+1);
