@@ -28,15 +28,32 @@ HttpManager::~HttpManager() {
 
 
 void HttpManager::Request(int id, const std::string& url, OnRequestListener* listener) {
+    HttpClient hc(url);
     m_threadPool.Enqueue([=] {
-            this->request(id, url, listener);
+            this->request(id, hc, listener);
         });
 }
 
-void HttpManager::request(int id, const std::string& url, OnRequestListener* listener) {
+void HttpManager::Request(int id, HttpMethod method, const std::string& url, OnRequestListener* listener, const std::string& body) {
     HttpClient hc(url);
-    const std::string result = hc.blockingRequestHttp();
-    
+    hc.SetHttpBody(body).SetHttpMethod(method);
+    request(id, hc, listener);
+}
+
+void HttpManager::Request(int id, HttpMethod method, const std::string& url, OnRequestListener* listener, HEADER_MAP_T headermap, const std::string& body) {
+    HttpClient hc(url);
+    hc.SetHttpBody(body).SetHttpMethod(method).SetHeadMap(headermap);
+    request(id, hc, listener);
+}
+
+void HttpManager::Request(int id, HttpClient& hc, OnRequestListener* listener) {
+    request(id, hc,listener);
+}
+
+void HttpManager::request(const int id, const HttpClient& hc, OnRequestListener* listener) {
+    // HttpClient hc(url);
+    // hc.SetHttpMethod(method).SetHeadMap(headermap).SetHttpBody(body);
+    const std::string result = hc.BlockingRequestHttp();
     if (listener != nullptr) {
         HttpResponseData hrd(result);
         if (hrd.GetHttpCode() == 200) {
@@ -44,7 +61,9 @@ void HttpManager::request(int id, const std::string& url, OnRequestListener* lis
         } else {
             listener->OnFailed(id, hrd.GetHttpCode(), HttpError::GetErrMsgByErrCode(hrd.GetHttpCode()) + "  " + hrd.GetResponseBody());
         }
-
     }
 }
+
+
+
 

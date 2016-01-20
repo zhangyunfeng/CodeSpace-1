@@ -18,12 +18,11 @@ Url::~Url()
 
 void Url::setUrl(const std::string& url)
 {
-    
     //url: http://google.com/index
     if (url.empty()) {
 	return;
     }
-    
+    m_url = url;    
     // http    protocol
     std::string::size_type position = m_url.find("://"); // http://
     if (position != std::string::npos) {

@@ -16,7 +16,7 @@
 #include "OnRequestListener.hpp"
 #include "HttpManager.hpp"
 #include "MiscUtils.hpp"
-
+#include "HttpClient.hpp"
 
 bool gTalkFlag = true;
 
@@ -48,7 +48,10 @@ int main(int argc, char *argv[]) {
             std::cin >> question;
             std::cout << "\n";
             std::string url = tuling_url_base + MiscUtils::UriEncode(question);
-            HttpManager::GetInstance().Request(1, url, listener);
+            //HttpManager::GetInstance().Request(1, url, listener);
+            HttpClient hc(url);
+            hc.SetHttpMethod(HttpMethod::POST);
+            HttpManager::GetInstance().Request(1, hc, listener);
             gTalkFlag = false;
         }
     }
