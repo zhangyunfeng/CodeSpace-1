@@ -1,0 +1,9 @@
+CC := g++ -std=c++11
+CCFLAGS := -g -Wall
+SRC := magiccube.hpp \
+	magiccube.cpp \
+
+OBJ := cube
+
+$(OBJ):$(SRC)
+	$(CC) $(CCFLAGS) -o $@ $<
