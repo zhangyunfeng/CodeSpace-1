@@ -1,70 +1,61 @@
-/**Copyright  Ken
- * @file   Test.cpp
+/**
+   Copyright
+ * @file   HttpTest.cpp
  * @author Ken <ken@ken-Ubuntu>
- * @date   Sun Aug 16 19:43:18 2015
- *
- * @brief
- *
- *
+ * @date   Wed Aug 19 22:46:40 2015
+ * 
+ * @brief  Http client test
+ * 
+ * 
  */
 
-// #include <iostream>
-// #include <string>
-// #include "Url.hpp"
-
-
-
-// void print(Url u)
-// {
-//     std::cout <<"protocol: " << u.getProtocol() << std::endl;
-//     std::cout << "host: " << u.getHost() << std::endl;
-//     std::cout << "path: " << u.getPath() << std::endl;
-//     std::cout << "port: " << u.getPort() << std::endl;
-
-//     std::cout << std::endl << std::endl;
-// }
-
-// int main(void)
-// {
-//     Url url(std::string("http://www.google.com/helloworld/abcdef:8080"));
-
-//     print(url);
-
-//     Url url2(std::string("https://www.tencent.com:8080"));
-//     print(url2);
-
-//     Url url3(std::string("ftp://102.3.3.44/hahah/jjj:89"));
-//     print(url3);
-//     return 0;
-// }
-
-#include <vector>
+#include <iostream>
 #include <string>
-#include "DNSUtil.hpp"
+#include "HttpClient.hpp"
+#include "HttpResponseData.hpp"
+#include "OnRequestListener.hpp"
+#include "HttpManager.hpp"
+#include "MiscUtils.hpp"
+#include "HttpClient.hpp"
 
-void PrintVector(std::vector<std::string> vec) {
-    for (std::vector<std::string>::iterator it = vec.begin();
-         it != vec.end(); it++) {
-        std::cout << *it << std::endl;
-}
-}
+bool gTalkFlag = true;
 
-int main(void) {
-    std::vector<std::string> ip = DNSUtil::GetIPByHostName("www.baidu.com");
-    std::cout << "baidu.com: ";
-    PrintVector(ip);
+class MyOnRequestListener : public OnRequestListener {
+  public:
 
-    ip = DNSUtil::GetIPByHostName("www.shuame.com");
-    std::cout << "www.shuame.com: ";
-    PrintVector(ip);
+    void OnReceived(int id, const std::string& data) override {
+        // std::cout << "id: " << id << " data: " << data << std::endl;
+        std::cout << "图灵机器人>>\n " << data << std::endl;
+        std::cout << "===========================================================" << std::endl;
+        gTalkFlag = true;
+    }
 
-    ip = DNSUtil::GetIPByHostName("qq.com");
-    std::cout << "www.qq.com: ";
-    PrintVector(ip);
+    void OnFailed(int id, int err_code, const std::string& err_msg) override {
+        std::cout << "onfailed : " << id << " " << err_code << " " << err_msg << std::endl << std::endl;
+        gTalkFlag = true;
+    }
+};
 
-    ip = DNSUtil::GetIPByHostName("127.0.0.1");
-    PrintVector(ip);
+int main(int argc, char *argv[]) {
+    std::string tuling_url_base = "http://tuling123.com/openapi/api?key=2bfa93ae9046da2a47bc780c1a151acd&info=";
+
+    MyOnRequestListener* listener = new MyOnRequestListener();
+
+    while (true) {
+        if (gTalkFlag) {
+            std::string question("");
+            std::cout << ">>";
+            std::cin >> question;
+            std::cout << "\n";
+            std::string url = tuling_url_base + MiscUtils::UriEncode(question);
+            //HttpManager::GetInstance().Request(1, url, listener);
+            HttpClient hc(url);
+            hc.SetHttpMethod(HttpMethod::POST);
+            HttpManager::GetInstance().Request(1, hc, listener);
+            gTalkFlag = false;
+        }
+    }
+
     return 0;
 }
-
 
