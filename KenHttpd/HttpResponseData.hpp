@@ -13,9 +13,7 @@
 #define HTTPRESPONSEDATA_H
 
 #include <string>
-
-
-
+#include <map>
 
 class HttpResponseData
 {
@@ -67,6 +65,7 @@ class HttpResponseData
     
   private:
     stResponse m_responseData;
+    std::map<std::string, std::string> m_mapHeader;
 };
 
 
