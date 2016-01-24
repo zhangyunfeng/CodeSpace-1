@@ -21,12 +21,14 @@ CMakeFiles/KenHttp.dir/HttpManager.cpp.o: HttpError.hpp
 CMakeFiles/KenHttp.dir/HttpManager.cpp.o: HttpManager.cpp
 CMakeFiles/KenHttp.dir/HttpManager.cpp.o: HttpManager.hpp
 CMakeFiles/KenHttp.dir/HttpManager.cpp.o: HttpResponseData.hpp
+CMakeFiles/KenHttp.dir/HttpManager.cpp.o: MiscUtils.hpp
 CMakeFiles/KenHttp.dir/HttpManager.cpp.o: OnRequestListener.hpp
 CMakeFiles/KenHttp.dir/HttpManager.cpp.o: ThreadPool.hpp
 CMakeFiles/KenHttp.dir/HttpManager.cpp.o: Url.hpp
 
 CMakeFiles/KenHttp.dir/HttpResponseData.cpp.o: HttpResponseData.cpp
 CMakeFiles/KenHttp.dir/HttpResponseData.cpp.o: HttpResponseData.hpp
+CMakeFiles/KenHttp.dir/HttpResponseData.cpp.o: MiscUtils.hpp
 
 CMakeFiles/KenHttp.dir/MiscUtils.cpp.o: MiscUtils.cpp
 CMakeFiles/KenHttp.dir/MiscUtils.cpp.o: MiscUtils.hpp

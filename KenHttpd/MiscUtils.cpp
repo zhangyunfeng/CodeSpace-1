@@ -7,7 +7,7 @@
  *
  * Copyright
  */
-
+#include <iostream>
 #include <string>
 #include "MiscUtils.hpp"
 
@@ -222,4 +222,71 @@ std::string MiscUtils::UriDecode(std::string const& sSrc) {
     std::string sResult(pStart, pEnd);
     delete [] pStart;
     return sResult;
+}
+
+
+/** 
+ * 将str由sepStr分成2个部分, 第一部分为key, 第二部分为value, 
+ * 并将k-v 存到map中
+ * @param str 
+ * @param beginPos 
+ * @param endPos 
+ * @param sepStr
+ * @param map container
+ */static inline void splitString(const std::string& str, const std::string& sepStr, std::map<std::string, std::string>& map)
+{
+    if (str.empty()) {
+        return;
+    }
+    size_t position = str.find(sepStr);
+    std::string key("");
+    std::string value("");
+    
+    if (position != std::string::npos) {
+        key = str.substr(0, position);
+        value = str.substr(position+1);
+        map.emplace(key, value);
+    }
+}
+
+/** 
+ * 解析 Http header
+ * 
+ * @param header 
+ * 
+ * @return 
+ */
+std::map<std::string, std::string> MiscUtils::ParseHttpHeader(const std::string& header) {
+    std::map<std::string, std::string> mapHeader;
+    if (header.empty()) {
+        return mapHeader;
+    }
+
+    std::string tmp = header;
+    const std::string separator(": ");
+    const std::string LRSeparator("\r\n");
+    size_t position = tmp.find(LRSeparator) + 2; // move position to behind of LRSeparator
+    tmp = tmp.substr(position);
+
+    while (!tmp.empty()) {
+        size_t tmpPos = tmp.find(LRSeparator);
+        splitString(tmp.substr(0, tmpPos), separator, mapHeader);
+        if (tmpPos == std::string::npos) {
+            break;
+        }
+        tmp = tmp.substr(tmpPos+2);
+    }
+
+    return mapHeader;
+}
+
+
+bool MiscUtils::IEquals(const std::string& a, const std::string& b) {
+    unsigned int sz = a.size();
+    if (b.size() != sz)
+        return false;
+    for (unsigned int i = 0; i < sz; ++i)
+        if (tolower(a[i]) != tolower(b[i]))
+            return false;
+    return true;
 }

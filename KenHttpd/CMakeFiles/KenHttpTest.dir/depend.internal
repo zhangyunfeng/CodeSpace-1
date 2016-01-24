@@ -22,12 +22,14 @@ CMakeFiles/KenHttpTest.dir/HttpManager.cpp.o
  /home/ken/Github/KenHttpd/HttpManager.cpp
  /home/ken/Github/KenHttpd/HttpManager.hpp
  /home/ken/Github/KenHttpd/HttpResponseData.hpp
+ /home/ken/Github/KenHttpd/MiscUtils.hpp
  /home/ken/Github/KenHttpd/OnRequestListener.hpp
  /home/ken/Github/KenHttpd/ThreadPool.hpp
  /home/ken/Github/KenHttpd/Url.hpp
 CMakeFiles/KenHttpTest.dir/HttpResponseData.cpp.o
  /home/ken/Github/KenHttpd/HttpResponseData.cpp
  /home/ken/Github/KenHttpd/HttpResponseData.hpp
+ /home/ken/Github/KenHttpd/MiscUtils.hpp
 CMakeFiles/KenHttpTest.dir/MiscUtils.cpp.o
  /home/ken/Github/KenHttpd/MiscUtils.cpp
  /home/ken/Github/KenHttpd/MiscUtils.hpp

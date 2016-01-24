@@ -56,6 +56,12 @@ int main(int argc, char *argv[]) {
         }
     }
 
+    // const std::string mapHeader = "GET HTTP\1.1\r\nAccept-Ranges: none\r\nConnection: close\r\nContent-Encoding: gzip\r\nContent-Type: text/html;charset=utf-8\r\nDate: Sun, 24 Jan 2016 14:39:53 GMT\r\nLast-Modified: Sun, 24 Jan 2016 14:39:53 GMT\r\nServer: Apache\r\nSet-Cookie: JSESSIONID=AEC0D89A5970AB6D6DED33AA5824C549; Path=/UserCookie=kHeonl3IbVDnla0LqQtfqdjGTAShGVza; Expires=Wed, 18-Jan-2017 14:39:53 GMT; Path=/\r\nTransfer-Encoding: chunked\r\nVary: Accept-Encoding,User-Agent\r\naccess-control-allow-credentials: true\r\n";
+    
+    // std::map<std::string, std::string> map = MiscUtils::ParseHttpHeader(mapHeader);
+    // for (auto& m : map) {
+    //     std::cout << m.first << "  " << m.second << std::endl;
+    // }
+    
     return 0;
 }
-

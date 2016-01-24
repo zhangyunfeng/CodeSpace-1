@@ -14,7 +14,7 @@
 #define MISCUTILS_H
 
 #include <string>
-
+#include <map>
 
 
 class MiscUtils {
@@ -27,6 +27,10 @@ class MiscUtils {
     static std::string UriEncode(std::string const& sSrc);
     
     static std::string UriDecode(std::string const& sSrc);
+
+    static std::map<std::string, std::string> ParseHttpHeader(const std::string& header);
+
+    static bool IEquals(const std::string& a, const std::string& b);
 };
 
 

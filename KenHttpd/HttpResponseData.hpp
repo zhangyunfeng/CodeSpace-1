@@ -14,6 +14,7 @@
 
 #include <string>
 #include <map>
+#include "MiscUtils.hpp"
 
 class HttpResponseData
 {
@@ -26,36 +27,73 @@ class HttpResponseData
 
     const std::string GetHttpProtocol() { return m_responseData.protocol; } 
     int GetHttpCode() const { return m_responseData.code; }
-    const std::string GetHttpServer() const { return m_responseData.server; }
-    const std::string GetHttpDate() const { return m_responseData.date; }
-    const std::string GetHttpContentType() const { return m_responseData.content_type; }
-    int GetHttpContentLength() const { return m_responseData.content_length; }
-    const std::string GetHttpCharset() const { return m_responseData.charset; }
-    const std::string GetHttpConnection() const { return m_responseData.connection; }
+    const std::string GetHttpServer() const {
+        std::string server("");
+        int code = getHeaderValue("Server", server);
+        if (code == 0) {
+            return server;
+        }
+        return "";
+    }
+     
+    const std::string GetHttpDate() const {
+        std::string date("");
+        int code = getHeaderValue("Date", date);
+        if (code == 0) {
+            return date;
+        }
+        return "";
+    }
+    
+    const std::string GetHttpContentType() const {
+        std::string content_type("");
+        int code = getHeaderValue("Content-Type", content_type);
+        if (code == 0) {
+            return content_type;
+        }
+        return "";
+    }
+    
+    int GetHttpContentLength() const {
+        std::string content_length("");
+        int code = getHeaderValue("Content-Length", content_length);
+        if (code == 0) {
+            return std::stoi(content_length);
+        }
+        return -1;
+    }
+    
+    const std::string GetHttpConnection() const {
+        std::string connection("");
+        int code = getHeaderValue("Connection", connection);
+        if (code == 0) {
+            return connection;
+        }
+        return "";
+    }
 
     const std::string GetResponseBody() const { return m_responseData.body; }
     
   private:
+    int getHeaderValue(const std::string& key, std::string& value) const {
+        for (auto& m : m_responseData.mapHeader) {
+            if (MiscUtils::IEquals(m.first, key)) {
+                value = m.second;
+                return 0;
+            }
+        }
+        return -1;
+    }
+    
     struct stResponse {
         std::string protocol; // HTTP/1.1
         int code; // 200, 400, ...
-        std::string server;
-        std::string date;
-        std::string content_type;
-        int content_length;
-        std::string charset;
-        std::string connection;
+        std::map<std::string, std::string> mapHeader;        
         std::string body;
 
         stResponse() :
                 protocol(""),
                 code(-1),
-                server(""),
-                date(""),
-                content_type(""),
-                content_length(-1),
-                charset(""),
-                connection(""),
                 body("") { }
     };
 
@@ -65,7 +103,6 @@ class HttpResponseData
     
   private:
     stResponse m_responseData;
-    std::map<std::string, std::string> m_mapHeader;
 };
 
 

@@ -131,7 +131,7 @@ std::string HttpClient::MakeHttpHead() const {
     }
 
     head += "\r\n";
-    std::cout << "[[" << head << "]]" << std::endl;
+    //std::cout << "[[" << head << "]]" << std::endl;
     return head;
 }
 
