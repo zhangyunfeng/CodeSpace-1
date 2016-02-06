@@ -163,6 +163,30 @@ ResponseParser.cpp.s:
 	cd /home/ken/Github/KenRobot && $(MAKE) -f src/CMakeFiles/KenRobot.dir/build.make src/CMakeFiles/KenRobot.dir/ResponseParser.cpp.s
 .PHONY : ResponseParser.cpp.s
 
+VoiceManager.o: VoiceManager.cpp.o
+.PHONY : VoiceManager.o
+
+# target to build an object file
+VoiceManager.cpp.o:
+	cd /home/ken/Github/KenRobot && $(MAKE) -f src/CMakeFiles/KenRobot.dir/build.make src/CMakeFiles/KenRobot.dir/VoiceManager.cpp.o
+.PHONY : VoiceManager.cpp.o
+
+VoiceManager.i: VoiceManager.cpp.i
+.PHONY : VoiceManager.i
+
+# target to preprocess a source file
+VoiceManager.cpp.i:
+	cd /home/ken/Github/KenRobot && $(MAKE) -f src/CMakeFiles/KenRobot.dir/build.make src/CMakeFiles/KenRobot.dir/VoiceManager.cpp.i
+.PHONY : VoiceManager.cpp.i
+
+VoiceManager.s: VoiceManager.cpp.s
+.PHONY : VoiceManager.s
+
+# target to generate assembly for a file
+VoiceManager.cpp.s:
+	cd /home/ken/Github/KenRobot && $(MAKE) -f src/CMakeFiles/KenRobot.dir/build.make src/CMakeFiles/KenRobot.dir/VoiceManager.cpp.s
+.PHONY : VoiceManager.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -202,6 +226,9 @@ help:
 	@echo "... ResponseParser.o"
 	@echo "... ResponseParser.i"
 	@echo "... ResponseParser.s"
+	@echo "... VoiceManager.o"
+	@echo "... VoiceManager.i"
+	@echo "... VoiceManager.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

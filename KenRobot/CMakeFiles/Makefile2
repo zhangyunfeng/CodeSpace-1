@@ -74,7 +74,7 @@ src/preinstall:
 src/CMakeFiles/KenRobot.dir/all:
 	$(MAKE) -f src/CMakeFiles/KenRobot.dir/build.make src/CMakeFiles/KenRobot.dir/depend
 	$(MAKE) -f src/CMakeFiles/KenRobot.dir/build.make src/CMakeFiles/KenRobot.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ken/Github/KenRobot/CMakeFiles  1 2 3
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ken/Github/KenRobot/CMakeFiles  1 2 3 4
 	@echo "Built target KenRobot"
 .PHONY : src/CMakeFiles/KenRobot.dir/all
 
@@ -84,7 +84,7 @@ all: src/CMakeFiles/KenRobot.dir/all
 
 # Build rule for subdir invocation for target.
 src/CMakeFiles/KenRobot.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ken/Github/KenRobot/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ken/Github/KenRobot/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/KenRobot.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ken/Github/KenRobot/CMakeFiles 0
 .PHONY : src/CMakeFiles/KenRobot.dir/rule

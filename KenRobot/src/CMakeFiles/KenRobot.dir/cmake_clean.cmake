@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/KenRobot.dir/ResponseParser.cpp.o"
   "CMakeFiles/KenRobot.dir/main.cpp.o"
   "CMakeFiles/KenRobot.dir/KenRobot.cpp.o"
+  "CMakeFiles/KenRobot.dir/VoiceManager.cpp.o"
   "KenRobot.pdb"
   "KenRobot"
 )

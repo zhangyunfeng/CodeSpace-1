@@ -11,9 +11,13 @@
 
 #include "KenRobot.hpp"
 
+void init() {
+    
+}
 
 int main(int argc, char *argv[])
 {
+    init();
     KenRobot robot;
     robot.Run();
     return 0;

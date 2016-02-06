@@ -19,6 +19,8 @@
 #include "OnRequestListener.hpp"
 #include "HttpManager.hpp"
 #include "ResponseParser.hpp"
+#include "VoiceManager.hpp"
+
 
 // 用于保证用户输入和机器回复是一问一答的方式
 extern volatile bool gFlag;
@@ -37,7 +39,11 @@ class MyOnRequestListener : public OnRequestListener
     void OnReceived(int id, const std::string& data) override {
         // 解析 data 用json,
         // std::cout << ResponseParser::GetInstance().GetTulingCode(data) << std::endl;
-        std::cout << "\n" << ResponseParser::GetInstance().GetText(data) + ResponseParser::GetInstance().GetUrl(data) << std::endl;
+        std::string text(ResponseParser::GetInstance().GetText(data) + ResponseParser::GetInstance().GetUrl(data));
+        std::cout << "\n" << text << std::endl;
+        VoiceManager::GetInstance().ConvertText2Speech(text.c_str(), "voice");
+        system("play voice");
+        
         gFlag = true;
     }
     

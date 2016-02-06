@@ -118,11 +118,35 @@ src/CMakeFiles/KenRobot.dir/KenRobot.cpp.o.provides: src/CMakeFiles/KenRobot.dir
 
 src/CMakeFiles/KenRobot.dir/KenRobot.cpp.o.provides.build: src/CMakeFiles/KenRobot.dir/KenRobot.cpp.o
 
+src/CMakeFiles/KenRobot.dir/VoiceManager.cpp.o: src/CMakeFiles/KenRobot.dir/flags.make
+src/CMakeFiles/KenRobot.dir/VoiceManager.cpp.o: src/VoiceManager.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ken/Github/KenRobot/CMakeFiles $(CMAKE_PROGRESS_4)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/KenRobot.dir/VoiceManager.cpp.o"
+	cd /home/ken/Github/KenRobot/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/KenRobot.dir/VoiceManager.cpp.o -c /home/ken/Github/KenRobot/src/VoiceManager.cpp
+
+src/CMakeFiles/KenRobot.dir/VoiceManager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/KenRobot.dir/VoiceManager.cpp.i"
+	cd /home/ken/Github/KenRobot/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ken/Github/KenRobot/src/VoiceManager.cpp > CMakeFiles/KenRobot.dir/VoiceManager.cpp.i
+
+src/CMakeFiles/KenRobot.dir/VoiceManager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/KenRobot.dir/VoiceManager.cpp.s"
+	cd /home/ken/Github/KenRobot/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ken/Github/KenRobot/src/VoiceManager.cpp -o CMakeFiles/KenRobot.dir/VoiceManager.cpp.s
+
+src/CMakeFiles/KenRobot.dir/VoiceManager.cpp.o.requires:
+.PHONY : src/CMakeFiles/KenRobot.dir/VoiceManager.cpp.o.requires
+
+src/CMakeFiles/KenRobot.dir/VoiceManager.cpp.o.provides: src/CMakeFiles/KenRobot.dir/VoiceManager.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/KenRobot.dir/build.make src/CMakeFiles/KenRobot.dir/VoiceManager.cpp.o.provides.build
+.PHONY : src/CMakeFiles/KenRobot.dir/VoiceManager.cpp.o.provides
+
+src/CMakeFiles/KenRobot.dir/VoiceManager.cpp.o.provides.build: src/CMakeFiles/KenRobot.dir/VoiceManager.cpp.o
+
 # Object files for target KenRobot
 KenRobot_OBJECTS = \
 "CMakeFiles/KenRobot.dir/ResponseParser.cpp.o" \
 "CMakeFiles/KenRobot.dir/main.cpp.o" \
-"CMakeFiles/KenRobot.dir/KenRobot.cpp.o"
+"CMakeFiles/KenRobot.dir/KenRobot.cpp.o" \
+"CMakeFiles/KenRobot.dir/VoiceManager.cpp.o"
 
 # External object files for target KenRobot
 KenRobot_EXTERNAL_OBJECTS =
@@ -130,6 +154,7 @@ KenRobot_EXTERNAL_OBJECTS =
 src/KenRobot: src/CMakeFiles/KenRobot.dir/ResponseParser.cpp.o
 src/KenRobot: src/CMakeFiles/KenRobot.dir/main.cpp.o
 src/KenRobot: src/CMakeFiles/KenRobot.dir/KenRobot.cpp.o
+src/KenRobot: src/CMakeFiles/KenRobot.dir/VoiceManager.cpp.o
 src/KenRobot: src/CMakeFiles/KenRobot.dir/build.make
 src/KenRobot: src/CMakeFiles/KenRobot.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable KenRobot"
@@ -142,6 +167,7 @@ src/CMakeFiles/KenRobot.dir/build: src/KenRobot
 src/CMakeFiles/KenRobot.dir/requires: src/CMakeFiles/KenRobot.dir/ResponseParser.cpp.o.requires
 src/CMakeFiles/KenRobot.dir/requires: src/CMakeFiles/KenRobot.dir/main.cpp.o.requires
 src/CMakeFiles/KenRobot.dir/requires: src/CMakeFiles/KenRobot.dir/KenRobot.cpp.o.requires
+src/CMakeFiles/KenRobot.dir/requires: src/CMakeFiles/KenRobot.dir/VoiceManager.cpp.o.requires
 .PHONY : src/CMakeFiles/KenRobot.dir/requires
 
 src/CMakeFiles/KenRobot.dir/clean:

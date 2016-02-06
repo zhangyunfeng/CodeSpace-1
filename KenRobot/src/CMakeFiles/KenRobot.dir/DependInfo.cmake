@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/ken/Github/KenRobot/src/KenRobot.cpp" "/home/ken/Github/KenRobot/src/CMakeFiles/KenRobot.dir/KenRobot.cpp.o"
   "/home/ken/Github/KenRobot/src/ResponseParser.cpp" "/home/ken/Github/KenRobot/src/CMakeFiles/KenRobot.dir/ResponseParser.cpp.o"
+  "/home/ken/Github/KenRobot/src/VoiceManager.cpp" "/home/ken/Github/KenRobot/src/CMakeFiles/KenRobot.dir/VoiceManager.cpp.o"
   "/home/ken/Github/KenRobot/src/main.cpp" "/home/ken/Github/KenRobot/src/CMakeFiles/KenRobot.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

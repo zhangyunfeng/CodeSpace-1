@@ -6,6 +6,18 @@
 
 #IncludeRegexTransform: 
 
+/home/ken/Github/KenRobot/Linux_voice/include/msp_cmn.h
+msp_types.h
+/home/ken/Github/KenRobot/Linux_voice/include/msp_types.h
+
+/home/ken/Github/KenRobot/Linux_voice/include/msp_errors.h
+
+/home/ken/Github/KenRobot/Linux_voice/include/msp_types.h
+
+/home/ken/Github/KenRobot/Linux_voice/include/qtts.h
+msp_types.h
+/home/ken/Github/KenRobot/Linux_voice/include/msp_types.h
+
 /home/ken/Github/KenRobot/rapidjson/allocators.h
 rapidjson.h
 /home/ken/Github/KenRobot/rapidjson/rapidjson.h
@@ -189,6 +201,8 @@ HttpManager.hpp
 /home/ken/Github/KenRobot/src/HttpManager.hpp
 ResponseParser.hpp
 /home/ken/Github/KenRobot/src/ResponseParser.hpp
+VoiceManager.hpp
+/home/ken/Github/KenRobot/src/VoiceManager.hpp
 
 /home/ken/Github/KenRobot/src/ResponseParser.cpp
 iostream
@@ -205,6 +219,34 @@ string
 /home/ken/Github/KenRobot/rapidjson/document.h
 ../rapidjson/stringbuffer.h
 /home/ken/Github/KenRobot/rapidjson/stringbuffer.h
+
+/home/ken/Github/KenRobot/src/VoiceManager.cpp
+exception
+-
+stdexcept
+-
+VoiceManager.hpp
+/home/ken/Github/KenRobot/src/VoiceManager.hpp
+Constants.hpp
+/home/ken/Github/KenRobot/src/Constants.hpp
+unistd.h
+-
+stdlib.h
+-
+stdio.h
+-
+string.h
+-
+
+/home/ken/Github/KenRobot/src/VoiceManager.hpp
+string
+-
+../Linux_voice/include/qtts.h
+/home/ken/Github/KenRobot/Linux_voice/include/qtts.h
+../Linux_voice/include/msp_cmn.h
+/home/ken/Github/KenRobot/Linux_voice/include/msp_cmn.h
+../Linux_voice/include/msp_errors.h
+/home/ken/Github/KenRobot/Linux_voice/include/msp_errors.h
 
 /home/ken/Github/KenRobot/src/main.cpp
 KenRobot.hpp

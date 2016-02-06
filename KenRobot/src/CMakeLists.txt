@@ -6,6 +6,6 @@ AUX_SOURCE_DIRECTORY(. robot_SRC)
 
 ADD_EXECUTABLE(KenRobot ${robot_SRC})
 
-TARGET_LINK_LIBRARIES(KenRobot KenHttp rapidjson msc)
+TARGET_LINK_LIBRARIES(KenRobot KenHttp rapidjson msc rt dl)
 
 SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -g -Wall -Wno-unused-variable -pthread")
