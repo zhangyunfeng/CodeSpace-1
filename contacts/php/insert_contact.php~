@@ -1,0 +1,9 @@
+<?php
+    $contact_name = $_POST["name"];
+    $contact_tel = $_POST["tel_number"];
+    print($contact_name . "  " . $contact_tel);
+        
+    function connect_conact_db() {
+        
+    }
+?>

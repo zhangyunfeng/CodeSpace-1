@@ -1,0 +1,50 @@
+<?php
+require_once("DbUtil.php");
+
+class ContactDbUtil {
+
+    public function __construct() {
+               DbUtil::getInstance()->init("localhost", "root", "root", "contacts_db");
+    }
+    
+    function insert_contact($name, $tel_number)
+    {
+        if (DbUtil::getInstance()->connect()) {
+            
+        }
+        
+    }
+
+    function delete_contact($name)
+    {
+        DbUtil::getInstance()->connect();
+        
+    }
+
+    function update_contact($name, $tel_number) {
+        DbUtil::getInstance()->connect();
+                
+    }
+
+    function query_contact_telnumber($name) {
+        if (DbUtil::getInstance()->connect()) {
+            $query = "select * from contacts where Name=\"" . $name . "\"";
+            print($query);
+            $result = DbUtil::getInstance()->getMySQLI()->query($query);
+            if ($result) {
+                if ($result->num_rows > 0) {
+                    while($row = $result->fetch_array()) {
+                        echo ($row[0]) . "<br>";
+                        echo ($row[1]) . "<br>";
+                    }
+                }
+            } else {
+                echo "query failed.";
+            }
+        }
+        
+    }
+
+    
+}
+?>
