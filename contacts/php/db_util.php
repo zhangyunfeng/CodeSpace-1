@@ -53,7 +53,7 @@ class DbUtil {
                    return TRUE;
                }
                // create mysqli object, and connect mysql
-               $this->mysqli = new mysqli($this->mHost, $this->user, $this->passwd, $this->db);
+               $this->mysqli = new mysqli($this->mHost, $this->user, $this->passwd);
                // check connecting success
                if (mysqli_connect_errno()) {
                    // failed
@@ -61,6 +61,7 @@ class DbUtil {
                    return FALSE;
                }
                $this->mysqli->set_charset("utf8");
+               $this->mysqli->select_db($this->db);
                return TRUE;
            }
 

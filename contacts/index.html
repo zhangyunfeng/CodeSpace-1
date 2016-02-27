@@ -1,18 +1,72 @@
 <html>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <head>
+        <!-- use JQuery and bootstrap-->
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/contact.css">
+        <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min"></script>
+        <script src="js/contact.js"></script>
+        
+	<title>
+	    Manage Contacts Database
+	</title>    
 
-<head>
-  <title>
-    Manage Contacts Database
-  </title>
-</head>
+    </head>
 
-<body>
-    <!-- insert -->
-    <form action="php/insert_contact.php" method="post">
-        ContactName: <input type="text" name="name"/>
-        ContactNumber: <input type="tel" name="tel_number"/>
-        <input type="submit" name="Insert"/>
-    </form>
+    <body>
+	<h1>
+	    联系人管理系统
+	</h1>
 
-</body>
+	<!-- form for insert a contact -->
+	<div style="margin-left:2%;float:left;width:30%" class="mycontainer">
+	    <form id="form_insert_contact" class="form-horizontal" role="form">
+		<div class="form-group input-group">
+		    <!-- <label class="col-sm-2 control-label">联系人:</label> -->
+		    <span class="input-group-addon">姓名</span>		
+		    <div class="col-sm-10">
+			<input type="text" class="form-control" name="name" placeholder="联系人姓名"/>
+		    </div>
+		</div>
+		<div class="form-group input-group">
+		    <!-- <label class="col-sm-2 control-label">电话:</label> -->
+		    <span class="input-group-addon">电话</span>
+		    <div class="col-sm-10">
+			<input type="tel" class="form-control" name="tel_number" placeholder="电话号码"/>
+		    </div>
+		</div>
+		<div class="form-group input-group">
+		    <!-- <label class="col-sm-2 control-label">Email:</label> -->
+		    <span class="input-group-addon">邮箱</span>
+		    <div class="col-sm-10">
+			<input type="" class="form-control" name="email" placeholder="Email地址"/>
+		    </div>
+		</div>
+		<div class="container">
+		    <button id="button_insert_contact" style="width:25%" type="button" class="btn btn-default btn-lg">新增</button>
+		</div>
+	    </form>
+	</div>
+	
+
+	<!-- table for contact list -->
+        <div style="float:right;width:66%" class="container"  >
+            <h2>Contacts list</h2>
+            <button id="button_refresh" class="buttonstyle">Refresh</button>
+            <table class="table table-striped" id="contacts_table">
+		<thead>
+	            <tr>
+			<th>Image</th>
+			<th>Name</th>
+			<th>Tel</th>
+			<th>Email</th>
+	            </tr>
+		</thead>
+		<tbody>
+		</tbody>
+	    </table>           
+        </div>
+    </body>
 </html>

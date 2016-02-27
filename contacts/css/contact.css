@@ -1,0 +1,52 @@
+div.mycontainer{
+    background-color:#99bbbb;
+    box-shadow: 10px 10px 5px #888888;
+    border-radius:15px;
+    padding-top:2%;
+    padding-left:2%;
+}
+
+div.inputbox {
+    float:left;
+    display:table-cell;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+div.buttonbox {
+    float:left;
+    margin-left:10px;
+    margin-right:auto;
+    padding-top:20px;
+    padding-bottom:20px;
+    
+}
+
+.vspace {
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+.buttonstyle {
+    border:none;
+    display:inline-block;
+    outline:0;
+    padding:6px 16px;
+    background-color:#F88E88;
+    overflow:hidden;
+    transition:.2s ease-out;
+    cursor: pointer;
+    font-size:14px;
+    box-shadow: 0px 1px 3px rgba(0,0,0,0.12), 0px 1px 2px rgba(0,0,0,0.24);
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.4em;
+    padding: 0px 0px 5px 0px;
+    width:100%;
+    display:inline-block;
+    font-family: monospace;
+    background-color: aliceblue;
+    color: rgba(88,88,88,0.7)
+}
