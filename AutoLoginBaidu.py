@@ -30,7 +30,7 @@ class Loginer(object):
  
 def main():
 	"""Main function for case test"""
-	loginer = Loginer("zhangyunfeng0101@gmail.com", "zyf515815")
+	loginer = Loginer("xxxxxxxx", "yyyyyyyyy")
 	print loginer.LoginToBaidu()
 
 if __name__ == '__main__':
