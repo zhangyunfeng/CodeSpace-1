@@ -1,0 +1,2 @@
+* 目录结构以及文件描述
+  [[file:./config.json][*config.json*]]  配置服务器节点的属性 

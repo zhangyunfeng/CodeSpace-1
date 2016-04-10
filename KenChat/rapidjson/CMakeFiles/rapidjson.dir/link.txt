@@ -1,0 +1,2 @@
+/usr/bin/ar cq librapidjson.a  CMakeFiles/rapidjson.dir/ResponseParser.o
+/usr/bin/ranlib librapidjson.a
